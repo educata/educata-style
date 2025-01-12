@@ -1,22 +1,84 @@
 {
   "name": "educata-styles",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Educata style library",
+  "keywords": [
+    "educata",
+    "styles",
+    "css",
+    "scss"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/educata/everrest/issues"
+  },
+  "contributors": [
+    {
+      "name": "Konstantine Datunishvili",
+      "email": "konstantine@educata.dev",
+      "url": "https://konstantinedatunishvili.com"
+    },
+    {
+      "name": "Pridon Tetradze",
+      "email": "pridon@educata.dev",
+      "url": "https://pridontetradze.com"
+    }
+  ],
   "scripts": {
     "prepare": "husky install",
     "build": "ts-node scripts/build.ts",
-    "watch": "ts-node scripts/build.ts --watch"
+    "watch": "ts-node scripts/build.ts --watch",
+    "release": "release-it",
+    "release:minor": "release-it minor",
+    "release:patch": "release-it patch",
+    "release:major": "release-it major"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.10.5",
+    "@commitlint/cli": "^18.4.1",
+    "@commitlint/config-conventional": "^18.4.0",
+    "husky": "^8.0.0",
+    "release-it": "^18.1.1",
     "sass": "^1.83.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
-    "typescript": "^5.7.3",
-    "husky": "^8.0.0"
+    "typescript": "^5.7.3"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "public": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "docs",
+              "section": "Documentations"
+            },
+            {
+              "type": "refactor",
+              "section": "Refactors"
+            }
+          ]
+        }
+      }
+    }
   }
 }
