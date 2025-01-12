@@ -1,0 +1,4 @@
+@use "../functions/apply-utility" as *;
+
+$position-values: static, relative, absolute, fixed, sticky;
+@include apply-utility-classes("position", "position", $position-values);

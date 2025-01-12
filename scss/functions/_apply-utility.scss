@@ -1,0 +1,26 @@
+@use "sass:list";
+
+@use "./generate-class" as *;
+
+@mixin apply-utility-classes(
+  $classname,
+  $property,
+  $values,
+  $byIndex: false,
+  $unit: null
+) {
+  $classes: generate-class($classname, $values, $byIndex);
+
+  @for $i from 1 through list.length($classes) {
+    $class: list.nth($classes, $i);
+    $value: list.nth($values, $i);
+
+    .#{$class} {
+      @if $value == "auto" {
+        #{$property}: auto;
+      } @else {
+        #{$property}: #{$value}#{$unit};
+      }
+    }
+  }
+}

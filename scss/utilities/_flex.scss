@@ -1,0 +1,33 @@
+@use "../functions/apply-utility" as *;
+
+$wrap-values: nowrap, wrap, wrap-reverse;
+@include apply-utility-classes("flex-wrap", "flex-wrap", $wrap-values);
+
+$direction-values: row, row-reverse, column, column-reverse;
+@include apply-utility-classes("flex-direction", "flex-direction", $direction-values);
+
+$justify-content-values: flex-start, flex-end, center, space-between, space-around,
+  space-evenly;
+@include apply-utility-classes(
+  "justify-content",
+  "justify-content",
+  $justify-content-values
+);
+
+$align-items-values: stretch, flex-start, flex-end, center, baseline;
+@include apply-utility-classes("align-items", "align-items", $align-items-values);
+
+$align-content-values: stretch, flex-start, flex-end, center, space-between, space-around;
+@include apply-utility-classes("align-content", "align-content", $align-content-values);
+
+$align-self-values: auto, stretch, flex-start, flex-end, center, baseline;
+@include apply-utility-classes("align-self", "align-self", $align-self-values);
+
+$order-values: 0, 1, 2, 3, 4, 5;
+@include apply-utility-classes("order", "order", $order-values, true);
+
+$grow-values: 0, 1;
+@include apply-utility-classes("flex-grow", "flex-grow", $grow-values);
+
+$shrink-values: 0, 1;
+@include apply-utility-classes("flex-shrink", "flex-shrink", $shrink-values);

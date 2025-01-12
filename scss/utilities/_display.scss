@@ -1,0 +1,5 @@
+@use "../functions/apply-utility" as *;
+
+$display-values: block, inline, inline-block, none, flex, inline-flex, grid, inline-grid,
+  table, table-row, table-cell;
+@include apply-utility-classes("d", "display", $display-values);

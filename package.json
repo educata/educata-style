@@ -1,0 +1,22 @@
+{
+  "name": "educata-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "ts-node scripts/build.ts",
+    "watch": "ts-node scripts/build.ts --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "sass": "^1.83.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3",
+    "husky": "^8.0.0"
+  }
+}

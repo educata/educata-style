@@ -1,0 +1,4 @@
+@use "../functions/apply-utility" as *;
+
+$opacity-values: 0, 25, 50, 75, 100;
+@include apply-utility-classes("opacity", "opacity", $opacity-values, false, "%");

@@ -1,0 +1,31 @@
+@use "sass:list";
+
+@function generate-class($className, $values, $byIndex: false) {
+  $classes: ();
+  $isFirstValueZero: list.nth($values, 1) == 0;
+
+  @for $i from 1 through list.length($values) {
+    $class-name: "";
+    $value: list.nth($values, $i);
+
+    @if $byIndex {
+      $index: $i;
+
+      @if $isFirstValueZero {
+        $index: $i - 1;
+      }
+
+      @if $value == "auto" {
+        $class-name: "#{$className}-auto";
+      } @else {
+        $class-name: "#{$className}-#{$index}";
+      }
+    } @else {
+      $class-name: "#{$className}-#{$value}";
+    }
+
+    $classes: list.append($classes, $class-name);
+  }
+
+  @return $classes;
+}

@@ -1,0 +1,20 @@
+@use "../functions/apply-utility" as *;
+
+$spacing-values: 0, 0.25, 0.5, 1, 1.5, 3, auto;
+
+@include apply-utility-classes("m", "margin", $spacing-values, true, rem);
+@include apply-utility-classes("p", "padding", $spacing-values, true, rem);
+
+@include apply-utility-classes("mt", "margin-top", $spacing-values, true, rem);
+@include apply-utility-classes("me", "margin-right", $spacing-values, true, rem);
+@include apply-utility-classes("mb", "margin-bottom", $spacing-values, true, rem);
+@include apply-utility-classes("me", "margin-left", $spacing-values, true, rem);
+
+@include apply-utility-classes("pt", "padding-top", $spacing-values, true, rem);
+@include apply-utility-classes("pe", "padding-right", $spacing-values, true, rem);
+@include apply-utility-classes("pb", "padding-bottom", $spacing-values, true, rem);
+@include apply-utility-classes("pe", "padding-left", $spacing-values, true, rem);
+
+@include apply-utility-classes("gap", "gap", $spacing-values, true, rem);
+@include apply-utility-classes("row-gap", "row-gap", $spacing-values, true, rem);
+@include apply-utility-classes("column-gap", "column-gap", $spacing-values, true, rem);

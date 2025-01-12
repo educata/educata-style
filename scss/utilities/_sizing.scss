@@ -1,0 +1,17 @@
+@use "../functions/apply-utility" as *;
+
+$sizing-values: 0, 25, 50, 75, 100, auto;
+
+@include apply-utility-classes("w", "width", $sizing-values, false, "%");
+@include apply-utility-classes("vw", "width", $sizing-values, false, vw);
+@include apply-utility-classes("min-w", "min-width", $sizing-values, false, "%");
+@include apply-utility-classes("min-vw", "min-width", $sizing-values, false, vw);
+@include apply-utility-classes("max-w", "max-width", $sizing-values, false, "%");
+@include apply-utility-classes("max-vw", "max-width", $sizing-values, false, vw);
+
+@include apply-utility-classes("h", "height", $sizing-values, false, "%");
+@include apply-utility-classes("vh", "height", $sizing-values, false, vh);
+@include apply-utility-classes("min-h", "min-height", $sizing-values, false, "%");
+@include apply-utility-classes("min-vh", "min-height", $sizing-values, false, vh);
+@include apply-utility-classes("max-h", "max-height", $sizing-values, false, "%");
+@include apply-utility-classes("max-vh", "max-height", $sizing-values, false, vh);

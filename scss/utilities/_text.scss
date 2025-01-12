@@ -1,0 +1,59 @@
+@use "../functions/apply-utility" as *;
+
+/*
+ * Text utilities
+*/
+
+$text-align-values: left, right, center, justify;
+@include apply-utility-classes("text", "text-align", $text-align-values);
+
+$text-transform-values: none, uppercase, lowercase, capitalize;
+@include apply-utility-classes(
+  "text-transform",
+  "text-transform",
+  $text-transform-values
+);
+
+$text-decoration-values: none, underline, overline, line-through;
+@include apply-utility-classes(
+  "text-decoration",
+  "text-decoration",
+  $text-decoration-values
+);
+
+$text-overflow-values: clip, ellipsis;
+@include apply-utility-classes("text-overflow", "text-overflow", $text-overflow-values);
+
+$text-opacity-values: 0, 25, 50, 75, 100;
+@include apply-utility-classes(
+  "text-opacity",
+  "opacity",
+  $text-opacity-values,
+  false,
+  "%"
+);
+
+$text-wrap-values: normal, nowrap, pre, pre-line, pre-wrap;
+@include apply-utility-classes("text-wrap", "white-space", $text-wrap-values);
+
+$text-overflow-values: clip, ellipsis;
+@include apply-utility-classes("text-overflow", "text-overflow", $text-overflow-values);
+
+$text-break-values: break-all, keep-all;
+@include apply-utility-classes("text", "word-break", $text-break-values);
+
+$text-word-wrap-values: normal, break-word;
+@include apply-utility-classes("text-wrap", "word-wrap", $text-word-wrap-values);
+
+/*
+ * Font utilities
+*/
+
+$font-style-values: normal, italic, oblique;
+@include apply-utility-classes("fs", "font-style", $font-style-values);
+
+$font-weight-values: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@include apply-utility-classes("fw", "font-weight", $font-weight-values, true);
+
+$font-size-values: 2.5 2 1.75 1.5 1.25 1;
+@include apply-utility-classes("fs", "font-size", $font-size-values, true, rem);
