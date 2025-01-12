@@ -27,16 +27,21 @@
   "scripts": {
     "prepare": "husky install",
     "build": "ts-node scripts/build.ts",
+    "build:silent": "ts-node scripts/build.ts --silent",
     "watch": "ts-node scripts/build.ts --watch",
+    "watch:silent": "ts-node scripts/build.ts --watch --silent",
+    "serve-client": "pnpm run build && ts-node scripts/static-server.ts --port 3000",
     "release": "release-it",
     "release:minor": "release-it minor",
     "release:patch": "release-it patch",
     "release:major": "release-it major"
   },
   "devDependencies": {
-    "@types/node": "^22.10.5",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "express": "^4.21.2",
     "husky": "^8.0.0",
     "release-it": "^18.1.1",
     "sass": "^1.83.1",

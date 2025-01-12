@@ -2,7 +2,7 @@
 
 /*
  * Text utilities
-*/
+ */
 
 $text-align-values: left, right, center, justify;
 @include apply-utility-classes("text", "text-align", $text-align-values);
@@ -47,7 +47,7 @@ $text-word-wrap-values: normal, break-word;
 
 /*
  * Font utilities
-*/
+ */
 
 $font-style-values: normal, italic, oblique;
 @include apply-utility-classes("fs", "font-style", $font-style-values);

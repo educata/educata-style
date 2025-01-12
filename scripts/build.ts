@@ -3,6 +3,7 @@ import { existsSync, mkdirSync, copyFileSync } from "fs";
 import { resolve } from "path";
 
 const isWatchMode = process.argv.includes("--watch");
+const isSilentMode = process.argv.includes("--silent");
 
 const srcDir = resolve(__dirname, "../scss");
 const distDir = resolve(__dirname, "../dist");
@@ -18,31 +19,31 @@ if (!existsSync(distDir)) {
 }
 
 try {
-  console.log("🔨 Compiling SCSS...");
+  log("🔨 Compiling SCSS...");
 
   execSync(`sass ${entryFile}:${outputFile} --style=expanded`, {
     stdio: "inherit",
   });
 
-  console.log("✅ Regular CSS compiled successfully!");
+  log("✅ Regular CSS compiled successfully!");
 
   execSync(`sass ${entryFile}:${minifiedOutputFile} --style=compressed`, {
     stdio: "inherit",
   });
 
-  console.log("✅ Minified CSS compiled successfully!");
+  log("✅ Minified CSS compiled successfully!");
 
-  console.log("📦 Copying CSS to site folder...");
+  log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);
   copyFileSync(minifiedOutputFile, siteMinifiedOutputFile);
-  console.log("✅ CSS copied to site folder successfully!");
+  log("✅ CSS copied to site folder successfully!");
 } catch (error) {
-  console.error("❌ An error occurred while compiling SCSS:", error);
+  log(`❌ An error occurred while compiling SCSS: ${error}`, true, true);
   process.exit(1);
 }
 
 if (isWatchMode) {
-  console.log("👀 Watching for changes...");
+  log("👀 Watching for changes...");
 
   execSync(`sass --watch ${entryFile}:${outputFile} --style=expanded`, {
     stdio: "inherit",
@@ -52,10 +53,22 @@ if (isWatchMode) {
     stdio: "inherit",
   });
 
-  console.log("📦 Copying CSS to site folder...");
+  log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);
   copyFileSync(minifiedOutputFile, siteMinifiedOutputFile);
-  console.log("✅ CSS copied to site folder successfully!");
+  log("✅ CSS copied to site folder successfully!");
 } else {
-  console.log("✅ Build process completed successfully!");
+  log("✅ Build process completed successfully!", true);
+}
+
+function log(message: string, bypass = false, isError = false) {
+  if (isSilentMode && !bypass) {
+    return;
+  }
+  const date = new Date();
+  if (isError) {
+    console.error(`[${date.toLocaleString()}]: ${message}`);
+  } else {
+    console.log(`[${date.toLocaleString()}]: ${message}`);
+  }
 }
