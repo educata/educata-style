@@ -1,5 +1,9 @@
 @use "../functions/apply-utility" as *;
 
+/*
+ * Sizing utilities
+ */
+
 $sizing-values: 0, 25, 50, 75, 100, auto;
 
 @include apply-utility-classes("w", "width", $sizing-values, false, "%");

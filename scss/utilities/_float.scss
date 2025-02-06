@@ -1,4 +1,8 @@
 @use "../functions/apply-utility" as *;
 
+/*
+ * Float utilities
+ */
+
 $float-values: left, right, none;
 @include apply-utility-classes("float", "float", $float-values);
