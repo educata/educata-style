@@ -93,6 +93,9 @@ h6 {
   font-size: 1.25rem;
 }
 
+/*
+ * Display utilities
+ */
 .d-block {
   display: block;
 }
@@ -137,6 +140,9 @@ h6 {
   display: table-cell;
 }
 
+/*
+ * Float utilities
+ */
 .float-left {
   float: left;
 }
@@ -149,6 +155,9 @@ h6 {
   float: none;
 }
 
+/*
+ * Opacity utilities
+ */
 .opacity-0 {
   opacity: 0%;
 }
@@ -169,6 +178,9 @@ h6 {
   opacity: 100%;
 }
 
+/*
+ * Position utilities
+ */
 .position-static {
   position: static;
 }
@@ -387,6 +399,9 @@ h6 {
   font-size: 1rem;
 }
 
+/*
+ * Sizing utilities
+ */
 .w-0 {
   width: 0%;
 }
@@ -675,6 +690,9 @@ h6 {
   max-height: auto;
 }
 
+/*
+ * Spacing utilities
+ */
 .m-0 {
   margin: 0rem;
 }
@@ -1039,6 +1057,9 @@ h6 {
   column-gap: auto;
 }
 
+/*
+ * Flex utilities
+ */
 .flex-wrap-nowrap {
   flex-wrap: nowrap;
 }
