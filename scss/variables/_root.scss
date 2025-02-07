@@ -1,0 +1,7 @@
+@use "./global" as *;
+
+:root {
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    --#{$prefix}breakpoint-#{$breakpoint}: #{$container-max-width};
+  }
+}
