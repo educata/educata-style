@@ -1,9 +1,5 @@
 @use "../functions/apply-utility" as *;
 
-/*
- * Spacing utilities
- */
-
 $spacing-values: 0, 0.25, 0.5, 1, 1.5, 3, auto;
 
 @include apply-utility-classes("m", "margin", $spacing-values, true, rem);

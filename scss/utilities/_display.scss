@@ -1,9 +1,5 @@
 @use "../functions/apply-utility" as *;
 
-/*
- * Display utilities
- */
-
 $display-values: block, inline, inline-block, none, flex, inline-flex, grid, inline-grid,
   table, table-row, table-cell;
 

@@ -1,19 +1,11 @@
-@import "../global/_global.scss";
+@use "sass:map";
+@use "../variables/global" as *;
 
-/*
- * Breakpoint utilities
- *
- * Breakpoints are defined in the global file as map from minimum to maximum
- * {
- *  xs: 0,
- *  sm: 576px,
- *  md: 768px,
- *  lg: 992px,
- *  xl: 1200px,
- *  xxl: 1400px,
- * }
- * Copyright (c) 2025, Bootstrap
- */
+// Breakpoint utilities
+// Breakpoints are defined in the global file as map from minimum to maximum
+// xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px
+// Copyright (c) 2025, Bootstrap
+//
 
 // Name of the next breakpoint, or null for the last breakpoint.
 @function breakpoint-next(
@@ -30,13 +22,13 @@
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 @function breakpoint-min($name, $breakpoints: $breakpoints) {
-  $min: map-get($breakpoints, $name);
+  $min: map.get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
 // Maximum breakpoint width. Null for the largest (last) breakpoint.
 @function breakpoint-max($name, $breakpoints: $breakpoints) {
-  $max: map-get($breakpoints, $name);
+  $max: map.get($breakpoints, $name);
   @return if($max and $max > 0, $max - 0.02, null);
 }
 

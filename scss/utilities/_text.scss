@@ -1,9 +1,5 @@
 @use "../functions/apply-utility" as *;
 
-/*
- * Text utilities
- */
-
 $text-align-values: left, right, center, justify;
 @include apply-utility-classes("text", "text-align", $text-align-values);
 

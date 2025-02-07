@@ -1,6 +1,7 @@
 {
   "name": "educata-styles",
   "version": "1.0.0",
+  "author": "The Educata authors",
   "description": "Educata style library",
   "keywords": [
     "educata",

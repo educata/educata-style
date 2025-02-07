@@ -1,9 +1,5 @@
 @use "../functions/apply-utility" as *;
 
-/*
- * Flex utilities
- */
-
 $wrap-values: nowrap, wrap, wrap-reverse;
 @include apply-utility-classes("flex-wrap", "flex-wrap", $wrap-values);
 

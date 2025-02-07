@@ -2,6 +2,9 @@ import { execSync } from "child_process";
 import { existsSync, mkdirSync, copyFileSync } from "fs";
 import { resolve } from "path";
 
+import { log } from "./log";
+import { prependTextToFile, LICENSE_BANNER_TEXT } from "./banner";
+
 const isWatchMode = process.argv.includes("--watch");
 const isSilentMode = process.argv.includes("--silent");
 
@@ -36,9 +39,11 @@ try {
   log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);
   copyFileSync(minifiedOutputFile, siteMinifiedOutputFile);
+  prependTextToFile(siteOutputFile, LICENSE_BANNER_TEXT);
+  prependTextToFile(siteMinifiedOutputFile, LICENSE_BANNER_TEXT);
   log("✅ CSS copied to site folder successfully!");
 } catch (error) {
-  log(`❌ An error occurred while compiling SCSS: ${error}`, true, true);
+  log(`❌ An error occurred while compiling SCSS: ${error}`, isSilentMode, true, true);
   process.exit(1);
 }
 
@@ -56,19 +61,9 @@ if (isWatchMode) {
   log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);
   copyFileSync(minifiedOutputFile, siteMinifiedOutputFile);
+  prependTextToFile(siteOutputFile, LICENSE_BANNER_TEXT);
+  prependTextToFile(siteMinifiedOutputFile, LICENSE_BANNER_TEXT);
   log("✅ CSS copied to site folder successfully!");
 } else {
-  log("✅ Build process completed successfully!", true);
-}
-
-function log(message: string, bypass = false, isError = false) {
-  if (isSilentMode && !bypass) {
-    return;
-  }
-  const date = new Date();
-  if (isError) {
-    console.error(`[${date.toLocaleString()}]: ${message}`);
-  } else {
-    console.log(`[${date.toLocaleString()}]: ${message}`);
-  }
+  log("✅ Build process completed successfully!", isSilentMode, true);
 }
