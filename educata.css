@@ -1,3 +1,8 @@
+/*
+ * Educata-style v1.0.0 (https://educata.github.io/educata-style/)
+ * Copyright 2025 The Educata authors
+ * Licensed under MIT (https://github.com/educata/educata-style/blob/main/LICENSE)
+ */
 *,
 *::before,
 *::after {
@@ -93,9 +98,6 @@ h6 {
   font-size: 1.25rem;
 }
 
-/*
- * Display utilities
- */
 .d-block {
   display: block;
 }
@@ -140,9 +142,6 @@ h6 {
   display: table-cell;
 }
 
-/*
- * Float utilities
- */
 .float-left {
   float: left;
 }
@@ -155,9 +154,6 @@ h6 {
   float: none;
 }
 
-/*
- * Opacity utilities
- */
 .opacity-0 {
   opacity: 0%;
 }
@@ -178,9 +174,6 @@ h6 {
   opacity: 100%;
 }
 
-/*
- * Position utilities
- */
 .position-static {
   position: static;
 }
@@ -201,9 +194,6 @@ h6 {
   position: sticky;
 }
 
-/*
- * Text utilities
- */
 .text-left {
   text-align: left;
 }
@@ -399,9 +389,6 @@ h6 {
   font-size: 1rem;
 }
 
-/*
- * Sizing utilities
- */
 .w-0 {
   width: 0%;
 }
@@ -690,9 +677,6 @@ h6 {
   max-height: auto;
 }
 
-/*
- * Spacing utilities
- */
 .m-0 {
   margin: 0rem;
 }
@@ -1057,9 +1041,6 @@ h6 {
   column-gap: auto;
 }
 
-/*
- * Flex utilities
- */
 .flex-wrap-nowrap {
   flex-wrap: nowrap;
 }
@@ -1218,6 +1199,48 @@ h6 {
 
 .flex-shrink-1 {
   flex-shrink: 1;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --ec-gutter-x: 1.5rem;
+  --ec-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--ec-gutter-x) * 0.5);
+  padding-left: calc(var(--ec-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
 }
 
 /*# sourceMappingURL=educata.css.map */
