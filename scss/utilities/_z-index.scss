@@ -1,0 +1,7 @@
+@use "../functions/apply-utility" as *;
+
+$z-index-values: 0, 1, 2, 3, 4, 5;
+$z-index-minus-values: -1, -2;
+
+@include apply-utility-classes("z", "z-index", $z-index-values, false);
+@include apply-utility-classes("zn", "z-index", $z-index-minus-values, true);
