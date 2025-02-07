@@ -1,0 +1,18 @@
+@use "sass:list";
+@use "sass:meta";
+
+@use "../variables/global" as *;
+
+@mixin apply-variables($prefixVar, $classname, $property, $values) {
+  @each $index, $value in $values {
+    .#{$classname}-#{$index} {
+      @if meta.type-of($property) == "list" {
+        @each $prop in $property {
+          --#{$prefix}#{$prefixVar}-#{$prop}: #{$value};
+        }
+      } @else {
+        --#{$prefix}#{$prefixVar}-#{$property}: #{$value};
+      }
+    }
+  }
+}
