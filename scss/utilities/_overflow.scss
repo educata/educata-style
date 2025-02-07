@@ -1,0 +1,7 @@
+@use "../functions/apply-utility" as *;
+
+$overflow-values: auto, hidden, visible, scroll;
+
+@include apply-utility-classes("overflow", "overflow", $overflow-values, false);
+@include apply-utility-classes("overflow-x", "overflow-x", $overflow-values, false);
+@include apply-utility-classes("overflow-y", "overflow-y", $overflow-values, false);
