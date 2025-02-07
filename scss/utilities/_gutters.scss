@@ -1,0 +1,8 @@
+@use "../variables/global" as *;
+@use "../functions/apply-variables" as *;
+
+$gutter-properties: "x", "y";
+
+@include apply-variables("gutter", "g", $gutter-properties, $spacers);
+@include apply-variables("gutter", "gx", "x", $spacers);
+@include apply-variables("gutter", "gy", "y", $spacers);
