@@ -1132,6 +1132,84 @@ h6 {
   z-index: -2;
 }
 
+.g-0 {
+  --ec-gutter-x: 0;
+  --ec-gutter-y: 0;
+}
+
+.g-1 {
+  --ec-gutter-x: 0.25rem;
+  --ec-gutter-y: 0.25rem;
+}
+
+.g-2 {
+  --ec-gutter-x: 0.5rem;
+  --ec-gutter-y: 0.5rem;
+}
+
+.g-3 {
+  --ec-gutter-x: 1rem;
+  --ec-gutter-y: 1rem;
+}
+
+.g-4 {
+  --ec-gutter-x: 1.5rem;
+  --ec-gutter-y: 1.5rem;
+}
+
+.g-5 {
+  --ec-gutter-x: 3rem;
+  --ec-gutter-y: 3rem;
+}
+
+.gx-0 {
+  --ec-gutter-x: 0;
+}
+
+.gx-1 {
+  --ec-gutter-x: 0.25rem;
+}
+
+.gx-2 {
+  --ec-gutter-x: 0.5rem;
+}
+
+.gx-3 {
+  --ec-gutter-x: 1rem;
+}
+
+.gx-4 {
+  --ec-gutter-x: 1.5rem;
+}
+
+.gx-5 {
+  --ec-gutter-x: 3rem;
+}
+
+.gy-0 {
+  --ec-gutter-y: 0;
+}
+
+.gy-1 {
+  --ec-gutter-y: 0.25rem;
+}
+
+.gy-2 {
+  --ec-gutter-y: 0.5rem;
+}
+
+.gy-3 {
+  --ec-gutter-y: 1rem;
+}
+
+.gy-4 {
+  --ec-gutter-y: 1.5rem;
+}
+
+.gy-5 {
+  --ec-gutter-y: 3rem;
+}
+
 .flex-wrap-nowrap {
   flex-wrap: nowrap;
 }
