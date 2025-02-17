@@ -1,0 +1,11 @@
+.row {
+  height: 200px;
+}
+
+.row div:first-child {
+  background-color: green;
+}
+
+.row div:last-child {
+  background-color: red;
+}
