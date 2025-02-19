@@ -34,3 +34,32 @@ $grid-row-columns: 6 !default;
 $grid-gutter-width: 1.5rem !default;
 
 $gutters: $spacers !default;
+
+// TODO: update colors
+
+$colors: (
+  primary: red,
+  secondary: green,
+  success: blue,
+  danger: yellow,
+  warning: orange,
+  info: purple,
+  light: gray,
+  dark: black,
+) !default;
+
+// TODO: update color
+
+$border-vars: (
+  width: 1px,
+  style: solid,
+  color: #000,
+) !default;
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
