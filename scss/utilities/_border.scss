@@ -1,0 +1,23 @@
+@use "./breakpoints" as *;
+@use "../variables/global" as *;
+@use "../functions/apply-variables" as *;
+
+$border-properties: "border", "border-top", "border-right", "border-bottom", "border-left";
+
+@each $property in $border-properties {
+  .#{$property} {
+    #{$property}: var(--#{$prefix}border-width)
+      var(--#{$prefix}border-style)
+      var(--#{$prefix}border-color);
+  }
+
+  .#{$property}-0 {
+    #{$property}: 0;
+  }
+}
+
+@each $property, $value in $border-widths {
+  .border-#{$property} {
+    border-width: #{$value};
+  }
+}

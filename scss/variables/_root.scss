@@ -1,6 +1,14 @@
 @use "./global" as *;
 
 :root {
+  @each $color, $value in $colors {
+    --#{$prefix}color-#{$color}: #{$value};
+  }
+
+  @each $property, $value in $border-vars {
+    --#{$prefix}border-#{$property}: #{$value};
+  }
+
   @each $breakpoint, $container-max-width in $container-max-widths {
     --#{$prefix}breakpoint-#{$breakpoint}: #{$container-max-width};
   }
