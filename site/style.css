@@ -1,11 +1,5 @@
-.row {
-  height: 200px;
-}
-
-.row div:first-child {
-  background-color: green;
-}
-
-.row div:last-child {
-  background-color: red;
+.row div {
+  padding: 0.75rem;
+  border: 1px solid black;
+  background-color: #bbf0dc9b;
 }
