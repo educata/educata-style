@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "../functions/generate-color-scale" as *;
+
 $prefix: "ec-";
 
 $container-padding-x: 1.5rem !default;
@@ -35,25 +38,20 @@ $grid-gutter-width: 1.5rem !default;
 
 $gutters: $spacers !default;
 
-// TODO: update colors
-
-$colors: (
-  primary: red,
-  secondary: green,
-  success: blue,
-  danger: yellow,
-  warning: orange,
-  info: purple,
-  light: gray,
-  dark: black,
+$base-colors: (
+  white: #ffffff,
+  black: #171719,
+  blue: #6666ff,
+  red: #cc1f4f,
+  green: #51d253,
+  purple: #c05be0,
+  yellow: #e6fd53,
 ) !default;
-
-// TODO: update color
 
 $border-vars: (
   width: 1px,
   style: solid,
-  color: #000,
+  color: generate-color-scale(map.get($base-colors, black), 100),
 ) !default;
 
 $border-widths: (

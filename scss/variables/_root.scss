@@ -1,8 +1,16 @@
 @use "./global" as *;
 
+@use "../functions/generate-color-scale" as *;
+
 :root {
-  @each $color, $value in $colors {
-    --#{$prefix}color-#{$color}: #{$value};
+  @each $color, $value in $base-colors {
+    @for $i from 10 through 1 {
+      $shade-number: $i * 10;
+      --#{$prefix}color-#{"" + $color}-#{$shade-number}: #{generate-color-scale(
+          $value,
+          $shade-number
+        )};
+    }
   }
 
   @each $property, $value in $border-vars {
