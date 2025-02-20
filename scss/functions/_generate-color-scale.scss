@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "sass:math";
+
+@function generate-color-scale($base-color, $shade: 100) {
+  $mixed-color: color.mix($base-color, white, math.percentage(math.div($shade, 100)));
+
+  $r: color.channel($mixed-color, "red", $space: rgb);
+  $g: color.channel($mixed-color, "green", $space: rgb);
+  $b: color.channel($mixed-color, "blue", $space: rgb);
+
+  @return rgb($r, $g, $b);
+}
