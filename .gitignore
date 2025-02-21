@@ -1,5 +1,7 @@
 /node_modules
 /dist
+/stories/educata.min.css
+
 *storybook.log
 
 /site/*

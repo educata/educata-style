@@ -36,7 +36,7 @@
     "release:minor": "release-it minor",
     "release:patch": "release-it patch",
     "release:major": "release-it major",
-    "docs:run": "storybook dev -p 2222",
+    "docs:run": "pnpm run build && storybook dev -p 2222",
     "docs:build": "storybook build -o site/storybook && pnpm run build && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
   },
   "devDependencies": {
@@ -44,18 +44,16 @@
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
     "@storybook/addon-essentials": "8.5.8",
-    "@storybook/addon-interactions": "8.5.8",
     "@storybook/blocks": "8.5.8",
     "@storybook/html": "8.5.8",
     "@storybook/html-vite": "8.5.8",
-    "@storybook/test": "8.5.8",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
-    "storybook": "8.5.8",
     "express": "^4.21.2",
     "husky": "^8.0.0",
     "release-it": "^18.1.1",
     "sass": "^1.83.1",
+    "storybook": "8.5.8",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3"

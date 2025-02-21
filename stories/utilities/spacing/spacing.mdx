@@ -1,0 +1,99 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CenteredDivStories from './centered-div.stories.ts';
+import * as GapStories from './gap.stories.ts';
+import * as RowGapStories from './row-gap.stories.ts';
+import * as ColumnGapStories from './column-gap.stories.ts';
+
+# Spacing
+
+Educata-Style provides a set of spacing utilities that can be used to add margin and padding to elements.
+There are many shorthand utilities for quickly adding margin, padding or gap to an element.
+
+## Margin and Spacing
+
+Apply responsive-friendly `margin` or `padding` to an element or specific sides using shorthand classes.
+These classes offer flexibility for individual, global, as well as vertical and horizontal spacing adjustments.
+Built using a default Sass map, they provide spacing options from `.25rem` to `3rem`.
+
+<div className="alert">
+  Using the CSS Grid layout module? Consider using the [gap utilities](#gap) for grid gap spacing.
+</div>
+
+### Usage
+
+Spacing can be used inside any breakpoint.
+
+The class names are based on the following pattern:
+
+```css
+.{property}{sides}-{size}
+```
+
+Where `{property}` is one of:
+
+- `m` - for classes that set `margin`
+- `p` - for classes that set `padding`
+
+Where `{sides}` is one of:
+
+- `t` - for classes that set `margin-top` or `padding-top`
+- `b` - for classes that set `margin-bottom` or `padding-bottom`
+- `e` - for classes that set both `*-left` and `*-right`
+- blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+- auto - for classes that set `margin` to `auto`
+
+Where `{size}` is one of:
+
+- `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
+- `1` - for classes that set the `margin` or `padding` to `.25rem`
+- `2` - for classes that set the `margin` or `padding` to `.5rem`
+- `3` - for classes that set the `margin` or `padding` to `1rem`
+- `4` - for classes that set the `margin` or `padding` to `1.5rem`
+- `5` - for classes that set the `margin` or `padding` to `3rem`
+
+### Examples
+
+```css
+.mt-0 {
+  margin-top: 0;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.pe-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+```
+
+### Horizontal centering
+
+You can use the `.m-auto` class to center an element horizontally.
+
+<Canvas of={CenteredDivStories.CenteredDiv} />
+
+## Gap
+
+When using `display: flex` or `display: grid`, you can use the `gap` utilities to add spacing between elements.
+This utility is available for both `row` and `column` directions. Gap utilities are responsive.
+
+<Canvas of={GapStories.Gap} />
+
+### row-gap
+
+`row-gap` sets the gap between rows in a container.
+
+<Canvas of={RowGapStories.RowGap} />
+
+### column-gap
+
+`column-gap` sets the gap between columns in a container.
+
+<Canvas of={ColumnGapStories.ColumnGap} />

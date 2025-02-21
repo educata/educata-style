@@ -1,0 +1,38 @@
+:root {
+  --ec-story-bg: color-mix(in srgb, var(--ec-color-green-100) 15%, transparent);
+  --ec-story-border: color-mix(in srgb, var(--ec-color-green-100) 50%, transparent);
+  --ec-alert-bg: color-mix(in srgb, var(--ec-color-blue-100) 15%, transparent);
+  --ec-alert-border: color-mix(in srgb, var(--ec-color-blue-100) 50%, transparent);
+  --ec-alert-padding: 1rem;
+  --ec-alert-margin: 1rem;
+}
+
+.box {
+  min-width: fit-content;
+  border: 1px solid var(--ec-story-border, --ec-color-green-100);
+  background-color: var(--ec-story-bg, --ec-color-green-100);
+  font-family: system-ui;
+}
+
+.alert {
+  width: 100%;
+  border: var(--ec-alert-border, 1px solid var(--ec-color-blue-100));
+  background-color: var(--ec-alert-bg, var(--ec-color-blue-100));
+  margin: var(--ec-alert-margin) 0 !important;
+  padding: var(--ec-alert-padding) !important;
+  position: relative;
+}
+
+.alert::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--ec-alert-border);
+}
+
+.alert > * {
+  margin: 0 !important;
+}
