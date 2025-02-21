@@ -26,6 +26,12 @@ devDependencies:
   '@storybook/html-vite':
     specifier: 8.5.8
     version: 8.5.8(storybook@8.5.8)(vite@6.1.1)
+  '@storybook/manager-api':
+    specifier: ^8.5.8
+    version: 8.5.8(storybook@8.5.8)
+  '@storybook/theming':
+    specifier: ^8.5.8
+    version: 8.5.8(storybook@8.5.8)
   '@types/express':
     specifier: ^5.0.0
     version: 5.0.0
