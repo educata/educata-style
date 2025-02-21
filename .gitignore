@@ -1,4 +1,9 @@
 /node_modules
 /dist
-/site/educata.css
-/site/educata.min.css
+/stories/educata.min.css
+
+*storybook.log
+
+/site/*
+
+!/site/README.md

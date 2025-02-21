@@ -16,6 +16,7 @@ const minifiedOutputFile = resolve(distDir, "educata.min.css");
 const siteDir = resolve(__dirname, "../site");
 const siteOutputFile = resolve(siteDir, "educata.css");
 const siteMinifiedOutputFile = resolve(siteDir, "educata.min.css");
+const storybookOutputFile = resolve(__dirname, "../stories/educata.min.css");
 
 if (!existsSync(distDir)) {
   mkdirSync(distDir);
@@ -24,13 +25,13 @@ if (!existsSync(distDir)) {
 try {
   log("🔨 Compiling SCSS...");
 
-  execSync(`sass ${entryFile}:${outputFile} --style=expanded`, {
+  execSync(`sass ${entryFile}:${outputFile} --no-source-map --style=expanded`, {
     stdio: "inherit",
   });
 
   log("✅ Regular CSS compiled successfully!");
 
-  execSync(`sass ${entryFile}:${minifiedOutputFile} --style=compressed`, {
+  execSync(`sass ${entryFile}:${minifiedOutputFile} --no-source-map --style=compressed`, {
     stdio: "inherit",
   });
 
@@ -39,6 +40,7 @@ try {
   log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);
   copyFileSync(minifiedOutputFile, siteMinifiedOutputFile);
+  copyFileSync(outputFile, storybookOutputFile);
   prependTextToFile(siteOutputFile, LICENSE_BANNER_TEXT);
   prependTextToFile(siteMinifiedOutputFile, LICENSE_BANNER_TEXT);
   log("✅ CSS copied to site folder successfully!");
@@ -50,13 +52,16 @@ try {
 if (isWatchMode) {
   log("👀 Watching for changes...");
 
-  execSync(`sass --watch ${entryFile}:${outputFile} --style=expanded`, {
+  execSync(`sass --watch ${entryFile}:${outputFile} --no-source-map --style=expanded`, {
     stdio: "inherit",
   });
 
-  execSync(`sass --watch ${entryFile}:${minifiedOutputFile} --style=compressed`, {
-    stdio: "inherit",
-  });
+  execSync(
+    `sass --watch ${entryFile}:${minifiedOutputFile}  --no-source-map --style=compressed`,
+    {
+      stdio: "inherit",
+    }
+  );
 
   log("📦 Copying CSS to site folder...");
   copyFileSync(outputFile, siteOutputFile);

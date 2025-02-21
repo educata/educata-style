@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/educata/everrest/issues"
+    "url": "https://github.com/educata/educata-style/issues"
   },
   "contributors": [
     {
@@ -31,21 +31,31 @@
     "build:silent": "ts-node scripts/build.ts --silent",
     "watch": "ts-node scripts/build.ts --watch",
     "watch:silent": "ts-node scripts/build.ts --watch --silent",
-    "serve-client": "pnpm run build && ts-node scripts/static-server.ts --port 3000",
+    "serve-client": "pnpm run docs:build && ts-node scripts/static-server.ts --port 3000",
     "release": "release-it",
     "release:minor": "release-it minor",
     "release:patch": "release-it patch",
-    "release:major": "release-it major"
+    "release:major": "release-it major",
+    "docs:run": "pnpm run build && storybook dev -p 2222",
+    "docs:build": "storybook build -o site/storybook && pnpm run build && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "3.2.4",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
+    "@storybook/addon-essentials": "8.5.8",
+    "@storybook/blocks": "8.5.8",
+    "@storybook/html": "8.5.8",
+    "@storybook/html-vite": "8.5.8",
+    "@storybook/manager-api": "^8.5.8",
+    "@storybook/theming": "^8.5.8",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
     "express": "^4.21.2",
     "husky": "^8.0.0",
     "release-it": "^18.1.1",
     "sass": "^1.83.1",
+    "storybook": "8.5.8",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3"
