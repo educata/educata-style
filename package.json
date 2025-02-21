@@ -31,13 +31,13 @@
     "build:silent": "ts-node scripts/build.ts --silent",
     "watch": "ts-node scripts/build.ts --watch",
     "watch:silent": "ts-node scripts/build.ts --watch --silent",
-    "serve-client": "pnpm run build && ts-node scripts/static-server.ts --port 3000",
+    "serve-client": "pnpm run docs:build && ts-node scripts/static-server.ts --port 3000",
     "release": "release-it",
     "release:minor": "release-it minor",
     "release:patch": "release-it patch",
     "release:major": "release-it major",
     "docs:run": "storybook dev -p 2222",
-    "docs:build": "storybook build -o site/storybook && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
+    "docs:build": "storybook build -o site/storybook && pnpm run build && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.4",
