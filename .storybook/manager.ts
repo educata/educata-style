@@ -6,7 +6,7 @@ addons.setConfig({
     base: "light",
     brandTitle: "Educata Styles Documentation",
     brandUrl: "https://educata.dev",
-    brandImage: "/brand.png",
+    brandImage: "/educata-style/brand.png",
     brandTarget: "_self",
   }),
 });
