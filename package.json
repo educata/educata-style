@@ -37,7 +37,7 @@
     "release:patch": "release-it patch",
     "release:major": "release-it major",
     "docs:run": "pnpm run build && storybook dev -p 2222",
-    "docs:build": "storybook build -o site/storybook && pnpm run build && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
+    "docs:build": "pnpm run build && storybook build -o site/storybook && ts-node scripts/relocate-folder.ts --source site/storybook --destination site"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.4",
