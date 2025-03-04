@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/educata/educata-style/blob/main/LICENSE)
  */
 :root {
+  --ec-color-white: rgb(255, 255, 255);
+  --ec-color-white-rgb: 255, 255, 255;
   --ec-color-white-100: rgb(255, 255, 255);
   --ec-color-white-90: rgb(255, 255, 255);
   --ec-color-white-80: rgb(255, 255, 255);
@@ -14,6 +16,8 @@
   --ec-color-white-30: rgb(255, 255, 255);
   --ec-color-white-20: rgb(255, 255, 255);
   --ec-color-white-10: rgb(255, 255, 255);
+  --ec-color-black: rgb(23, 23, 25);
+  --ec-color-black-rgb: 23, 23, 25;
   --ec-color-black-100: rgb(23, 23, 25);
   --ec-color-black-90: rgb(46.2, 46.2, 48);
   --ec-color-black-80: rgb(69.4, 69.4, 71);
@@ -24,6 +28,8 @@
   --ec-color-black-30: rgb(185.4, 185.4, 186);
   --ec-color-black-20: rgb(208.6, 208.6, 209);
   --ec-color-black-10: rgb(231.8, 231.8, 232);
+  --ec-color-blue: rgb(102, 102, 255);
+  --ec-color-blue-rgb: 102, 102, 255;
   --ec-color-blue-100: rgb(102, 102, 255);
   --ec-color-blue-90: rgb(117.3, 117.3, 255);
   --ec-color-blue-80: rgb(132.6, 132.6, 255);
@@ -34,6 +40,8 @@
   --ec-color-blue-30: rgb(209.1, 209.1, 255);
   --ec-color-blue-20: rgb(224.4, 224.4, 255);
   --ec-color-blue-10: rgb(239.7, 239.7, 255);
+  --ec-color-red: rgb(204, 31, 79);
+  --ec-color-red-rgb: 204, 31, 79;
   --ec-color-red-100: rgb(204, 31, 79);
   --ec-color-red-90: rgb(209.1, 53.4, 96.6);
   --ec-color-red-80: rgb(214.2, 75.8, 114.2);
@@ -44,6 +52,8 @@
   --ec-color-red-30: rgb(239.7, 187.8, 202.2);
   --ec-color-red-20: rgb(244.8, 210.2, 219.8);
   --ec-color-red-10: rgb(249.9, 232.6, 237.4);
+  --ec-color-green: rgb(81, 210, 83);
+  --ec-color-green-rgb: 81, 210, 83;
   --ec-color-green-100: rgb(81, 210, 83);
   --ec-color-green-90: rgb(98.4, 214.5, 100.2);
   --ec-color-green-80: rgb(115.8, 219, 117.4);
@@ -54,6 +64,8 @@
   --ec-color-green-30: rgb(202.8, 241.5, 203.4);
   --ec-color-green-20: rgb(220.2, 246, 220.6);
   --ec-color-green-10: rgb(237.6, 250.5, 237.8);
+  --ec-color-purple: rgb(192, 91, 224);
+  --ec-color-purple-rgb: 192, 91, 224;
   --ec-color-purple-100: rgb(192, 91, 224);
   --ec-color-purple-90: rgb(198.3, 107.4, 227.1);
   --ec-color-purple-80: rgb(204.6, 123.8, 230.2);
@@ -64,6 +76,8 @@
   --ec-color-purple-30: rgb(236.1, 205.8, 245.7);
   --ec-color-purple-20: rgb(242.4, 222.2, 248.8);
   --ec-color-purple-10: rgb(248.7, 238.6, 251.9);
+  --ec-color-yellow: rgb(230, 253, 83);
+  --ec-color-yellow-rgb: 230, 253, 83;
   --ec-color-yellow-100: rgb(230, 253, 83);
   --ec-color-yellow-90: rgb(232.5, 253.2, 100.2);
   --ec-color-yellow-80: rgb(235, 253.4, 117.4);
