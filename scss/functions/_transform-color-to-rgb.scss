@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "sass:math";
+
+@function transform-color-to-rgb($base-color) {
+  $r: color.channel($base-color, "red", $space: rgb);
+  $g: color.channel($base-color, "green", $space: rgb);
+  $b: color.channel($base-color, "blue", $space: rgb);
+
+  @return ($r, $g, $b);
+}

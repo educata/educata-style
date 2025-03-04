@@ -6,6 +6,11 @@ import "../stories/stories.css";
 const preview: Preview = {
   parameters: {
     layout: "centered",
+    options: {
+      storySort: {
+        order: ["*", ["Introduction", "introduction", "*"]],
+      },
+    },
   },
 };
 

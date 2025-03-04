@@ -1,9 +1,12 @@
 @use "./global" as *;
 
 @use "../functions/generate-color-scale" as *;
+@use "../functions/transform-color-to-rgb" as *;
 
 :root {
   @each $color, $value in $base-colors {
+    --#{$prefix}color-#{"" + $color}: #{generate-color-scale($value, 100)};
+    --#{$prefix}color-#{"" + $color}-rgb: #{transform-color-to-rgb($value)};
     @for $i from 10 through 1 {
       $shade-number: $i * 10;
       --#{$prefix}color-#{"" + $color}-#{$shade-number}: #{generate-color-scale(
