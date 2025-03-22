@@ -1,0 +1,22 @@
+@use "../variables/global" as *;
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thubnail {
+  max-width: 100%;
+  height: auto;
+  padding: 0.25rem;
+  border-radius: var(--#{$prefix}border-radius);
+  border: var(--#{$prefix}border-width) solid var(--#{$prefix}color-color);
+}
+
+@each $property, $value in $icon-sizes {
+  .icon-#{$property} {
+    width: $value;
+    height: $value;
+    object-fit: contain;
+  }
+}

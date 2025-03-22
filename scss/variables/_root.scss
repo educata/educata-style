@@ -20,6 +20,14 @@
     --#{$prefix}border-#{$property}: #{$value};
   }
 
+  @each $property, $value in $border-radius {
+    --#{$prefix}border-radius-#{$property}: #{$value};
+  }
+
+  @each $property, $value in $icon-sizes {
+    --#{$prefix}icon-#{$property}: #{$value};
+  }
+
   @each $breakpoint, $container-max-width in $container-max-widths {
     --#{$prefix}breakpoint-#{$breakpoint}: #{$container-max-width};
   }

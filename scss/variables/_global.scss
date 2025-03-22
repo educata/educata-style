@@ -52,6 +52,7 @@ $border-vars: (
   width: 1px,
   style: solid,
   color: generate-color-scale(map.get($base-colors, black), 100),
+  radius: 0.375rem,
 ) !default;
 
 $border-widths: (
@@ -61,3 +62,21 @@ $border-widths: (
   4: 4px,
   5: 5px,
 ) !default;
+
+$border-radius: (
+  sm: 0.25rem,
+  lg: 0.5rem,
+  xl: 1rem,
+  xxl: 2rem,
+  pill: 50rem,
+  circle: 50%,
+) !default;
+
+$icon-sizes: (
+  sm: 12px,
+  md: 16px,
+  lg: 20px,
+  xl: 24px,
+  xxl: 32px,
+  xxxl: 40px,
+);
