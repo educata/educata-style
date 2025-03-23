@@ -10,3 +10,7 @@
 
   @return rgb($r, $g, $b);
 }
+
+@function generate-darker-color($base-color, $mix-percent: 90) {
+  @return color.mix($base-color, black, math.percentage(math.div($mix-percent, 100)));
+}
