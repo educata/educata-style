@@ -90,7 +90,7 @@
   --ec-color-yellow-10: rgb(252.5, 254.8, 237.8);
   --ec-border-width: 1px;
   --ec-border-style: solid;
-  --ec-border-color: rgb(23, 23, 25);
+  --ec-border-color: #171719;
   --ec-border-radius: 0.375rem;
   --ec-border-radius-sm: 0.25rem;
   --ec-border-radius-lg: 0.5rem;
@@ -3151,4 +3151,211 @@ h6 {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
+}
+.btn {
+  --ec-btn-weight: 400;
+  --ec-btn-line-height: 1.5;
+  --ec-btn-disabled-opacity: 0.65;
+  --ec-btn-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+  --ec-btn-font-size: 1rem;
+  --ec-btn-padding-x: 0.75rem;
+  --ec-btn-padding-y: 0.375rem;
+  --ec-btn-radius: var(--ec-border-radius);
+  --ec-btn-color: var(--ec-color-black);
+  --ec-btn-bg: transparent;
+  --ec-btn-border: var(--ec-border-width) var(--ec-border-style)
+    var(--ec-border-color);
+  --ec-btn-border-color: var(--ec-btn-bg);
+  display: inline-block;
+  padding: var(--ec-btn-padding-y) var(--ec-btn-padding-x);
+  font-size: var(--ec-btn-font-size);
+  font-weight: var(--ec-btn-weight);
+  line-height: var(--ec-btn-line-height);
+  border: var(--ec-btn-border);
+  border-color: var(--ec-btn-border-color);
+  border-radius: var(--ec-btn-radius);
+  color: var(--ec-btn-color);
+  background-color: var(--ec-btn-bg);
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: var(--ec-btn-disabled-opacity);
+}
+.btn:focus, .btn:hover, .btn:active {
+  outline: none;
+  box-shadow: var(--ec-btn-box-shadow);
+}
+
+.btn-primary,
+.btn-outline-primary {
+  --ec-btn-color: black;
+  --ec-btn-bg: #e6fd53;
+  --ec-btn-border-color: #e6fd53;
+}
+.btn-primary.btn-outline-primary,
+.btn-outline-primary.btn-outline-primary {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #e6fd53;
+}
+.btn-primary.btn-outline-primary:not(:disabled):hover, .btn-primary.btn-outline-primary:not(:disabled):focus, .btn-primary.btn-outline-primary:not(:disabled):active,
+.btn-outline-primary.btn-outline-primary:not(:disabled):hover,
+.btn-outline-primary.btn-outline-primary:not(:disabled):focus,
+.btn-outline-primary.btn-outline-primary:not(:disabled):active {
+  --ec-btn-color: black;
+}
+.btn-primary:not(:disabled):hover, .btn-primary:not(:disabled):focus, .btn-primary:not(:disabled):active,
+.btn-outline-primary:not(:disabled):hover,
+.btn-outline-primary:not(:disabled):focus,
+.btn-outline-primary:not(:disabled):active {
+  --ec-btn-bg: rgb(225.4, 247.94, 81.34);
+  --ec-btn-border-color: rgb(225.4, 247.94, 81.34);
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  --ec-btn-color: white;
+  --ec-btn-bg: #6666ff;
+  --ec-btn-border-color: #6666ff;
+}
+.btn-secondary.btn-outline-secondary,
+.btn-outline-secondary.btn-outline-secondary {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #6666ff;
+}
+.btn-secondary.btn-outline-secondary:not(:disabled):hover, .btn-secondary.btn-outline-secondary:not(:disabled):focus, .btn-secondary.btn-outline-secondary:not(:disabled):active,
+.btn-outline-secondary.btn-outline-secondary:not(:disabled):hover,
+.btn-outline-secondary.btn-outline-secondary:not(:disabled):focus,
+.btn-outline-secondary.btn-outline-secondary:not(:disabled):active {
+  --ec-btn-color: white;
+}
+.btn-secondary:not(:disabled):hover, .btn-secondary:not(:disabled):focus, .btn-secondary:not(:disabled):active,
+.btn-outline-secondary:not(:disabled):hover,
+.btn-outline-secondary:not(:disabled):focus,
+.btn-outline-secondary:not(:disabled):active {
+  --ec-btn-bg: rgb(91.8, 91.8, 229.5);
+  --ec-btn-border-color: rgb(91.8, 91.8, 229.5);
+}
+
+.btn-success,
+.btn-outline-success {
+  --ec-btn-color: white;
+  --ec-btn-bg: #51d253;
+  --ec-btn-border-color: #51d253;
+}
+.btn-success.btn-outline-success,
+.btn-outline-success.btn-outline-success {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #51d253;
+}
+.btn-success.btn-outline-success:not(:disabled):hover, .btn-success.btn-outline-success:not(:disabled):focus, .btn-success.btn-outline-success:not(:disabled):active,
+.btn-outline-success.btn-outline-success:not(:disabled):hover,
+.btn-outline-success.btn-outline-success:not(:disabled):focus,
+.btn-outline-success.btn-outline-success:not(:disabled):active {
+  --ec-btn-color: white;
+}
+.btn-success:not(:disabled):hover, .btn-success:not(:disabled):focus, .btn-success:not(:disabled):active,
+.btn-outline-success:not(:disabled):hover,
+.btn-outline-success:not(:disabled):focus,
+.btn-outline-success:not(:disabled):active {
+  --ec-btn-bg: rgb(72.9, 189, 74.7);
+  --ec-btn-border-color: rgb(72.9, 189, 74.7);
+}
+
+.btn-danger,
+.btn-outline-danger {
+  --ec-btn-color: white;
+  --ec-btn-bg: #cc1f4f;
+  --ec-btn-border-color: #cc1f4f;
+}
+.btn-danger.btn-outline-danger,
+.btn-outline-danger.btn-outline-danger {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #cc1f4f;
+}
+.btn-danger.btn-outline-danger:not(:disabled):hover, .btn-danger.btn-outline-danger:not(:disabled):focus, .btn-danger.btn-outline-danger:not(:disabled):active,
+.btn-outline-danger.btn-outline-danger:not(:disabled):hover,
+.btn-outline-danger.btn-outline-danger:not(:disabled):focus,
+.btn-outline-danger.btn-outline-danger:not(:disabled):active {
+  --ec-btn-color: white;
+}
+.btn-danger:not(:disabled):hover, .btn-danger:not(:disabled):focus, .btn-danger:not(:disabled):active,
+.btn-outline-danger:not(:disabled):hover,
+.btn-outline-danger:not(:disabled):focus,
+.btn-outline-danger:not(:disabled):active {
+  --ec-btn-bg: rgb(183.6, 27.9, 71.1);
+  --ec-btn-border-color: rgb(183.6, 27.9, 71.1);
+}
+
+.btn-white,
+.btn-outline-white {
+  --ec-btn-color: black;
+  --ec-btn-bg: #ffffff;
+  --ec-btn-border-color: #ffffff;
+}
+.btn-white.btn-outline-white,
+.btn-outline-white.btn-outline-white {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #ffffff;
+}
+.btn-white.btn-outline-white:not(:disabled):hover, .btn-white.btn-outline-white:not(:disabled):focus, .btn-white.btn-outline-white:not(:disabled):active,
+.btn-outline-white.btn-outline-white:not(:disabled):hover,
+.btn-outline-white.btn-outline-white:not(:disabled):focus,
+.btn-outline-white.btn-outline-white:not(:disabled):active {
+  --ec-btn-color: black;
+}
+.btn-white:not(:disabled):hover, .btn-white:not(:disabled):focus, .btn-white:not(:disabled):active,
+.btn-outline-white:not(:disabled):hover,
+.btn-outline-white:not(:disabled):focus,
+.btn-outline-white:not(:disabled):active {
+  --ec-btn-bg: rgb(229.5, 229.5, 229.5);
+  --ec-btn-border-color: rgb(229.5, 229.5, 229.5);
+}
+
+.btn-black,
+.btn-outline-black {
+  --ec-btn-color: white;
+  --ec-btn-bg: #171719;
+  --ec-btn-border-color: #171719;
+}
+.btn-black.btn-outline-black,
+.btn-outline-black.btn-outline-black {
+  --ec-btn-bg: transparent;
+  --ec-btn-color: #171719;
+}
+.btn-black.btn-outline-black:not(:disabled):hover, .btn-black.btn-outline-black:not(:disabled):focus, .btn-black.btn-outline-black:not(:disabled):active,
+.btn-outline-black.btn-outline-black:not(:disabled):hover,
+.btn-outline-black.btn-outline-black:not(:disabled):focus,
+.btn-outline-black.btn-outline-black:not(:disabled):active {
+  --ec-btn-color: white;
+}
+.btn-black:not(:disabled):hover, .btn-black:not(:disabled):focus, .btn-black:not(:disabled):active,
+.btn-outline-black:not(:disabled):hover,
+.btn-outline-black:not(:disabled):focus,
+.btn-outline-black:not(:disabled):active {
+  --ec-btn-bg: rgb(46.2, 46.2, 48);
+  --ec-btn-border-color: rgb(46.2, 46.2, 48);
+}
+
+.btn-sm {
+  --ec-btn-font-size: 0.875rem;
+  --ec-btn-padding-x: 0.5rem;
+  --ec-btn-padding-y: 0.25rem;
+}
+
+.btn-md {
+  --ec-btn-font-size: 1rem;
+  --ec-btn-padding-x: 0.75rem;
+  --ec-btn-padding-y: 0.375rem;
+}
+
+.btn-lg {
+  --ec-btn-font-size: 1.25rem;
+  --ec-btn-padding-x: 1rem;
+  --ec-btn-padding-y: 0.5rem;
 }
