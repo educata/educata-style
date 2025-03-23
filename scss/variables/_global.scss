@@ -51,7 +51,7 @@ $base-colors: (
 $border-vars: (
   width: 1px,
   style: solid,
-  color: generate-color-scale(map.get($base-colors, black), 100),
+  color: map.get($base-colors, black),
   radius: 0.375rem,
 ) !default;
 
@@ -79,4 +79,55 @@ $icon-sizes: (
   xl: 24px,
   xxl: 32px,
   xxxl: 40px,
-);
+) !default;
+
+$button-sizes: (
+  sm: (
+    padding-y: 0.25rem,
+    padding-x: 0.5rem,
+    font-size: 0.875rem,
+  ),
+  md: (
+    padding-y: 0.375rem,
+    padding-x: 0.75rem,
+    font-size: 1rem,
+  ),
+  lg: (
+    padding-y: 0.5rem,
+    padding-x: 1rem,
+    font-size: 1.25rem,
+  ),
+) !default;
+
+$button-variations: (
+  primary: (
+    color: black,
+    bg-color: map.get($base-colors, yellow),
+    bg-hover-color: generate-darker-color(map.get($base-colors, yellow), 98),
+  ),
+  secondary: (
+    color: white,
+    bg-color: map.get($base-colors, blue),
+    bg-hover-color: generate-darker-color(map.get($base-colors, blue), 90),
+  ),
+  success: (
+    color: white,
+    bg-color: map.get($base-colors, green),
+    bg-hover-color: generate-darker-color(map.get($base-colors, green), 90),
+  ),
+  danger: (
+    color: white,
+    bg-color: map.get($base-colors, red),
+    bg-hover-color: generate-darker-color(map.get($base-colors, red), 90),
+  ),
+  white: (
+    color: black,
+    bg-color: map.get($base-colors, white),
+    bg-hover-color: generate-darker-color(map.get($base-colors, white), 90),
+  ),
+  black: (
+    color: white,
+    bg-color: map.get($base-colors, black),
+    bg-hover-color: generate-color-scale(map.get($base-colors, black), 90),
+  ),
+) !default;

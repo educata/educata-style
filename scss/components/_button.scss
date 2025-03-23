@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "../variables/global" as *;
+
+.btn {
+  --#{$prefix}btn-weight: 400;
+  --#{$prefix}btn-line-height: 1.5;
+  --#{$prefix}btn-disabled-opacity: 0.65;
+  --#{$prefix}btn-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+  --#{$prefix}btn-font-size: #{map.get(map.get($button-sizes, md), font-size)};
+  --#{$prefix}btn-padding-x: #{map.get(map.get($button-sizes, md), padding-x)};
+  --#{$prefix}btn-padding-y: #{map.get(map.get($button-sizes, md), padding-y)};
+  --#{$prefix}btn-radius: var(--#{$prefix}border-radius);
+  --#{$prefix}btn-color: var(--#{$prefix}color-black);
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+    var(--#{$prefix}border-color);
+  --#{$prefix}btn-border-color: var(--#{$prefix}btn-bg);
+
+  display: inline-block;
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-size: var(--#{$prefix}btn-font-size);
+  font-weight: var(--#{$prefix}btn-weight);
+  line-height: var(--#{$prefix}btn-line-height);
+  border: var(--#{$prefix}btn-border);
+  border-color: var(--#{$prefix}btn-border-color);
+  border-radius: var(--#{$prefix}btn-radius);
+  color: var(--#{$prefix}btn-color);
+  background-color: var(--#{$prefix}btn-bg);
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    box-shadow: var(--#{$prefix}btn-box-shadow);
+  }
+}
+
+@each $variation, $styles in $button-variations {
+  .btn-#{"" + $variation},
+  .btn-outline-#{"" + $variation} {
+    --#{$prefix}btn-color: #{map.get($styles, color)};
+    --#{$prefix}btn-bg: #{map.get($styles, bg-color)};
+    --#{$prefix}btn-border-color: #{map.get($styles, bg-color)};
+
+    &.btn-outline-#{"" + $variation} {
+      --#{$prefix}btn-bg: transparent;
+      --#{$prefix}btn-color: #{map.get($styles, bg-color)};
+
+      &:not(:disabled) {
+        &:hover,
+        &:focus,
+        &:active {
+          --#{$prefix}btn-color: #{map.get($styles, color)};
+        }
+      }
+    }
+
+    &:not(:disabled) {
+      &:hover,
+      &:focus,
+      &:active {
+        --#{$prefix}btn-bg: #{map.get($styles, bg-hover-color)};
+        --#{$prefix}btn-border-color: #{map.get($styles, bg-hover-color)};
+      }
+    }
+  }
+}
+
+@each $size, $styles in $button-sizes {
+  .btn-#{"" + $size} {
+    --#{$prefix}btn-font-size: #{map.get($styles, font-size)};
+    --#{$prefix}btn-padding-x: #{map.get($styles, padding-x)};
+    --#{$prefix}btn-padding-y: #{map.get($styles, padding-y)};
+  }
+}
