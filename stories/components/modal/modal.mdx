@@ -1,0 +1,38 @@
+# Modal
+
+To display modal overlays, use the `.modal` class.
+The structure inside it should be the same for every modal.
+
+```html
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="modal-title">Header name</span>
+      <span class="modal-close">CLOSE_ICON_UPDATE_ME</span>
+    </div>
+    <div class="modal-body">
+      <!-- any content -->
+    </div>
+  </div>
+</div>
+```
+
+By default, the modal will not be visible, as it uses `opacity: 0` for animation.
+To make it visible, add the `.show` class.
+
+On mobile devices, the modal will default to a drawer-style layout.
+To make it full-screen, add the `.modal-mobile-fullscreen` class.
+
+```html
+<div class="modal modal-mobile-fullscreen">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="modal-title">Header name</span>
+      <span class="modal-close">CLOSE_ICON_UPDATE_ME</span>
+    </div>
+    <div class="modal-body">
+      <!-- any content -->
+    </div>
+  </div>
+</div>
+```

@@ -16,6 +16,14 @@
     }
   }
 
+  @for $i from 1 through 9 {
+    --#{$prefix}font-weight-#{100 * $i}: #{100 * $i};
+  }
+
+  @each $property, $value in $font-sizes {
+    --#{$prefix}font-size-#{$property}: #{$value}rem;
+  }
+
   @each $property, $value in $border-vars {
     --#{$prefix}border-#{$property}: #{$value};
   }
