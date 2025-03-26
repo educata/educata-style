@@ -18,18 +18,17 @@
   --#{$prefix}modal-content-border-radius: var(--#{$prefix}border-radius-xl);
   --#{$prefix}modal-content-header-height: 40px;
   --#{$prefix}modal-content-header-bg-color: var(--#{$prefix}color-black);
-  --#{$prefix}modal-transition-duration: 0.3s;
 
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background-color: var(--#{$prefix}modal-bg-color);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--#{$prefix}modal-z-index);
   opacity: 0;
-  transition: opacity var(--#{$prefix}modal-transition-duration) ease-in-out;
+  background-color: var(--#{$prefix}modal-bg-color);
+  z-index: var(--#{$prefix}modal-z-index);
+  transition: opacity var(--#{$prefix}transition-ease-in-out);
 
   .modal-content {
     position: relative;
@@ -49,7 +48,7 @@
     row-gap: var(--#{$prefix}modal-content-gap);
 
     transform: translate(-50%, -150%);
-    transition: transform var(--#{$prefix}modal-transition-duration) ease-out;
+    transition: transform var(--#{$prefix}transition-ease-out);
   }
 
   &.show {
@@ -76,7 +75,7 @@
       border-top-right-radius: var(--#{$prefix}modal-content-border-radius);
 
       transform: translateY(100%);
-      transition: transform var(--#{$prefix}modal-transition-duration) ease-out;
+      transition: transform var(--#{$prefix}transition-ease-out);
 
       .modal-body {
         max-height: calc(100vh - var(--#{$prefix}modal-content-header-height) - 100px);
@@ -101,7 +100,7 @@
 
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: opacity var(--#{$prefix}modal-transition-duration) ease-out;
+        transition: opacity var(--#{$prefix}transition-ease-out);
       }
 
       &.show .modal-content {

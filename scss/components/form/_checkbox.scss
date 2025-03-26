@@ -1,0 +1,64 @@
+@use "../../variables/global" as *;
+
+.form-check-group {
+  --#{$prefix}form-check-group-gap: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--#{$prefix}form-check-group-gap);
+  color: var(--#{$prefix}color-white);
+
+  &.reverse-input {
+    input {
+      order: 1;
+    }
+  }
+}
+
+input[type="checkbox"].form-check-input {
+  --#{$prefix}form-check-input-width: 1em;
+  --#{$prefix}form-check-input-height: 1em;
+  --#{$prefix}form-check-input-bg-color: transparent;
+  --#{$prefix}form-check-input-border-width: 1px;
+  --#{$prefix}form-check-input-margin: 5px;
+  --#{$prefix}form-check-input-accent-color: var(--#{$prefix}form-utilities-bg-color);
+  --#{$prefix}form-check-input-border-radius: var(--#{$prefix}border-radius-sm);
+  --#{$prefix}form-check-input-border-color: var(--#{$prefix}form-utilities-border-color);
+
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  width: var(--#{$prefix}form-check-input-width);
+  height: var(--#{$prefix}form-check-input-height);
+  background-color: var(--#{$prefix}form-check-input-bg-color);
+  margin: var(--#{$prefix}form-check-input-margin);
+  border-radius: var(--#{$prefix}form-check-input-border-radius);
+  border: var(--#{$prefix}form-check-input-border-width) solid
+    var(--#{$prefix}form-check-input-border-color);
+  transition: var(--#{$prefix}transition-ease-in-out);
+
+  &::before {
+    content: "✔";
+    font-size: var(--#{$prefix}font-size-sm);
+    color: var(--#{$prefix}color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    visibility: hidden;
+  }
+
+  &:checked::before {
+    visibility: visible;
+  }
+
+  &:checked {
+    border-color: var(--#{$prefix}form-check-input-accent-color);
+    background-color: var(--#{$prefix}form-check-input-accent-color);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
