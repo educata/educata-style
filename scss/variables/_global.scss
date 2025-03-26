@@ -2,6 +2,8 @@
 @use "../functions/generate-color-scale" as *;
 
 $prefix: "ec-";
+$transitions-duration: 0.3s !default;
+$transitions: ease-in-out, ease-in, ease-out, linear !default;
 
 $font-sizes: (
   sm: 0.75,
@@ -140,3 +142,8 @@ $button-variations: (
     bg-hover-color: generate-color-scale(map.get($base-colors, black), 90),
   ),
 ) !default;
+
+$form-utilities: (
+  bg-color: #26776d,
+  border-color: #ededee,
+);

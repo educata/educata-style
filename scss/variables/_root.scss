@@ -16,6 +16,13 @@
     }
   }
 
+  --#{$prefix}transation-duration: #{$transitions-duration};
+
+  @each $transition in $transitions {
+    --#{$prefix}transition-#{$transition}: var(--#{$prefix}transation-duration)
+      #{$transition};
+  }
+
   @for $i from 1 through 9 {
     --#{$prefix}font-weight-#{100 * $i}: #{100 * $i};
   }
@@ -34,6 +41,10 @@
 
   @each $property, $value in $icon-sizes {
     --#{$prefix}icon-#{$property}: #{$value};
+  }
+
+  @each $property, $value in $form-utilities {
+    --#{$prefix}form-utilities-#{$property}: #{$value};
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
