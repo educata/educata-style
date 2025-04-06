@@ -59,6 +59,13 @@ $base-colors: (
   yellow: #e6fd53,
 ) !default;
 
+$base-bg-colors: map.merge(
+  $base-colors,
+  (
+    main: #0c0c16,
+  )
+) !default;
+
 $border-vars: (
   width: 1px,
   style: solid,
@@ -144,6 +151,7 @@ $button-variations: (
 ) !default;
 
 $form-utilities: (
+  text-color: map.get($base-colors, white),
   bg-color: #26776d,
   border-color: #ededee,
 );

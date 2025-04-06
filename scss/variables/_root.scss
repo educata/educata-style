@@ -16,6 +16,10 @@
     }
   }
 
+  @each $property, $value in $base-bg-colors {
+    --#{$prefix}bg-color-#{"" + $property}: #{$value};
+  }
+
   --#{$prefix}transation-duration: #{$transitions-duration};
 
   @each $transition in $transitions {

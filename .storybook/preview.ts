@@ -11,6 +11,19 @@ const preview: Preview = {
         order: ["*", ["Introduction", "introduction", "*"]],
       },
     },
+    backgrounds: {
+      default: "light",
+      values: [
+        {
+          name: "light",
+          value: "#ffffff",
+        },
+        {
+          name: "dark",
+          value: "#0c0c16",
+        },
+      ],
+    },
   },
 };
 

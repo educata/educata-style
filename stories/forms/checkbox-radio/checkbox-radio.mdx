@@ -1,0 +1,90 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as CheckBoxStories from './checkbox.stories.ts';
+
+# Checkbox & Radio
+
+The default appearance of checkboxes and radio buttons in browsers is enhanced using
+`.form-check` — a set of classes designed to improve the structure and functionality of these input elements.
+This approach allows for better customization and consistent behavior across different browsers.
+Checkboxes are used when multiple selections are allowed, while radio buttons let users choose only one option from a group.
+
+In our structure, `<input>` and `<label>` elements are placed as siblings rather than nesting the `<input>` inside the `<label>`.
+While this approach requires explicitly setting id and for attributes to link them, it offers more flexibility.
+We use the sibling selector `~` to target various `<input>` states such as :checked and :disabled. Paired with the
+`.form-check-label` class, this setup makes it simple to style the label text based on the state of the corresponding input.
+
+## Checks
+
+<Canvas of={CheckBoxStories.DefaultCheckboxs} className='bg-main' />
+
+### Disabled
+
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+
+<Canvas of={CheckBoxStories.DefaultDisabledCheckboxs} className='bg-main' />
+
+### Validation
+
+By default checkboxes will get invalid style after submitting the form.
+
+<Canvas of={CheckBoxStories.Checkbox} className='bg-main' />
+
+## Switch
+
+Switch is same as checkbox but with different style. It is used to toggle between two states, such as on/off or yes/no.
+To use switch, add the `role="switch"`
+
+<Canvas of={CheckBoxStories.DefaultSwitchCheckbox} className='bg-main' />
+
+## Radio
+
+<Canvas of={CheckBoxStories.DefaultRadios} className='bg-main' />
+
+### Disabled
+
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+
+<Canvas of={CheckBoxStories.DefaultDisabledRadios} className='bg-main' />
+
+### Validation
+
+<Canvas of={CheckBoxStories.Radio} className='bg-main' />
+
+## Disable Validation
+
+To disable custom validation add `data-no-validate` attribute to the checkbox or radio input.
+
+For example:
+
+```html
+<input type="checkbox" class="form-check-input" required data-no-validation />
+```
+
+## Reverse label
+
+To reverse the label and checkbox/radio input, add `.form-reverse-input` class name to `.form-check` element.
+
+```html
+<div class="form-check form-reverse-input">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+  <label class="form-check-label" for="exampleCheck1">Check this checkbox</label>
+</div>
+```
+
+## Inline
+
+To display checkboxes or radio buttons inline, add the `.form-check-inline` class to the `.form-check` element.
+This will ensure that the checkboxes or radio buttons are displayed in a single line, making them more compact and visually appealing.
+
+```html
+<div class="form-check form-reverse-input">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+  <label class="form-check-label" for="exampleCheck1">Check this checkbox</label>
+</div>
+<div class="form-check form-check-inline">
+  <input type="checkbox" class="form-check-input" id="exampleCheck2" />
+  <label class="form-check-label" for="exampleCheck2">Check this checkbox 2</label>
+</div>
+```
+
+> You can use `.form-check-inline` class with `.form-reverse-input` class to display checkbox/radio input inline with reverse label.
