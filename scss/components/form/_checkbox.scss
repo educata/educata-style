@@ -31,6 +31,7 @@
   --#{$prefix}form-check-input-accent-color: var(--#{$prefix}form-utilities-bg-color);
   --#{$prefix}form-check-input-border-radius: var(--#{$prefix}border-radius-sm);
   --#{$prefix}form-check-input-border-color: var(--#{$prefix}form-utilities-border-color);
+  --#{$prefix}form-check-input-box-shadow: var(--#{$prefix}form-utilities-box-shadow);
 
   appearance: none;
   position: relative;
@@ -46,6 +47,16 @@
   background-color: var(--#{$prefix}form-check-input-bg-color);
   background-repeat: no-repeat;
   background-size: contain;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--#{$prefix}form-check-input-accent-color);
+    box-shadow: var(--#{$prefix}form-check-input-box-shadow);
+  }
 
   &::before {
     content: "✔";
