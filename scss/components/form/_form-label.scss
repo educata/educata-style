@@ -1,0 +1,60 @@
+@use "../../variables/global" as *;
+
+.form-label {
+  --#{$prefix}form-label-primary-color: var(--#{$prefix}form-utilities-color-primary);
+  --#{$prefix}form-label-secondary-color: var(--#{$prefix}form-utilities-color-secondary);
+  --#{$prefix}form-label-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-label-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-label-color: var(--#{$prefix}color-black-30);
+  --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}form-label-margin-bottom: 0.5rem;
+  --#{$prefix}form-label-padding: 0.375rem;
+
+  display: block;
+  color: var(--#{$prefix}form-label-color);
+  font-size: var(--#{$prefix}form-label-font-size);
+  padding: var(--#{$prefix}form-label-padding);
+  margin-bottom: var(--#{$prefix}form-label-margin-bottom);
+
+  &:has(~ .form-control:disabled),
+  &:has(~ .form-select:disabled) {
+    color: var(--#{$prefix}form-label-disabled-color);
+  }
+
+  &:has(~ .form-control:user-invalid:not([data-no-validation])),
+  &:has(~ .form-select:user-invalid:not([data-no-validation])) {
+    color: var(--#{$prefix}form-utilities-color-invalid);
+  }
+
+  &:has(~ .form-control-sm) {
+    --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-sm);
+  }
+
+  &:has(~ .form-control-lg) {
+    --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-lg);
+  }
+}
+
+.form-text {
+  --#{$prefix}form-text-secondary-color: var(--#{$prefix}form-utilities-color-secondary);
+  --#{$prefix}form-text-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-text-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-text-font-size: var(--#{$prefix}font-size-sm);
+  --#{$prefix}form-text-margin-top: 0.375rem;
+  --#{$prefix}form-text-padding: 0.375rem;
+
+  margin: 0;
+  display: block;
+  color: var(--#{$prefix}form-text-secondary-color);
+  font-size: var(--#{$prefix}form-text-font-size);
+  padding: var(--#{$prefix}form-text-padding);
+  margin-top: var(--#{$prefix}form-text-margin-top);
+
+  &:has(.form-control:disabled) {
+    color: var(--#{$prefix}form-text-disabled-color);
+  }
+
+  &:has(.form-control:user-invalid:not([data-no-validation])) {
+    color: var(--#{$prefix}form-utilities-color-invalid);
+  }
+}
