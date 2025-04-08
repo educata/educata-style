@@ -32,7 +32,7 @@
   }
 
   @each $property, $value in $font-sizes {
-    --#{$prefix}font-size-#{$property}: #{$value}rem;
+    --#{$prefix}font-size-#{$property}: #{$value}em;
   }
 
   @each $property, $value in $border-vars {
@@ -49,6 +49,10 @@
 
   @each $property, $value in $form-utilities {
     --#{$prefix}form-utilities-#{$property}: #{$value};
+  }
+
+  @each $property, $value in $form-utilities-colors {
+    --#{$prefix}form-utilities-color-#{$property}: var(--#{$prefix}color-#{"" + $value});
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {

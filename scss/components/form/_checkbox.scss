@@ -2,8 +2,8 @@
 
 .form-check {
   --#{$prefix}form-check-gap: 5px;
-  --#{$prefix}form-check-disabled-color: var(--#{$prefix}color-black-30);
-  --#{$prefix}form-check-invalid-color: var(--#{$prefix}color-red-80);
+  --#{$prefix}form-check-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-check-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
 
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
   &::before {
     content: "✔";
     font-size: var(--#{$prefix}font-size-sm);
-    color: var(--#{$prefix}color-white);
+    color: var(--#{$prefix}form-utilities-color-primary);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -135,6 +135,6 @@
 }
 
 .form-check-label {
-  --#{$prefix}form-check-input-label-color: var(--#{$prefix}form-utilities-text-color);
+  --#{$prefix}form-check-input-label-color: var(--#{$prefix}form-utilities-color-primary);
   color: var(--#{$prefix}form-check-input-label-color);
 }

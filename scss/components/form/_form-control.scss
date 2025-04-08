@@ -1,1 +1,214 @@
 @use "../../variables/global" as *;
+
+.form-label {
+  --#{$prefix}form-label-primary-color: var(--#{$prefix}form-utilities-color-primary);
+  --#{$prefix}form-label-secondary-color: var(--#{$prefix}form-utilities-color-secondary);
+  --#{$prefix}form-label-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-label-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-label-color: var(--#{$prefix}color-black-30);
+  --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}form-label-margin-bottom: 0.5rem;
+  --#{$prefix}form-label-padding: 0.375rem;
+
+  display: block;
+  color: var(--#{$prefix}form-label-color);
+  font-size: var(--#{$prefix}form-label-font-size);
+  padding: var(--#{$prefix}form-label-padding);
+  margin-bottom: var(--#{$prefix}form-label-margin-bottom);
+
+  &:has(~ .form-control:disabled) {
+    color: var(--#{$prefix}form-label-disabled-color);
+  }
+
+  &:has(~ .form-control:user-invalid:not([data-no-validation])) {
+    color: var(--#{$prefix}form-utilities-color-invalid);
+  }
+
+  &:has(~ .form-control-sm) {
+    --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-sm);
+  }
+
+  &:has(~ .form-control-lg) {
+    --#{$prefix}form-label-font-size: var(--#{$prefix}font-size-lg);
+  }
+}
+
+.form-text {
+  --#{$prefix}form-text-secondary-color: var(--#{$prefix}form-utilities-color-secondary);
+  --#{$prefix}form-text-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-text-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-text-font-size: var(--#{$prefix}font-size-sm);
+  --#{$prefix}form-text-margin-top: 0.375rem;
+  --#{$prefix}form-text-padding: 0.375rem;
+
+  margin: 0;
+  display: block;
+  color: var(--#{$prefix}form-text-secondary-color);
+  font-size: var(--#{$prefix}form-text-font-size);
+  padding: var(--#{$prefix}form-text-padding);
+  margin-top: var(--#{$prefix}form-text-margin-top);
+
+  &:has(.form-control:disabled) {
+    color: var(--#{$prefix}form-text-disabled-color);
+  }
+
+  &:has(.form-control:user-invalid:not([data-no-validation])) {
+    color: var(--#{$prefix}form-utilities-color-invalid);
+  }
+}
+
+.form-control {
+  --#{$prefix}form-control-primary-color: var(--#{$prefix}form-utilities-color-primary);
+  --#{$prefix}form-control-secondary-color: var(
+    --#{$prefix}form-utilities-color-secondary
+  );
+  --#{$prefix}form-control-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-control-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-control-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}form-control-padding: 0.375rem;
+  --#{$prefix}form-control-border-width: 1px;
+  --#{$prefix}form-control-line-height: 1.5;
+  --#{$prefix}form-control-bg-color: transparent;
+  --#{$prefix}form-control-transition: border-color
+      var(--#{$prefix}transition-ease-in-out),
+    box-shadow var(--#{$prefix}transition-ease-in-out);
+
+  appearance: none;
+  border: 0;
+  display: block;
+  width: 100%;
+  color: var(--#{$prefix}form-control-primary-color);
+  padding: var(--#{$prefix}form-control-padding) var(--#{$prefix}form-control-padding)
+    calc(var(--#{$prefix}form-control-padding) * 2);
+  font-size: var(--#{$prefix}form-control-size);
+  line-height: var(--#{$prefix}form-control-line-height);
+  background-color: var(--#{$prefix}form-control-bg-color);
+  transition: var(--#{$prefix}form-control-transition);
+  border-bottom: var(--#{$prefix}form-control-border-width) solid
+    var(--#{$prefix}form-control-secondary-color);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--#{$prefix}form-control-primary-color);
+  }
+
+  &::placeholder {
+    color: var(--#{$prefix}form-control-secondary-color);
+  }
+
+  &:disabled,
+  &:read-only {
+    &,
+    &::placeholder {
+      color: var(--#{$prefix}form-control-disabled-color);
+      border-color: var(--#{$prefix}form-control-disabled-color);
+    }
+  }
+
+  &:user-invalid:not([data-no-validation]) {
+    color: var(--#{$prefix}form-control-invalid-color);
+    border-bottom: var(--#{$prefix}form-control-border-width) solid
+      var(--#{$prefix}form-control-invalid-color);
+
+    &::placeholder {
+      color: var(--#{$prefix}form-control-invalid-color);
+    }
+  }
+
+  &.form-control-sm {
+    --#{$prefix}form-control-size: var(--#{$prefix}font-size-sm);
+    --#{$prefix}form-control-padding: 0.275rem;
+  }
+
+  &.form-control-lg {
+    --#{$prefix}form-control-size: var(--#{$prefix}font-size-lg);
+    --#{$prefix}form-control-padding: 0.5rem;
+  }
+
+  &.form-control-plaintext {
+    border: none;
+  }
+}
+
+textarea.form-control {
+  --#{$prefix}form-control-textarea-min-height: calc(
+    2em + 0.75rem + calc(var(--#{$prefix}form-control-border-width) * 2)
+  );
+  --#{$prefix}form-control-textarea-max-height: 400px;
+
+  resize: vertical;
+  max-width: 100%;
+  min-height: var(--#{$prefix}form-control-textarea-min-height);
+  max-height: var(--#{$prefix}form-control-textarea-max-height);
+}
+
+input.form-control {
+  &[type="file"] {
+    --#{$prefix}form-control-file-background-color: transparent;
+    --#{$prefix}form-control-file-border: var(--#{$prefix}form-control-border-width) solid
+      var(--#{$prefix}form-control-secondary-color);
+
+    padding: 0;
+    overflow: hidden;
+    border: var(--#{$prefix}form-control-file-border);
+    border-radius: var(--#{$prefix}border-radius);
+
+    &:disabled {
+      &,
+      &::file-selector-button {
+        color: var(--#{$prefix}form-control-disabled-color);
+        border-color: var(--#{$prefix}form-control-disabled-color);
+      }
+    }
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+
+      &:active {
+        &,
+        &::file-selector-button {
+          border-color: var(--#{$prefix}form-control-primary-color);
+        }
+      }
+    }
+
+    &::file-selector-button {
+      border: none;
+      pointer-events: none;
+      color: var(--#{$prefix}form-utilities-color-secondary);
+      padding: calc(var(--#{$prefix}form-control-padding) * 2);
+      transition: var(--#{$prefix}form-control-transition);
+      border-right: var(--#{$prefix}form-control-file-border);
+      background-color: var(--#{$prefix}form-control-file-background-color);
+    }
+
+    &:user-invalid:not([data-no-validation]) {
+      &,
+      &::file-selector-button {
+        color: var(--#{$prefix}form-control-invalid-color);
+        border-color: var(--#{$prefix}form-control-invalid-color);
+      }
+    }
+  }
+
+  &[type="color"] {
+    width: 3rem;
+    height: calc(1.5em + 0.75rem + calc(var(--#{$prefix}border-width) * 2));
+    padding: var(--#{$prefix}border-radius);
+    border-radius: var(--#{$prefix}border-radius);
+    border: var(--#{$prefix}form-control-border-width) solid
+      var(--#{$prefix}form-control-secondary-color);
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      border-color: var(--#{$prefix}form-control-primary-color);
+    }
+  }
+}

@@ -151,8 +151,14 @@ $button-variations: (
 ) !default;
 
 $form-utilities: (
-  text-color: map.get($base-colors, white),
   bg-color: #26776d,
   border-color: #ededee,
   box-shadow: 0 0 0 0.25rem rgba(#26776d, 0.25),
+);
+
+$form-utilities-colors: (
+  primary: white,
+  secondary: black-30,
+  disabled: black-60,
+  invalid: red-80,
 );
