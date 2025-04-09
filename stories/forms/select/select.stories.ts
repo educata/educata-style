@@ -6,7 +6,7 @@ type FormSelectArgs = {
 };
 
 const meta: Meta<FormSelectArgs> = {
-  title: "Forms/Form Select",
+  title: "Forms/Select",
   parameters: {
     backgrounds: {
       default: "dark",

@@ -24,7 +24,7 @@ interface FormControlArgs extends Partial<FormControlOptional> {
 }
 
 const meta: Meta<FormControlArgs> = {
-  title: "Forms/Form Group",
+  title: "Forms/Input Group",
   parameters: {
     backgrounds: {
       default: "dark",
