@@ -17,12 +17,16 @@
   margin-bottom: var(--#{$prefix}form-label-margin-bottom);
 
   &:has(~ .form-control:disabled),
-  &:has(~ .form-select:disabled) {
+  &:has(~ .form-select:disabled),
+  &:has(~ .input-group.form-control:disabled),
+  &:has(~ .input-group.form-select:disabled) {
     color: var(--#{$prefix}form-label-disabled-color);
   }
 
   &:has(~ .form-control:user-invalid:not([data-no-validation])),
-  &:has(~ .form-select:user-invalid:not([data-no-validation])) {
+  &:has(~ .form-select:user-invalid:not([data-no-validation])),
+  &:has(~ .input-group.form-control:user-invalid:not([data-no-validation])),
+  &:has(~ .input-group.form-select:user-invalid:not([data-no-validation])) {
     color: var(--#{$prefix}form-utilities-color-invalid);
   }
 
