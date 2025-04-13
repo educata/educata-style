@@ -87,6 +87,10 @@ textarea.form-control {
   max-width: 100%;
   min-height: var(--#{$prefix}form-control-textarea-min-height);
   max-height: var(--#{$prefix}form-control-textarea-max-height);
+
+  &:disabled {
+    resize: none;
+  }
 }
 
 input.form-control {

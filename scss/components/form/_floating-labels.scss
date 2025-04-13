@@ -1,0 +1,131 @@
+@use "../../variables/global" as *;
+
+.form-floating {
+  --#{$prefix}form-floating-line-height: 1.5;
+  --#{$prefix}form-floating-base-height: 3.5rem;
+  --#{$prefix}form-floating-height: calc(
+    var(--#{$prefix}form-floating-base-height) + calc(var(--#{$prefix}border-width) * 2)
+  );
+  --#{$prefix}form-floating-padding-x: 0.75rem;
+  --#{$prefix}form-floating-padding-y: 1rem;
+  --#{$prefix}form-floating-input-padding-top: 1.625rem;
+  --#{$prefix}form-floating-input-padding-bottom: 0.625rem;
+  --#{$prefix}form-floating-label-transform: scale(0.85) translateY(-0.5rem)
+    translateX(0.15rem);
+
+  position: relative;
+
+  > .form-control,
+  > .fotm-control-plaintext,
+  > .form-select {
+    height: var(--#{$prefix}form-floating-height);
+    min-height: var(--#{$prefix}form-floating-height);
+    line-height: var(--#{$prefix}form-floating-line-height);
+  }
+
+  > label {
+    --#{$prefix}form-floating-label-font-size: var(--#{$prefix}font-size-md);
+    --#{$prefix}form-floating-label-primary-color: var(
+      --#{$prefix}form-utilities-color-primary
+    );
+    --#{$prefix}form-floating-label-secondary-color: var(
+      --#{$prefix}form-utilities-color-secondary
+    );
+    --#{$prefix}form-floating-label-disabled-color: var(
+      --#{$prefix}form-utilities-color-disabled
+    );
+    --#{$prefix}form-floating-label-invalid-color: var(
+      --#{$prefix}form-utilities-color-invalid
+    );
+    --#{$prefix}form-floating-label-transition: var(--#{$prefix}transition-ease-in-out);
+    --#{$prefix}form-floating-label-border: var(--#{$prefix}border-width) solid
+      transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 100%;
+    height: 100%; // allow textareas
+    padding: var(--#{$prefix}form-floating-padding-y)
+      var(--#{$prefix}form-floating-padding-x);
+    font-size: var(--#{$prefix}form-floating-label-font-size);
+    color: var(--#{$prefix}form-floating-label-secondary-color);
+    border: var(--#{$prefix}form-floating-label-border);
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  }
+
+  > .form-control,
+  > .form-control-plaintext {
+    padding: var(--#{$prefix}form-floating-padding-y)
+      var(--#{$prefix}form-floating-padding-x);
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding-top: var(--#{$prefix}form-floating-input-padding-top);
+      padding-bottom: var(--#{$prefix}form-floating-input-padding-bottom);
+    }
+
+    &:-webkit-autofill {
+      padding-top: var(--#{$prefix}form-floating-input-padding-top);
+      padding-bottom: var(--#{$prefix}form-floating-input-padding-bottom);
+    }
+  }
+
+  > .form-select {
+    --#{$prefix}form-floating-select-additional-size: 0.5rem;
+    height: calc(
+      var(--#{$prefix}form-floating-height) +
+        var(--#{$prefix}form-floating-select-additional-size)
+    );
+    min-height: calc(
+      var(--#{$prefix}form-floating-height) +
+        var(--#{$prefix}form-floating-select-additional-size)
+    );
+    padding-top: calc(
+      var(--#{$prefix}form-floating-input-padding-top) +
+        var(--#{$prefix}form-floating-select-additional-size)
+    );
+    padding-bottom: var(--#{$prefix}form-floating-input-padding-bottom);
+    padding-left: var(--#{$prefix}form-floating-padding-x);
+  }
+
+  > .form-control:not(:read-only):focus,
+  > .form-control:not(:read-only):not(:placeholder-shown),
+  > .form-control-plaintext:not(:read-only),
+  > .form-select:not(:read-only) {
+    ~ label {
+      transform: var(--#{$prefix}form-floating-label-transform);
+    }
+  }
+
+  > .form-control:-webkit-autofill {
+    ~ label {
+      transform: var(--#{$prefix}form-floating-label-transform);
+    }
+  }
+
+  > .form-control:user-invalid:not([data-no-validation]) {
+    ~ label {
+      color: var(--#{$prefix}form-floating-label-invalid-color);
+    }
+  }
+
+  > .form-control:disabled,
+  > .form-control[readonly],
+  > .form-select:disabled,
+  > .form-select[readonly] {
+    ~ label {
+      color: var(--#{$prefix}form-floating-label-disabled-color);
+    }
+  }
+}
