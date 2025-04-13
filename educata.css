@@ -3,6 +3,7 @@
  * Copyright 2025 The Educata authors
  * Licensed under MIT (https://github.com/educata/educata-style/blob/main/LICENSE)
  */
+@charset "UTF-8";
 :root {
   --ec-color-white: rgb(255, 255, 255);
   --ec-color-white-rgb: 255, 255, 255;
@@ -88,6 +89,23 @@
   --ec-color-yellow-30: rgb(247.5, 254.4, 203.4);
   --ec-color-yellow-20: rgb(250, 254.6, 220.6);
   --ec-color-yellow-10: rgb(252.5, 254.8, 237.8);
+  --ec-bg-color-white: #ffffff;
+  --ec-bg-color-black: #171719;
+  --ec-bg-color-blue: #6666ff;
+  --ec-bg-color-red: #cc1f4f;
+  --ec-bg-color-green: #51d253;
+  --ec-bg-color-purple: #c05be0;
+  --ec-bg-color-yellow: #e6fd53;
+  --ec-bg-color-main: #0c0c16;
+  --ec-transation-duration: 0.3s;
+  --ec-transition-ease-in-out: var(--ec-transation-duration)
+    ease-in-out;
+  --ec-transition-ease-in: var(--ec-transation-duration)
+    ease-in;
+  --ec-transition-ease-out: var(--ec-transation-duration)
+    ease-out;
+  --ec-transition-linear: var(--ec-transation-duration)
+    linear;
   --ec-font-weight-100: 100;
   --ec-font-weight-200: 200;
   --ec-font-weight-300: 300;
@@ -97,12 +115,12 @@
   --ec-font-weight-700: 700;
   --ec-font-weight-800: 800;
   --ec-font-weight-900: 900;
-  --ec-font-size-sm: 0.75rem;
-  --ec-font-size-md: 1rem;
-  --ec-font-size-lg: 1.25rem;
-  --ec-font-size-xl: 1.5rem;
-  --ec-font-size-xxl: 2rem;
-  --ec-font-size-xxxl: 3rem;
+  --ec-font-size-sm: 0.75em;
+  --ec-font-size-md: 1em;
+  --ec-font-size-lg: 1.25em;
+  --ec-font-size-xl: 1.5em;
+  --ec-font-size-xxl: 2em;
+  --ec-font-size-xxxl: 3em;
   --ec-border-width: 1px;
   --ec-border-style: solid;
   --ec-border-color: #171719;
@@ -119,6 +137,13 @@
   --ec-icon-xl: 24px;
   --ec-icon-xxl: 32px;
   --ec-icon-xxxl: 40px;
+  --ec-form-utilities-bg-color: #26776d;
+  --ec-form-utilities-border-color: #ededee;
+  --ec-form-utilities-box-shadow: 0 0 0 0.25rem rgba(38, 119, 109, 0.25);
+  --ec-form-utilities-color-primary: var(--ec-color-white);
+  --ec-form-utilities-color-secondary: var(--ec-color-black-30);
+  --ec-form-utilities-color-disabled: var(--ec-color-black-60);
+  --ec-form-utilities-color-invalid: var(--ec-color-red-80);
   --ec-breakpoint-sm: 540px;
   --ec-breakpoint-md: 720px;
   --ec-breakpoint-lg: 960px;
@@ -1460,6 +1485,66 @@ h6 {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.rounded {
+  border-radius: var(--ec-border-radius);
+}
+
+.rounded-sm {
+  border-radius: var(--ec-border-radius-sm);
+}
+
+.rounded-lg {
+  border-radius: var(--ec-border-radius-lg);
+}
+
+.rounded-xl {
+  border-radius: var(--ec-border-radius-xl);
+}
+
+.rounded-xxl {
+  border-radius: var(--ec-border-radius-xxl);
+}
+
+.rounded-pill {
+  border-radius: var(--ec-border-radius-pill);
+}
+
+.rounded-circle {
+  border-radius: var(--ec-border-radius-circle);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-black {
+  background-color: #171719;
+}
+
+.bg-blue {
+  background-color: #6666ff;
+}
+
+.bg-red {
+  background-color: #cc1f4f;
+}
+
+.bg-green {
+  background-color: #51d253;
+}
+
+.bg-purple {
+  background-color: #c05be0;
+}
+
+.bg-yellow {
+  background-color: #e6fd53;
+}
+
+.bg-main {
+  background-color: #0c0c16;
 }
 
 .flex-wrap-nowrap {
@@ -3391,17 +3476,16 @@ h6 {
   --ec-modal-content-border-radius: var(--ec-border-radius-xl);
   --ec-modal-content-header-height: 40px;
   --ec-modal-content-header-bg-color: var(--ec-color-black);
-  --ec-modal-transition-duration: 0.3s;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background-color: var(--ec-modal-bg-color);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--ec-modal-z-index);
   opacity: 0;
-  transition: opacity var(--ec-modal-transition-duration) ease-in-out;
+  background-color: var(--ec-modal-bg-color);
+  z-index: var(--ec-modal-z-index);
+  transition: opacity var(--ec-transition-ease-in-out);
 }
 .modal .modal-content {
   position: relative;
@@ -3420,7 +3504,7 @@ h6 {
   grid-template-rows: var(--ec-modal-content-header-height) 1fr;
   row-gap: var(--ec-modal-content-gap);
   transform: translate(-50%, -150%);
-  transition: transform var(--ec-modal-transition-duration) ease-out;
+  transition: transform var(--ec-transition-ease-out);
 }
 .modal.show {
   opacity: 1;
@@ -3444,7 +3528,7 @@ h6 {
     border-top-left-radius: var(--ec-modal-content-border-radius);
     border-top-right-radius: var(--ec-modal-content-border-radius);
     transform: translateY(100%);
-    transition: transform var(--ec-modal-transition-duration) ease-out;
+    transition: transform var(--ec-transition-ease-out);
   }
   .modal .modal-content .modal-body {
     max-height: calc(100vh - var(--ec-modal-content-header-height) - 100px);
@@ -3463,7 +3547,7 @@ h6 {
     right: auto;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity var(--ec-modal-transition-duration) ease-out;
+    transition: opacity var(--ec-transition-ease-out);
   }
   .modal.modal-mobile-fullscreen.show .modal-content {
     opacity: 1;
@@ -3487,4 +3571,584 @@ h6 {
 .modal .modal-body {
   overflow-y: auto;
   position: relative;
+}
+
+.form-check {
+  --ec-form-check-gap: 5px;
+  --ec-form-check-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-form-check-invalid-color: var(--ec-form-utilities-color-invalid);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--ec-form-check-gap);
+  color: var(--ec-color-white);
+}
+.form-check.form-reverse-input input {
+  order: 1;
+}
+.form-check.form-check-inline {
+  display: inline-flex;
+}
+
+.form-check-input {
+  --ec-form-check-input-width: 1em;
+  --ec-form-check-input-height: 1em;
+  --ec-form-check-input-bg-color: transparent;
+  --ec-form-check-input-border-width: 1px;
+  --ec-form-check-input-margin: 5px;
+  --ec-form-check-input-accent-color: var(--ec-form-utilities-bg-color);
+  --ec-form-check-input-border-radius: var(--ec-border-radius-sm);
+  --ec-form-check-input-border-color: var(--ec-form-utilities-border-color);
+  --ec-form-check-input-box-shadow: var(--ec-form-utilities-box-shadow);
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  print-color-adjust: exact;
+  width: var(--ec-form-check-input-width);
+  height: var(--ec-form-check-input-height);
+  margin: var(--ec-form-check-input-margin);
+  border-radius: var(--ec-form-check-input-border-radius);
+  border: var(--ec-form-check-input-border-width) solid var(--ec-form-check-input-border-color);
+  transition: var(--ec-transition-ease-in-out);
+  background-color: var(--ec-form-check-input-bg-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.form-check-input:focus {
+  outline: none;
+}
+.form-check-input:focus-visible {
+  outline: none;
+  border-color: var(--ec-form-check-input-accent-color);
+  box-shadow: var(--ec-form-check-input-box-shadow);
+}
+.form-check-input::before {
+  content: "✔";
+  font-size: var(--ec-font-size-sm);
+  color: var(--ec-form-utilities-color-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  visibility: hidden;
+}
+.form-check-input:checked::before {
+  visibility: visible;
+}
+.form-check-input:checked {
+  border-color: var(--ec-form-check-input-accent-color);
+  background-color: var(--ec-form-check-input-accent-color);
+}
+.form-check-input[type=radio] {
+  --ec-form-check-input-circle-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  border-radius: 50%;
+}
+.form-check-input[type=radio]:checked {
+  background-image: var(--ec-form-check-input-circle-bg);
+  background-position: center;
+  background-size: 10px;
+  transition: unset;
+}
+.form-check-input[type=radio]::before {
+  display: none;
+}
+.form-check-input[role=switch] {
+  --ec-form-switch-width: 2em;
+  --ec-form-switch-border-radius: 2em;
+  --ec-form-check-input-circle-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  width: var(--ec-form-switch-width);
+  border-radius: var(--ec-form-switch-border-radius);
+  background-image: var(--ec-form-check-input-circle-bg);
+  background-position: left center;
+}
+.form-check-input[role=switch]::before {
+  display: none;
+}
+.form-check-input[role=switch]:checked {
+  background-position: right center;
+}
+.form-check-input:disabled {
+  cursor: default;
+}
+.form-check-input:disabled:not(:checked) {
+  border-color: var(--ec-form-check-disabled-color);
+}
+.form-check-input:disabled ~ .form-check-label {
+  color: var(--ec-form-check-disabled-color);
+}
+.form-check-input:user-invalid:not([data-no-validation]) {
+  border-color: var(--ec-form-check-invalid-color);
+}
+.form-check-input:user-invalid:not([data-no-validation]) ~ .form-check-label {
+  color: var(--ec-form-check-invalid-color);
+}
+
+.form-check-label {
+  --ec-form-check-input-label-color: var(--ec-form-utilities-color-primary);
+  color: var(--ec-form-check-input-label-color);
+}
+
+.form-label {
+  --ec-form-label-primary-color: var(--ec-form-utilities-color-primary);
+  --ec-form-label-secondary-color: var(--ec-form-utilities-color-secondary);
+  --ec-form-label-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-form-label-invalid-color: var(--ec-form-utilities-color-invalid);
+  --ec-form-label-color: var(--ec-color-black-30);
+  --ec-form-label-font-size: var(--ec-font-size-md);
+  --ec-form-label-margin-bottom: 0.5rem;
+  --ec-form-label-padding: 0.375rem;
+  display: block;
+  color: var(--ec-form-label-color);
+  font-size: var(--ec-form-label-font-size);
+  padding: var(--ec-form-label-padding);
+  margin-bottom: var(--ec-form-label-margin-bottom);
+}
+.form-label:has(~ .form-control:disabled), .form-label:has(~ .form-select:disabled), .form-label:has(~ .input-group.form-control:disabled), .form-label:has(~ .input-group.form-select:disabled) {
+  color: var(--ec-form-label-disabled-color);
+}
+.form-label:has(~ .form-control:user-invalid:not([data-no-validation])), .form-label:has(~ .form-select:user-invalid:not([data-no-validation])), .form-label:has(~ .input-group.form-control:user-invalid:not([data-no-validation])), .form-label:has(~ .input-group.form-select:user-invalid:not([data-no-validation])) {
+  color: var(--ec-form-utilities-color-invalid);
+}
+.form-label:has(~ .form-control-sm) {
+  --ec-form-label-font-size: var(--ec-font-size-sm);
+}
+.form-label:has(~ .form-control-lg) {
+  --ec-form-label-font-size: var(--ec-font-size-lg);
+}
+
+.form-text {
+  --ec-form-text-secondary-color: var(--ec-form-utilities-color-secondary);
+  --ec-form-text-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-form-text-invalid-color: var(--ec-form-utilities-color-invalid);
+  --ec-form-text-font-size: var(--ec-font-size-sm);
+  --ec-form-text-margin-top: 0.375rem;
+  --ec-form-text-padding: 0.375rem;
+  margin: 0;
+  display: block;
+  color: var(--ec-form-text-secondary-color);
+  font-size: var(--ec-form-text-font-size);
+  padding: var(--ec-form-text-padding);
+  margin-top: var(--ec-form-text-margin-top);
+}
+.form-text:has(.form-control:disabled) {
+  color: var(--ec-form-text-disabled-color);
+}
+.form-text:has(.form-control:user-invalid:not([data-no-validation])) {
+  color: var(--ec-form-utilities-color-invalid);
+}
+
+.form-control {
+  --ec-form-control-primary-color: var(--ec-form-utilities-color-primary);
+  --ec-form-control-secondary-color: var(
+    --ec-form-utilities-color-secondary
+  );
+  --ec-form-control-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-form-control-invalid-color: var(--ec-form-utilities-color-invalid);
+  --ec-form-control-size: var(--ec-font-size-md);
+  --ec-form-control-padding: 0.375rem;
+  --ec-form-control-border-width: 1px;
+  --ec-form-control-line-height: 1.5;
+  --ec-form-control-bg-color: transparent;
+  --ec-form-control-transition: border-color
+      var(--ec-transition-ease-in-out),
+    box-shadow var(--ec-transition-ease-in-out);
+  appearance: none;
+  border: 0;
+  display: block;
+  width: 100%;
+  color: var(--ec-form-control-primary-color);
+  padding: var(--ec-form-control-padding) var(--ec-form-control-padding) calc(var(--ec-form-control-padding) * 2);
+  font-size: var(--ec-form-control-size);
+  line-height: var(--ec-form-control-line-height);
+  background-color: var(--ec-form-control-bg-color);
+  transition: var(--ec-form-control-transition);
+  border-bottom: var(--ec-form-control-border-width) solid var(--ec-form-control-secondary-color);
+}
+.form-control:focus {
+  outline: none;
+}
+.form-control:focus-visible {
+  outline: none;
+  border-color: var(--ec-form-control-primary-color);
+}
+.form-control::placeholder {
+  color: var(--ec-form-control-secondary-color);
+}
+.form-control:disabled, .form-control:disabled::placeholder, .form-control:read-only, .form-control:read-only::placeholder {
+  color: var(--ec-form-control-disabled-color);
+  border-color: var(--ec-form-control-disabled-color);
+}
+.form-control:user-invalid:not([data-no-validation]) {
+  color: var(--ec-form-control-invalid-color);
+  border-bottom: var(--ec-form-control-border-width) solid var(--ec-form-control-invalid-color);
+}
+.form-control:user-invalid:not([data-no-validation])::placeholder {
+  color: var(--ec-form-control-invalid-color);
+}
+.form-control.form-control-sm {
+  --ec-form-control-size: var(--ec-font-size-sm);
+  --ec-form-control-padding: 0.275rem;
+}
+.form-control.form-control-lg {
+  --ec-form-control-size: var(--ec-font-size-lg);
+  --ec-form-control-padding: 0.5rem;
+}
+.form-control.form-control-plaintext {
+  border: none;
+}
+
+textarea.form-control {
+  --ec-form-control-textarea-min-height: calc(
+    2em + 0.75rem + calc(var(--ec-form-control-border-width) * 2)
+  );
+  --ec-form-control-textarea-max-height: 400px;
+  resize: vertical;
+  max-width: 100%;
+  min-height: var(--ec-form-control-textarea-min-height);
+  max-height: var(--ec-form-control-textarea-max-height);
+}
+textarea.form-control:disabled {
+  resize: none;
+}
+
+input.form-control[type=file] {
+  --ec-form-control-file-background-color: transparent;
+  --ec-form-control-file-border: var(--ec-form-control-border-width) solid
+    var(--ec-form-control-secondary-color);
+  padding: 0;
+  overflow: hidden;
+  border: var(--ec-form-control-file-border);
+  border-radius: var(--ec-border-radius);
+}
+input.form-control[type=file]:disabled, input.form-control[type=file]:disabled::file-selector-button {
+  color: var(--ec-form-control-disabled-color);
+  border-color: var(--ec-form-control-disabled-color);
+}
+input.form-control[type=file]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+input.form-control[type=file]:not(:disabled):not([readonly]):active, input.form-control[type=file]:not(:disabled):not([readonly]):active::file-selector-button {
+  border-color: var(--ec-form-control-primary-color);
+}
+input.form-control[type=file]::file-selector-button {
+  border: none;
+  pointer-events: none;
+  color: var(--ec-form-utilities-color-secondary);
+  padding: calc(var(--ec-form-control-padding) * 2);
+  transition: var(--ec-form-control-transition);
+  border-right: var(--ec-form-control-file-border);
+  background-color: var(--ec-form-control-file-background-color);
+}
+input.form-control[type=file]:user-invalid:not([data-no-validation]), input.form-control[type=file]:user-invalid:not([data-no-validation])::file-selector-button {
+  color: var(--ec-form-control-invalid-color);
+  border-color: var(--ec-form-control-invalid-color);
+}
+input.form-control[type=color] {
+  width: 3rem;
+  height: calc(1.5em + 0.75rem + var(--ec-border-width) * 2);
+  padding: var(--ec-border-radius);
+  border-radius: var(--ec-border-radius);
+  border: var(--ec-form-control-border-width) solid var(--ec-form-control-secondary-color);
+}
+input.form-control[type=color]:not(:disabled) {
+  cursor: pointer;
+}
+input.form-control[type=color]:focus-visible {
+  border-color: var(--ec-form-control-primary-color);
+}
+
+.form-select {
+  --ec-form-select-primary-color: var(--ec-form-utilities-color-primary);
+  --ec-form-select-secondary-color: var(
+    --ec-form-utilities-color-secondary
+  );
+  --ec-form-select-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-form-select-invalid-color: var(--ec-form-utilities-color-invalid);
+  --ec-form-select-size: var(--ec-font-size-md);
+  --ec-form-select-padding: 0.375rem;
+  --ec-form-select-border-width: 1px;
+  --ec-form-select-line-height: 1.5;
+  --ec-form-select-bg-color: transparent;
+  --ec-form-select-transition: border-color var(--ec-transition-ease-in-out),
+    box-shadow var(--ec-transition-ease-in-out);
+  --ec-form-select-img-placement: 0.75rem;
+  --ec-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --ec-form-select-border: var(--ec-form-select-border-width) solid
+    var(--ec-form-select-secondary-color);
+  cursor: pointer;
+  appearance: none;
+  display: block;
+  border: 0;
+  width: 100%;
+  color: var(--ec-form-select-primary-color);
+  padding: var(--ec-form-select-padding) calc(var(--ec-form-select-img-placement) * 3) var(--ec-form-select-padding) var(--ec-form-select-padding);
+  font-size: var(--ec-form-select-size);
+  line-height: var(--ec-form-select-line-height);
+  transition: var(--ec-form-select-transition);
+  border-bottom: var(--ec-form-select-border);
+  background-color: var(--ec-form-select-bg-color);
+  background-image: var(--ec-form-select-bg-img);
+  background-repeat: no-repeat;
+  background-position: right var(--ec-form-select-img-placement) center;
+  background-size: 16px 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.form-select[multiple], .form-select[size]:not([size="1"]) {
+  padding-right: var(--ec-form-select-padding);
+  background-image: none;
+}
+.form-select option {
+  --ec-bg-color: #0c0c16;
+  color: var(--ec-form-select-secondary-color);
+  background-color: var(--ec-bg-color);
+}
+.form-select option:checked {
+  color: var(--ec-form-select-primary-color);
+}
+.form-select:focus {
+  outline: none;
+}
+.form-select:focus-visible {
+  outline: none;
+  border-color: var(--ec-form-select-primary-color);
+}
+.form-select:disabled {
+  cursor: default;
+  color: var(--ec-form-select-disabled-color);
+  border-color: var(--ec-form-select-disabled-color);
+}
+.form-select:user-invalid:not([data-no-validation]) {
+  color: var(--ec-form-select-invalid-color);
+  border-bottom: var(--ec-form-select-border-width) solid var(--ec-form-select-invalid-color);
+}
+.form-select.form-select-sm {
+  --ec-form-select-size: var(--ec-font-size-sm);
+  --ec-form-select-padding: 0.275rem;
+}
+.form-select.form-select-lg {
+  --ec-form-select-size: var(--ec-font-size-lg);
+  --ec-form-select-padding: 0.5rem;
+}
+
+select.form-select::-ms-expand {
+  display: none;
+}
+@media screen and (min-width: 0\0 ) {
+  select.form-select {
+    background: none\9 ;
+    padding: 5px\9 ;
+  }
+}
+
+.input-group {
+  --ec-input-group-primary-color: var(--ec-form-utilities-color-primary);
+  --ec-input-group-secondary-color: var(
+    --ec-form-utilities-color-secondary
+  );
+  --ec-input-group-disabled-color: var(--ec-form-utilities-color-disabled);
+  --ec-input-group-invalid-color: var(--ec-form-utilities-color-invalid);
+  --ec-input-group-padding: 0.375rem;
+  --ec-input-group-border-width: 1px;
+  --ec-input-group-line-height: 1.5;
+  --ec-input-group-transition: border-color var(--ec-transition-ease-in-out),
+    box-shadow var(--ec-transition-ease-in-out);
+  --ec-input-group-border: var(--ec-input-group-border-width) solid
+    var(--ec-input-group-secondary-color);
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: var(--ec-input-group-line-height);
+  border-bottom: var(--ec-input-group-border);
+  transition: var(--ec-input-group-transition);
+}
+.input-group .input-group-text {
+  --ec-input-group-text-color: var(--ec-input-group-primary-color);
+  --ec-input-group-text-bg-color: transparent;
+  --ec-input-group-text-font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--ec-input-group-text-color);
+  font-weight: var(--ec-input-group-text-font-weight);
+  background-color: var(--ec-input-group-text-bg-color);
+  padding: var(--ec-input-group-padding) var(--ec-input-group-padding) calc(var(--ec-input-group-padding) * 2);
+}
+.input-group .input-group-text ~ .form-control:disabled, .input-group .input-group-text ~ .form-select:disabled {
+  color: var(--ec-input-group-disabled-color);
+}
+.input-group > .form-control,
+.input-group > .form-select,
+.input-group > .form-floating {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  border: none;
+}
+.input-group > .form-control > .form-control,
+.input-group > .form-control > .form-select,
+.input-group > .form-select > .form-control,
+.input-group > .form-select > .form-select,
+.input-group > .form-floating > .form-control,
+.input-group > .form-floating > .form-select {
+  border: none;
+}
+.input-group > .form-control:focus,
+.input-group > .form-select:focus,
+.input-group > .form-floating:focus-within {
+  z-index: 5;
+}
+.input-group:has(> .form-select) .input-group-text {
+  padding: var(--ec-form-select-padding);
+}
+.input-group:has(> .form-control:focus-visible), .input-group:has(> .form-select:focus-visible), .input-group:has(> .form-floating:focus-within) {
+  outline: none;
+  border-color: var(--ec-input-group-primary-color);
+}
+.input-group:has(> .form-control:disabled), .input-group:has(> .form-select:disabled), .input-group:has(> .form-control:read-only), .input-group:has(> .form-select:read-only) {
+  color: var(--ec-input-group-disabled-color);
+  border-color: var(--ec-input-group-disabled-color);
+}
+.input-group:has(> .form-control:disabled) .input-group-text, .input-group:has(> .form-select:disabled) .input-group-text, .input-group:has(> .form-control:read-only) .input-group-text, .input-group:has(> .form-select:read-only) .input-group-text {
+  color: var(--ec-input-group-disabled-color);
+}
+.input-group:has(> .form-control:disabled) ::placeholder, .input-group:has(> .form-select:disabled) ::placeholder, .input-group:has(> .form-control:read-only) ::placeholder, .input-group:has(> .form-select:read-only) ::placeholder {
+  color: var(--ec-input-group-disabled-color);
+}
+.input-group:has(> .form-control:invalid:not([data-no-validation])), .input-group:has(> .form-select:invalid:not([data-no-validation])) {
+  color: var(--ec-input-group-invalid-color);
+  border-color: var(--ec-input-group-invalid-color);
+}
+.input-group:has(> .form-control:invalid:not([data-no-validation])) .form-control,
+.input-group:has(> .form-control:invalid:not([data-no-validation])) .form-select, .input-group:has(> .form-select:invalid:not([data-no-validation])) .form-control,
+.input-group:has(> .form-select:invalid:not([data-no-validation])) .form-select {
+  color: var(--ec-input-group-invalid-color);
+  border-bottom: none;
+}
+.input-group:has(> .form-control:invalid:not([data-no-validation])) .input-group-text, .input-group:has(> .form-select:invalid:not([data-no-validation])) .input-group-text {
+  color: var(--ec-input-group-invalid-color);
+}
+.input-group:has(> .form-control:invalid:not([data-no-validation])) ::placeholder, .input-group:has(> .form-select:invalid:not([data-no-validation])) ::placeholder {
+  color: var(--ec-input-group-invalid-color);
+}
+.input-group.input-group-sm .form-control,
+.input-group.input-group-sm .form-select,
+.input-group.input-group-sm .input-group-text {
+  --ec-input-group-padding: 0.25rem;
+  --ec-input-group-size: var(--ec-font-size-sm);
+  font-size: var(--ec-input-group-size);
+  padding: var(--ec-input-group-padding) var(--ec-input-group-padding) calc(var(--ec-input-group-padding) * 2);
+}
+.input-group.input-group-lg .form-control,
+.input-group.input-group-lg .form-select,
+.input-group.input-group-lg .input-group-text {
+  --ec-input-group-padding: 0.5rem;
+  --ec-input-group-size: var(--ec-font-size-lg);
+  font-size: var(--ec-input-group-size);
+  padding: var(--ec-input-group-padding) var(--ec-input-group-padding) calc(var(--ec-input-group-padding) * 2);
+}
+
+.form-floating {
+  --ec-form-floating-line-height: 1.5;
+  --ec-form-floating-base-height: 3.5rem;
+  --ec-form-floating-height: calc(
+    var(--ec-form-floating-base-height) + calc(var(--ec-border-width) * 2)
+  );
+  --ec-form-floating-padding-x: 0.75rem;
+  --ec-form-floating-padding-y: 1rem;
+  --ec-form-floating-input-padding-top: 1.625rem;
+  --ec-form-floating-input-padding-bottom: 0.625rem;
+  --ec-form-floating-label-transform: scale(0.85) translateY(-0.5rem)
+    translateX(0.15rem);
+  position: relative;
+}
+.form-floating > .form-control,
+.form-floating > .fotm-control-plaintext,
+.form-floating > .form-select {
+  height: var(--ec-form-floating-height);
+  min-height: var(--ec-form-floating-height);
+  line-height: var(--ec-form-floating-line-height);
+}
+.form-floating > label {
+  --ec-form-floating-label-font-size: var(--ec-font-size-md);
+  --ec-form-floating-label-primary-color: var(
+    --ec-form-utilities-color-primary
+  );
+  --ec-form-floating-label-secondary-color: var(
+    --ec-form-utilities-color-secondary
+  );
+  --ec-form-floating-label-disabled-color: var(
+    --ec-form-utilities-color-disabled
+  );
+  --ec-form-floating-label-invalid-color: var(
+    --ec-form-utilities-color-invalid
+  );
+  --ec-form-floating-label-transition: var(--ec-transition-ease-in-out);
+  --ec-form-floating-label-border: var(--ec-border-width) solid
+    transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  max-width: 100%;
+  height: 100%;
+  padding: var(--ec-form-floating-padding-y) var(--ec-form-floating-padding-x);
+  font-size: var(--ec-form-floating-label-font-size);
+  color: var(--ec-form-floating-label-secondary-color);
+  border: var(--ec-form-floating-label-border);
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+  padding: var(--ec-form-floating-padding-y) var(--ec-form-floating-padding-x);
+}
+.form-floating > .form-control::placeholder,
+.form-floating > .form-control-plaintext::placeholder {
+  color: transparent;
+}
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown),
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown) {
+  padding-top: var(--ec-form-floating-input-padding-top);
+  padding-bottom: var(--ec-form-floating-input-padding-bottom);
+}
+.form-floating > .form-control:-webkit-autofill,
+.form-floating > .form-control-plaintext:-webkit-autofill {
+  padding-top: var(--ec-form-floating-input-padding-top);
+  padding-bottom: var(--ec-form-floating-input-padding-bottom);
+}
+.form-floating > .form-select {
+  --ec-form-floating-select-additional-size: 0.5rem;
+  height: calc(var(--ec-form-floating-height) + var(--ec-form-floating-select-additional-size));
+  min-height: calc(var(--ec-form-floating-height) + var(--ec-form-floating-select-additional-size));
+  padding-top: calc(var(--ec-form-floating-input-padding-top) + var(--ec-form-floating-select-additional-size));
+  padding-bottom: var(--ec-form-floating-input-padding-bottom);
+  padding-left: var(--ec-form-floating-padding-x);
+}
+.form-floating > .form-control:not(:read-only):focus ~ label,
+.form-floating > .form-control:not(:read-only):not(:placeholder-shown) ~ label,
+.form-floating > .form-control-plaintext:not(:read-only) ~ label,
+.form-floating > .form-select:not(:read-only) ~ label {
+  transform: var(--ec-form-floating-label-transform);
+}
+.form-floating > .form-control:-webkit-autofill ~ label {
+  transform: var(--ec-form-floating-label-transform);
+}
+.form-floating > .form-control:user-invalid:not([data-no-validation]) ~ label {
+  color: var(--ec-form-floating-label-invalid-color);
+}
+.form-floating > .form-control:disabled ~ label,
+.form-floating > .form-control[readonly] ~ label,
+.form-floating > .form-select:disabled ~ label,
+.form-floating > .form-select[readonly] ~ label {
+  color: var(--ec-form-floating-label-disabled-color);
 }

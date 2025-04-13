@@ -1,4 +1,4 @@
-import{j as e}from"./index-CJ2V4BqM.js";import{useMDXComponents as l}from"./index-dGnVyRoY.js";function a(s){const n={code:"code",h1:"h1",p:"p",pre:"pre",...l(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"modal",children:"Modal"}),`
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as l}from"./index-Bb44zobi.js";function a(s){const n={code:"code",h1:"h1",p:"p",pre:"pre",...l(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"modal",children:"Modal"}),`
 `,e.jsxs(n.p,{children:["To display modal overlays, use the ",e.jsx(n.code,{children:".modal"}),` class.
 The structure inside it should be the same for every modal.`]}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<div class="modal">

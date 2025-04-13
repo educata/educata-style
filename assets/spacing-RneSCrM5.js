@@ -1,11 +1,13 @@
-import{j as e}from"./index-CJ2V4BqM.js";import{useMDXComponents as r}from"./index-dGnVyRoY.js";import{C as i}from"./index-KLnuV1dT.js";import{CenteredDiv as c}from"./centered-div.stories-CQqjmt0C.js";import{Gap as o}from"./gap.stories-Hl_XlOpU.js";import{RowGap as l}from"./row-gap.stories-DjIo3ns1.js";import{ColumnGap as a}from"./column-gap.stories-D2scWGjF.js";import"./iframe-BcGipsLl.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function d(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",pre:"pre",ul:"ul",...r(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"spacing",children:"Spacing"}),`
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as r}from"./index-Bb44zobi.js";import{C as i}from"./index-DfVDOXU6.js";import{CenteredDiv as c}from"./centered-div.stories-CQqjmt0C.js";import{Gap as o}from"./gap.stories-Hl_XlOpU.js";import{RowGap as l}from"./row-gap.stories-DjIo3ns1.js";import{ColumnGap as a}from"./column-gap.stories-D2scWGjF.js";import"./iframe-CfX-IpHZ.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function d(s){const n={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",pre:"pre",ul:"ul",...r(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"spacing",children:"Spacing"}),`
 `,e.jsx(n.p,{children:`Educata-Style provides a set of spacing utilities that can be used to add margin and padding to elements.
 There are many shorthand utilities for quickly adding margin, padding or gap to an element.`}),`
 `,e.jsx(n.h2,{id:"margin-and-spacing",children:"Margin and Spacing"}),`
 `,e.jsxs(n.p,{children:["Apply responsive-friendly ",e.jsx(n.code,{children:"margin"})," or ",e.jsx(n.code,{children:"padding"}),` to an element or specific sides using shorthand classes.
 These classes offer flexibility for individual, global, as well as vertical and horizontal spacing adjustments.
 Built using a default Sass map, they provide spacing options from `,e.jsx(n.code,{children:".25rem"})," to ",e.jsx(n.code,{children:"3rem"}),"."]}),`
-`,e.jsx("div",{className:"alert",children:e.jsxs(n.p,{children:["Using the CSS Grid layout module? Consider using the ",e.jsx(n.a,{href:"#gap",children:"gap utilities"})," for grid gap spacing."]})}),`
+`,e.jsxs(n.blockquote,{children:[`
+`,e.jsxs(n.p,{children:["Using the CSS Grid layout module? Consider using the ",e.jsx(n.a,{href:"#gap",children:"gap utilities"})," for grid gap spacing."]}),`
+`]}),`
 `,e.jsx(n.h3,{id:"usage",children:"Usage"}),`
 `,e.jsx(n.p,{children:"Spacing can be used inside any breakpoint."}),`
 `,e.jsx(n.p,{children:"The class names are based on the following pattern:"}),`
@@ -63,4 +65,4 @@ This utility is available for both `,e.jsx(n.code,{children:"row"})," and ",e.js
 `,e.jsx(i,{of:l}),`
 `,e.jsx(n.h3,{id:"column-gap",children:"column-gap"}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"column-gap"})," sets the gap between columns in a container."]}),`
-`,e.jsx(i,{of:a})]})}function b(s={}){const{wrapper:n}={...r(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(d,{...s})}):d(s)}export{b as default};
+`,e.jsx(i,{of:a})]})}function y(s={}){const{wrapper:n}={...r(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(d,{...s})}):d(s)}export{y as default};
