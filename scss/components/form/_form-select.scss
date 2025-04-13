@@ -1,0 +1,100 @@
+@use "../../variables/global" as *;
+
+.form-select {
+  --#{$prefix}form-select-primary-color: var(--#{$prefix}form-utilities-color-primary);
+  --#{$prefix}form-select-secondary-color: var(
+    --#{$prefix}form-utilities-color-secondary
+  );
+  --#{$prefix}form-select-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-select-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+  --#{$prefix}form-select-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}form-select-padding: 0.375rem;
+  --#{$prefix}form-select-border-width: 1px;
+  --#{$prefix}form-select-line-height: 1.5;
+  --#{$prefix}form-select-bg-color: transparent;
+  --#{$prefix}form-select-transition: border-color var(--#{$prefix}transition-ease-in-out),
+    box-shadow var(--#{$prefix}transition-ease-in-out);
+  --#{$prefix}form-select-img-placement: 0.75rem;
+  --#{$prefix}form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --#{$prefix}form-select-border: var(--#{$prefix}form-select-border-width) solid
+    var(--#{$prefix}form-select-secondary-color);
+
+  cursor: pointer;
+  appearance: none;
+  display: block;
+  border: 0;
+  width: 100%;
+  color: var(--#{$prefix}form-select-primary-color);
+  padding: var(--#{$prefix}form-select-padding)
+    calc(var(--#{$prefix}form-select-img-placement) * 3)
+    var(--#{$prefix}form-select-padding) var(--#{$prefix}form-select-padding);
+  font-size: var(--#{$prefix}form-select-size);
+  line-height: var(--#{$prefix}form-select-line-height);
+  transition: var(--#{$prefix}form-select-transition);
+  border-bottom: var(--#{$prefix}form-select-border);
+  background-color: var(--#{$prefix}form-select-bg-color);
+  background-image: var(--#{$prefix}form-select-bg-img);
+  background-repeat: no-repeat;
+  background-position: right var(--#{$prefix}form-select-img-placement) center;
+  background-size: 16px 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    padding-right: var(--#{$prefix}form-select-padding);
+    background-image: none;
+  }
+
+  option {
+    --#{$prefix}bg-color: #0c0c16;
+    color: var(--#{$prefix}form-select-secondary-color);
+    background-color: var(--#{$prefix}bg-color);
+
+    &:checked {
+      color: var(--#{$prefix}form-select-primary-color);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--#{$prefix}form-select-primary-color);
+  }
+
+  &:disabled {
+    cursor: default;
+    color: var(--#{$prefix}form-select-disabled-color);
+    border-color: var(--#{$prefix}form-select-disabled-color);
+  }
+
+  &:user-invalid:not([data-no-validation]) {
+    color: var(--#{$prefix}form-select-invalid-color);
+    border-bottom: var(--#{$prefix}form-select-border-width) solid
+      var(--#{$prefix}form-select-invalid-color);
+  }
+
+  &.form-select-sm {
+    --#{$prefix}form-select-size: var(--#{$prefix}font-size-sm);
+    --#{$prefix}form-select-padding: 0.275rem;
+  }
+
+  &.form-select-lg {
+    --#{$prefix}form-select-size: var(--#{$prefix}font-size-lg);
+    --#{$prefix}form-select-padding: 0.5rem;
+  }
+}
+
+select.form-select {
+  &::-ms-expand {
+    display: none;
+  }
+
+  @media screen and (min-width: 0\0) {
+    background: none\9;
+    padding: 5px\9;
+  }
+}

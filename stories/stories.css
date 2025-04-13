@@ -14,16 +14,17 @@
   font-family: system-ui;
 }
 
-.alert {
+blockquote {
   width: 100%;
   border: var(--ec-alert-border, 1px solid var(--ec-color-blue-100));
   background-color: var(--ec-alert-bg, var(--ec-color-blue-100));
   margin: var(--ec-alert-margin) 0 !important;
   padding: var(--ec-alert-padding) !important;
+  border-left: unset !important;
   position: relative;
 }
 
-.alert::before {
+blockquote::before {
   content: "";
   position: absolute;
   top: 0;
@@ -33,6 +34,10 @@
   background-color: var(--ec-alert-border);
 }
 
-.alert > * {
+blockquote > * {
   margin: 0 !important;
+}
+
+.bg-main {
+  background-color: var(--ec-bg-color-main) !important;
 }

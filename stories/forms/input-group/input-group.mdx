@@ -1,0 +1,47 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as FormGroupStories from './input-group.stories.ts';
+
+# Input group
+
+The input group component is a wrapper for form elements that allows you to group them together.
+It can be used to create a more complex form layout, such as a form with multiple inputs or a form with a label and an input.
+
+## Basic example
+
+Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
+
+<Canvas of={FormGroupStories.BasicExample} className='bg-main' />
+
+## Wrapping
+
+Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custom form field validation within an input group.
+You may disable this with `.flex-nowrap`.
+
+<Canvas of={FormGroupStories.Wrapping} className='bg-main' />
+
+## Sizing
+
+Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+
+> Sizing on the individual input group elements isn't supported.
+
+<Canvas of={FormGroupStories.Sizing} className='bg-main' />
+
+## Checkboxes and radios
+
+Checkboxes and radios are supported as well. Use the `.input-group-text` class to add a label to the checkbox or radio input.
+
+<Canvas of={FormGroupStories.CheckBoxRadio} className='bg-main' />
+
+## Multiple inputs
+
+<Canvas of={FormGroupStories.MultipleInputs} className='bg-main' />
+
+## Multiple addons
+
+<Canvas of={FormGroupStories.MultipleAddons} className='bg-main' />
+
+## Select with addon
+
+<Canvas of={FormGroupStories.Select} className='bg-main' />

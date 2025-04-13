@@ -1,0 +1,62 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as FormControlStories from './form-control.stories.ts';
+
+# Form controls
+
+Educata's form controls are styled with class names. Be sure to use an appropriate `type` attribute on all inputs.
+It can be used on `input` and `textarea` elements, which will give custom styles, sizing, focus states and more.
+
+## Example
+
+<Canvas of={FormControlStories.DefaultForm} className='bg-main' />
+
+## Sizing
+
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+
+<Canvas of={FormControlStories.FormControlSizing} className='bg-main' />
+
+## Form text
+
+Block-level form text can be created using `.form-text`.
+
+> Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+
+Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+
+<Canvas of={FormControlStories.FormText} className='bg-main' />
+
+## Disabled
+
+Add the `disabled` boolean attribute on an input to give it a disabled style. The associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+
+<Canvas of={FormControlStories.FormControlDisabled} className='bg-main' />
+
+## Readonly
+
+Add the `readonly` boolean attribute on an input to give it a readonly style. The associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
+
+<Canvas of={FormControlStories.FormControlReadonly} className='bg-main' />
+
+## Readonly plain text
+
+If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct margin and padding.
+
+<Canvas of={FormControlStories.FormControlPlainText} className='bg-main' />
+
+## File Input
+
+<Canvas of={FormControlStories.FormControlFileInput} className='bg-main' />
+
+## Color
+
+Set the `type="color"` on input.
+
+<Canvas of={FormControlStories.FormControlColorInput} className='bg-main' />
+
+## Datalist
+
+A `<datalist>` element can be used to provide an "autocomplete" or "suggestion" list of options for an `<input>` element. The `<datalist>` is referenced by the `list` attribute on the `<input>`.
+
+<Canvas of={FormControlStories.FormControlDataList} className='bg-main' />

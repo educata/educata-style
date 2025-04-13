@@ -1,0 +1,34 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as FormSelectStories from './select.stories.ts';
+
+# Select
+
+Customize the native `<select>`s with custom CSS that changes the element's initial appearance.
+
+## Default
+
+Custom `<select>` menus need only a custom class, `.form-select` to trigger the custom styles.
+Custom styles are limited to the `<select>`'s initial appearance and cannot fully modify the `<option>`s due to browser limitations.
+
+<Canvas of={FormSelectStories.FormSelectDefault} className='bg-main' />
+
+## Sizing
+
+You may also choose from small and large custom selects to match our similarly sized text inputs.
+
+<Canvas of={FormSelectStories.FormSelectSizing} className='bg-main' />
+
+## Disabled
+
+Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
+
+<Canvas of={FormSelectStories.FormSelectDisabled} className='bg-main' />
+
+## Multiple
+
+<Canvas of={FormSelectStories.FormSelectMultiple} className='bg-main' />
+
+## Size
+
+<Canvas of={FormSelectStories.FormSelectSize} className='bg-main' />

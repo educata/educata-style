@@ -2,6 +2,8 @@
 @use "../functions/generate-color-scale" as *;
 
 $prefix: "ec-";
+$transitions-duration: 0.3s !default;
+$transitions: ease-in-out, ease-in, ease-out, linear !default;
 
 $font-sizes: (
   sm: 0.75,
@@ -55,6 +57,13 @@ $base-colors: (
   green: #51d253,
   purple: #c05be0,
   yellow: #e6fd53,
+) !default;
+
+$base-bg-colors: map.merge(
+  $base-colors,
+  (
+    main: #0c0c16,
+  )
 ) !default;
 
 $border-vars: (
@@ -140,3 +149,16 @@ $button-variations: (
     bg-hover-color: generate-color-scale(map.get($base-colors, black), 90),
   ),
 ) !default;
+
+$form-utilities: (
+  bg-color: #26776d,
+  border-color: #ededee,
+  box-shadow: 0 0 0 0.25rem rgba(#26776d, 0.25),
+);
+
+$form-utilities-colors: (
+  primary: white,
+  secondary: black-30,
+  disabled: black-60,
+  invalid: red-80,
+);

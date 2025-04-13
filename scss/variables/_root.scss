@@ -16,12 +16,23 @@
     }
   }
 
+  @each $property, $value in $base-bg-colors {
+    --#{$prefix}bg-color-#{"" + $property}: #{$value};
+  }
+
+  --#{$prefix}transation-duration: #{$transitions-duration};
+
+  @each $transition in $transitions {
+    --#{$prefix}transition-#{$transition}: var(--#{$prefix}transation-duration)
+      #{$transition};
+  }
+
   @for $i from 1 through 9 {
     --#{$prefix}font-weight-#{100 * $i}: #{100 * $i};
   }
 
   @each $property, $value in $font-sizes {
-    --#{$prefix}font-size-#{$property}: #{$value}rem;
+    --#{$prefix}font-size-#{$property}: #{$value}em;
   }
 
   @each $property, $value in $border-vars {
@@ -34,6 +45,14 @@
 
   @each $property, $value in $icon-sizes {
     --#{$prefix}icon-#{$property}: #{$value};
+  }
+
+  @each $property, $value in $form-utilities {
+    --#{$prefix}form-utilities-#{$property}: #{$value};
+  }
+
+  @each $property, $value in $form-utilities-colors {
+    --#{$prefix}form-utilities-color-#{$property}: var(--#{$prefix}color-#{"" + $value});
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {

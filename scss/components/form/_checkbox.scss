@@ -1,0 +1,140 @@
+@use "../../variables/global" as *;
+
+.form-check {
+  --#{$prefix}form-check-gap: 5px;
+  --#{$prefix}form-check-disabled-color: var(--#{$prefix}form-utilities-color-disabled);
+  --#{$prefix}form-check-invalid-color: var(--#{$prefix}form-utilities-color-invalid);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--#{$prefix}form-check-gap);
+  color: var(--#{$prefix}color-white);
+
+  &.form-reverse-input {
+    input {
+      order: 1;
+    }
+  }
+
+  &.form-check-inline {
+    display: inline-flex;
+  }
+}
+
+.form-check-input {
+  --#{$prefix}form-check-input-width: 1em;
+  --#{$prefix}form-check-input-height: 1em;
+  --#{$prefix}form-check-input-bg-color: transparent;
+  --#{$prefix}form-check-input-border-width: 1px;
+  --#{$prefix}form-check-input-margin: 5px;
+  --#{$prefix}form-check-input-accent-color: var(--#{$prefix}form-utilities-bg-color);
+  --#{$prefix}form-check-input-border-radius: var(--#{$prefix}border-radius-sm);
+  --#{$prefix}form-check-input-border-color: var(--#{$prefix}form-utilities-border-color);
+  --#{$prefix}form-check-input-box-shadow: var(--#{$prefix}form-utilities-box-shadow);
+
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  print-color-adjust: exact;
+  width: var(--#{$prefix}form-check-input-width);
+  height: var(--#{$prefix}form-check-input-height);
+  margin: var(--#{$prefix}form-check-input-margin);
+  border-radius: var(--#{$prefix}form-check-input-border-radius);
+  border: var(--#{$prefix}form-check-input-border-width) solid
+    var(--#{$prefix}form-check-input-border-color);
+  transition: var(--#{$prefix}transition-ease-in-out);
+  background-color: var(--#{$prefix}form-check-input-bg-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--#{$prefix}form-check-input-accent-color);
+    box-shadow: var(--#{$prefix}form-check-input-box-shadow);
+  }
+
+  &::before {
+    content: "✔";
+    font-size: var(--#{$prefix}font-size-sm);
+    color: var(--#{$prefix}form-utilities-color-primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    visibility: hidden;
+  }
+
+  &:checked::before {
+    visibility: visible;
+  }
+
+  &:checked {
+    border-color: var(--#{$prefix}form-check-input-accent-color);
+    background-color: var(--#{$prefix}form-check-input-accent-color);
+  }
+
+  &[type="radio"] {
+    --#{$prefix}form-check-input-circle-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    border-radius: 50%;
+
+    &:checked {
+      background-image: var(--#{$prefix}form-check-input-circle-bg);
+      background-position: center;
+      background-size: 10px;
+      transition: unset;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &[role="switch"] {
+    --#{$prefix}form-switch-width: 2em;
+    --#{$prefix}form-switch-border-radius: 2em;
+    --#{$prefix}form-check-input-circle-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+
+    width: var(--#{$prefix}form-switch-width);
+    border-radius: var(--#{$prefix}form-switch-border-radius);
+    background-image: var(--#{$prefix}form-check-input-circle-bg);
+    background-position: left center;
+
+    &::before {
+      display: none;
+    }
+
+    &:checked {
+      background-position: right center;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &:not(:checked) {
+      border-color: var(--#{$prefix}form-check-disabled-color);
+    }
+
+    ~ .form-check-label {
+      color: var(--#{$prefix}form-check-disabled-color);
+    }
+  }
+
+  &:user-invalid:not([data-no-validation]) {
+    border-color: var(--#{$prefix}form-check-invalid-color);
+
+    ~ .form-check-label {
+      color: var(--#{$prefix}form-check-invalid-color);
+    }
+  }
+}
+
+.form-check-label {
+  --#{$prefix}form-check-input-label-color: var(--#{$prefix}form-utilities-color-primary);
+  color: var(--#{$prefix}form-check-input-label-color);
+}

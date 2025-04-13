@@ -1,0 +1,11 @@
+@use "../variables/global" as *;
+
+.rounded {
+  border-radius: var(--#{$prefix}border-radius);
+}
+
+@each $property, $value in $border-radius {
+  .rounded-#{$property} {
+    border-radius: var(--#{$prefix}border-radius-#{$property});
+  }
+}
