@@ -4004,6 +4004,10 @@ select.form-select::-ms-expand {
 .input-group:has(> .form-select) .input-group-text {
   padding: var(--ec-form-select-padding);
 }
+.input-group:has(> .form-floating) .input-group-text {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .input-group:has(> .form-control:focus-visible), .input-group:has(> .form-select:focus-visible), .input-group:has(> .form-floating:focus-within) {
   outline: none;
   border-color: var(--ec-input-group-primary-color);
@@ -4113,7 +4117,7 @@ select.form-select::-ms-expand {
 }
 .form-floating > .form-control::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
-  color: transparent;
+  color: transparent !important;
 }
 .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown),
 .form-floating > .form-control-plaintext:focus,
