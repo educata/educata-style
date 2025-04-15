@@ -1,0 +1,43 @@
+@use "../variables/global" as *;
+
+.chip {
+  --#{$prefix}chip-line-height: 1.5;
+  --#{$prefix}chip-padding: 0.2rem 1rem;
+  --#{$prefix}chip-font-size: var(--#{$prefix}font-size-sm);
+  --#{$prefix}chip-font-weight: var(--#{$prefix}font-weight-500);
+  --#{$prefix}chip-base-color: var(--#{$prefix}primary-bg-color);
+  --#{$prefix}chip-color: var(--#{$prefix}chip-base-color);
+  --#{$prefix}chip-border-radius: var(--#{$prefix}border-radius-pill);
+  --#{$prefix}chip-bg: color-mix(
+    in srgb,
+    var(--#{$prefix}chip-base-color) 15%,
+    transparent
+  );
+  --#{$prefix}chip-border: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+    color-mix(in srgb, var(--#{$prefix}chip-base-color) 15%, transparent);
+
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--#{$prefix}chip-font-size);
+  font-weight: var(--#{$prefix}chip-font-weight);
+  line-height: var(--#{$prefix}chip-line-height);
+  padding: var(--#{$prefix}chip-padding);
+  color: var(--#{$prefix}chip-color);
+  background-color: var(--#{$prefix}chip-bg);
+  border-radius: var(--#{$prefix}chip-border-radius);
+  border: var(--#{$prefix}chip-border);
+}
+
+@each $property, $value in $color-variations {
+  .chip-#{"" + $property} {
+    --#{$prefix}chip-base-color: var(--#{$prefix}#{"" + $property}-bg-color);
+  }
+}
