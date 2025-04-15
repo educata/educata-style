@@ -70,6 +70,13 @@
     }
   }
 
+  &:has(> .form-floating) {
+    .input-group-text {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   &:has(> .form-control:focus-visible),
   &:has(> .form-select:focus-visible),
   &:has(> .form-floating:focus-within) {
