@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "./global" as *;
 
 @use "../functions/generate-color-scale" as *;
@@ -16,8 +17,9 @@
     }
   }
 
-  @each $property, $value in $base-bg-colors {
-    --#{$prefix}bg-color-#{"" + $property}: #{$value};
+  @each $property, $value in $color-variations {
+    --#{$prefix}#{"" + $property}-text-color: #{map.get($value, color)};
+    --#{$prefix}#{"" + $property}-bg-color: #{map.get($value, bg-color)};
   }
 
   --#{$prefix}transation-duration: #{$transitions-duration};

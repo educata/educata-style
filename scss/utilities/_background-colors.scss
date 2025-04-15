@@ -1,7 +1,7 @@
 @use "../variables/global" as *;
 
-@each $property, $value in $base-bg-colors {
+@each $property, $value in $color-variations {
   .bg-#{"" + $property} {
-    background-color: $value;
+    background-color: var(--#{$prefix}bg-color-#{$property});
   }
 }

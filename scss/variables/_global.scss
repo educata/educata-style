@@ -59,11 +59,35 @@ $base-colors: (
   yellow: #e6fd53,
 ) !default;
 
-$base-bg-colors: map.merge(
-  $base-colors,
-  (
-    main: #0c0c16,
-  )
+$color-variations: (
+  primary: (
+    color: black,
+    bg-color: map.get($base-colors, yellow),
+  ),
+  secondary: (
+    color: white,
+    bg-color: map.get($base-colors, blue),
+  ),
+  success: (
+    color: white,
+    bg-color: map.get($base-colors, green),
+  ),
+  danger: (
+    color: white,
+    bg-color: map.get($base-colors, red),
+  ),
+  white: (
+    color: black,
+    bg-color: map.get($base-colors, white),
+  ),
+  black: (
+    color: white,
+    bg-color: map.get($base-colors, black),
+  ),
+  main: (
+    color: white,
+    bg-color: #0c0c16,
+  ),
 ) !default;
 
 $border-vars: (
@@ -118,36 +142,63 @@ $button-sizes: (
 ) !default;
 
 $button-variations: (
-  primary: (
-    color: black,
-    bg-color: map.get($base-colors, yellow),
-    bg-hover-color: generate-darker-color(map.get($base-colors, yellow), 98),
-  ),
-  secondary: (
-    color: white,
-    bg-color: map.get($base-colors, blue),
-    bg-hover-color: generate-darker-color(map.get($base-colors, blue), 90),
-  ),
-  success: (
-    color: white,
-    bg-color: map.get($base-colors, green),
-    bg-hover-color: generate-darker-color(map.get($base-colors, green), 90),
-  ),
-  danger: (
-    color: white,
-    bg-color: map.get($base-colors, red),
-    bg-hover-color: generate-darker-color(map.get($base-colors, red), 90),
-  ),
-  white: (
-    color: black,
-    bg-color: map.get($base-colors, white),
-    bg-hover-color: generate-darker-color(map.get($base-colors, white), 90),
-  ),
-  black: (
-    color: white,
-    bg-color: map.get($base-colors, black),
-    bg-hover-color: generate-color-scale(map.get($base-colors, black), 90),
-  ),
+  primary:
+    map.merge(
+      map.get($color-variations, primary),
+      (
+        bg-hover-color:
+          generate-darker-color(
+            map.get(map.get($color-variations, primary), bg-color),
+            98
+          ),
+      )
+    ),
+  secondary:
+    map.merge(
+      map.get($color-variations, secondary),
+      (
+        bg-hover-color:
+          generate-darker-color(
+            map.get(map.get($color-variations, secondary), bg-color),
+            90
+          ),
+      )
+    ),
+  success:
+    map.merge(
+      map.get($color-variations, success),
+      (
+        bg-hover-color:
+          generate-darker-color(
+            map.get(map.get($color-variations, success), bg-color),
+            90
+          ),
+      )
+    ),
+  danger:
+    map.merge(
+      map.get($color-variations, danger),
+      (
+        bg-hover-color:
+          generate-darker-color(map.get(map.get($color-variations, danger), bg-color), 90),
+      )
+    ),
+  white:
+    map.merge(
+      map.get($color-variations, white),
+      (
+        bg-hover-color:
+          generate-darker-color(map.get(map.get($color-variations, white), bg-color), 90),
+      )
+    ),
+  black:
+    map.merge(
+      map.get($color-variations, black),
+      (
+        bg-hover-color:
+          generate-color-scale(map.get(map.get($color-variations, black), bg-color), 90),
+      )
+    ),
 ) !default;
 
 $form-utilities: (
