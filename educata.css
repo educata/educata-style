@@ -89,14 +89,20 @@
   --ec-color-yellow-30: rgb(247.5, 254.4, 203.4);
   --ec-color-yellow-20: rgb(250, 254.6, 220.6);
   --ec-color-yellow-10: rgb(252.5, 254.8, 237.8);
-  --ec-bg-color-white: #ffffff;
-  --ec-bg-color-black: #171719;
-  --ec-bg-color-blue: #6666ff;
-  --ec-bg-color-red: #cc1f4f;
-  --ec-bg-color-green: #51d253;
-  --ec-bg-color-purple: #c05be0;
-  --ec-bg-color-yellow: #e6fd53;
-  --ec-bg-color-main: #0c0c16;
+  --ec-primary-text-color: black;
+  --ec-primary-bg-color: #e6fd53;
+  --ec-secondary-text-color: white;
+  --ec-secondary-bg-color: #6666ff;
+  --ec-success-text-color: white;
+  --ec-success-bg-color: #51d253;
+  --ec-danger-text-color: white;
+  --ec-danger-bg-color: #cc1f4f;
+  --ec-white-text-color: black;
+  --ec-white-bg-color: #ffffff;
+  --ec-black-text-color: white;
+  --ec-black-bg-color: #171719;
+  --ec-main-text-color: white;
+  --ec-main-bg-color: #0c0c16;
   --ec-transation-duration: 0.3s;
   --ec-transition-ease-in-out: var(--ec-transation-duration)
     ease-in-out;
@@ -1515,36 +1521,32 @@ h6 {
   border-radius: var(--ec-border-radius-circle);
 }
 
+.bg-primary {
+  background-color: var(--ec-bg-color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--ec-bg-color-secondary);
+}
+
+.bg-success {
+  background-color: var(--ec-bg-color-success);
+}
+
+.bg-danger {
+  background-color: var(--ec-bg-color-danger);
+}
+
 .bg-white {
-  background-color: #ffffff;
+  background-color: var(--ec-bg-color-white);
 }
 
 .bg-black {
-  background-color: #171719;
-}
-
-.bg-blue {
-  background-color: #6666ff;
-}
-
-.bg-red {
-  background-color: #cc1f4f;
-}
-
-.bg-green {
-  background-color: #51d253;
-}
-
-.bg-purple {
-  background-color: #c05be0;
-}
-
-.bg-yellow {
-  background-color: #e6fd53;
+  background-color: var(--ec-bg-color-black);
 }
 
 .bg-main {
-  background-color: #0c0c16;
+  background-color: var(--ec-bg-color-main);
 }
 
 .flex-wrap-nowrap {
@@ -3571,6 +3573,69 @@ h6 {
 .modal .modal-body {
   overflow-y: auto;
   position: relative;
+}
+
+.chip {
+  --ec-chip-line-height: 1.5;
+  --ec-chip-padding: 0.2rem 1rem;
+  --ec-chip-font-size: var(--ec-font-size-sm);
+  --ec-chip-font-weight: var(--ec-font-weight-500);
+  --ec-chip-base-color: var(--ec-primary-bg-color);
+  --ec-chip-color: var(--ec-chip-base-color);
+  --ec-chip-border-radius: var(--ec-border-radius-pill);
+  --ec-chip-bg: color-mix(
+    in srgb,
+    var(--ec-chip-base-color) 15%,
+    transparent
+  );
+  --ec-chip-border: var(--ec-border-width) var(--ec-border-style)
+    color-mix(in srgb, var(--ec-chip-base-color) 15%, transparent);
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--ec-chip-font-size);
+  font-weight: var(--ec-chip-font-weight);
+  line-height: var(--ec-chip-line-height);
+  padding: var(--ec-chip-padding);
+  color: var(--ec-chip-color);
+  background-color: var(--ec-chip-bg);
+  border-radius: var(--ec-chip-border-radius);
+  border: var(--ec-chip-border);
+}
+
+.chip-primary {
+  --ec-chip-base-color: var(--ec-primary-bg-color);
+}
+
+.chip-secondary {
+  --ec-chip-base-color: var(--ec-secondary-bg-color);
+}
+
+.chip-success {
+  --ec-chip-base-color: var(--ec-success-bg-color);
+}
+
+.chip-danger {
+  --ec-chip-base-color: var(--ec-danger-bg-color);
+}
+
+.chip-white {
+  --ec-chip-base-color: var(--ec-white-bg-color);
+}
+
+.chip-black {
+  --ec-chip-base-color: var(--ec-black-bg-color);
+}
+
+.chip-main {
+  --ec-chip-base-color: var(--ec-main-bg-color);
 }
 
 .form-check {
