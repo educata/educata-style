@@ -31,8 +31,8 @@ body {
   min-height: 100vh;
   line-height: 1;
   font-family: sans-serif;
-  background-color: var(--#{$prefix}color-white-100);
-  color: var(--#{$prefix}color-black-100);
+  background-color: var(--#{$prefix}main-bg-color);
+  color: var(--#{$prefix}main-text-color);
 }
 
 img,
@@ -51,7 +51,17 @@ select {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+  transition: var(--#{$prefix}transition-ease-in-out);
+
+  &:hover {
+    color: var(--#{$prefix}color-yellow);
+  }
+
+  &:focus {
+    outline: 2px dashed var(--#{$prefix}color-yellow);
+    outline-offset: 2px;
+  }
 }
 
 button {

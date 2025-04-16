@@ -1,0 +1,39 @@
+@use "../variables/global" as *;
+
+.breadcrumb {
+  --#{$prefix}breadcrumb-padding-x: 0;
+  --#{$prefix}breadcrumb-padding-y: 0;
+  --#{$prefix}breadcrumb-margin-bottom: 1rem;
+  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}main-text-color);
+  --#{$prefix}breadcrumb-divider: "/";
+  --#{$prefix}breadcrumb-font-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}breadcrumb-font-weight: var(--#{$prefix}font-weight-400);
+  --#{$prefix}breadcrumb-text-color: var(--#{$prefix}main-text-color);
+  --#{$prefix}breadcrumb-text-decoration: none;
+  --#{$prefix}breadcrumb-item-padding-x: 0.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
+  margin: 0 0 var(--#{$prefix}breadcrumb-margin-bottom);
+  font-size: var(--#{$prefix}breadcrumb-font-size);
+  font-weight: var(--#{$prefix}breadcrumb-font-weight);
+  color: var(--#{$prefix}breadcrumb-text-color);
+  text-decoration: var(--#{$prefix}breadcrumb-text-decoration);
+  list-style: none;
+  background-color: transparent;
+
+  .breadcrumb-item {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    + .breadcrumb-item {
+      &::before {
+        content: var(--#{$prefix}breadcrumb-divider);
+        color: var(--#{$prefix}breadcrumb-divider-color);
+        padding: 0 var(--#{$prefix}breadcrumb-item-padding-x);
+      }
+    }
+  }
+}
