@@ -3638,6 +3638,66 @@ h6 {
   --ec-chip-base-color: var(--ec-main-bg-color);
 }
 
+.spinner {
+  --ec-spinner-size: 2rem;
+  --ec-spinner-border-width: 0.25rem;
+  --ec-spinner-color: var(--ec-color-white);
+  --ec-spinner-animation-speed: 0.75s;
+  display: inline-block;
+  width: var(--ec-spinner-size);
+  height: var(--ec-spinner-size);
+  border: var(--ec-spinner-border-width) solid var(--ec-spinner-color);
+  border-radius: var(--ec-border-radius-circle);
+  border-top-color: transparent;
+  background-color: transparent;
+  animation: spin var(--ec-spinner-animation-speed) infinite linear;
+}
+.spinner.spinner-sm {
+  --ec-spinner-size: 1rem;
+}
+.spinner.spinner-lg {
+  --ec-spinner-size: 3rem;
+}
+.spinner.spinner-reverse {
+  animation-direction: reverse;
+}
+
+.spinner-primary {
+  --ec-spinner-color: var(--ec-primary-bg-color);
+}
+
+.spinner-secondary {
+  --ec-spinner-color: var(--ec-secondary-bg-color);
+}
+
+.spinner-success {
+  --ec-spinner-color: var(--ec-success-bg-color);
+}
+
+.spinner-danger {
+  --ec-spinner-color: var(--ec-danger-bg-color);
+}
+
+.spinner-white {
+  --ec-spinner-color: var(--ec-white-bg-color);
+}
+
+.spinner-black {
+  --ec-spinner-color: var(--ec-black-bg-color);
+}
+
+.spinner-main {
+  --ec-spinner-color: var(--ec-main-bg-color);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .form-check {
   --ec-form-check-gap: 5px;
   --ec-form-check-disabled-color: var(--ec-form-utilities-color-disabled);
