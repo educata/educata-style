@@ -1,0 +1,44 @@
+@use "../variables/global" as *;
+
+.spinner {
+  --#{$prefix}spinner-size: 2rem;
+  --#{$prefix}spinner-border-width: 0.25rem;
+  --#{$prefix}spinner-color: var(--#{$prefix}color-white);
+  --#{$prefix}spinner-animation-speed: 0.75s;
+
+  display: inline-block;
+  width: var(--#{$prefix}spinner-size);
+  height: var(--#{$prefix}spinner-size);
+  border: var(--#{$prefix}spinner-border-width) solid var(--#{$prefix}spinner-color);
+  border-radius: var(--#{$prefix}border-radius-circle);
+  border-top-color: transparent;
+  background-color: transparent;
+  animation: spin var(--#{$prefix}spinner-animation-speed) infinite linear;
+
+  &.spinner-sm {
+    --#{$prefix}spinner-size: 1rem;
+  }
+
+  &.spinner-lg {
+    --#{$prefix}spinner-size: 3rem;
+  }
+
+  &.spinner-reverse {
+    animation-direction: reverse;
+  }
+}
+
+@each $property, $value in $color-variations {
+  .spinner-#{"" + $property} {
+    --#{$prefix}spinner-color: var(--#{$prefix}#{"" + $property}-bg-color);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
