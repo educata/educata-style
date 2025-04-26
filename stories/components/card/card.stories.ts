@@ -1,5 +1,14 @@
 import { Meta, StoryObj } from "@storybook/html";
 
+// @ts-ignore
+import YellowPromo from "../../assets/yellow-promo.svg";
+// @ts-ignore
+import GreenPromo from "../../assets/green-promo.svg";
+// @ts-ignore
+import BluePromo from "../../assets/blue-promo.svg";
+// @ts-ignore
+import PurplePromo from "../../assets/purple-promo.svg";
+
 type CardArgs = {
   maxWidth: number;
   withImage: boolean;
@@ -79,7 +88,7 @@ export const PromoCardWithImage: Story = {
     return `
 <div
   class="promo-card"
-  style="max-width: 600px; background-image: url('/stories/assets/yellow-promo.svg')"
+  style="max-width: 600px; background-image: url('${YellowPromo}');"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -114,11 +123,7 @@ export const Promo: Story = {
     return `
 <div
   class="promo-card promo-card-${args.variation}"
-  style="max-width: ${args.maxWidth}px; ${
-      args.withImage
-        ? `background-image: url('/stories/assets/${args.variation}-promo.svg')`
-        : ""
-    }"
+  style="max-width: ${args.maxWidth}px; ${args.withImage ? getImage(args.variation) : ""}"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -161,3 +166,16 @@ export const SimpleCard: Story = {
 `;
   },
 };
+
+function getImage(variation: string): string {
+  switch (variation) {
+    case "yellow":
+      return `background-image: url('${YellowPromo}');`;
+    case "green":
+      return `background-image: url('${GreenPromo}');`;
+    case "blue":
+      return `background-image: url('${BluePromo}');`;
+    case "purple":
+      return `background-image: url('${PurplePromo}');`;
+  }
+}
