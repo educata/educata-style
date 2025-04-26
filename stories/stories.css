@@ -39,5 +39,5 @@ blockquote > * {
 }
 
 .bg-main {
-  background-color: var(--ec-bg-color-main) !important;
+  background-color: var(--ec-main-bg-color) !important;
 }

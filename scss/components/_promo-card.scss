@@ -1,0 +1,116 @@
+@use "../variables/global" as *;
+@use "../utilities/breakpoints" as *;
+
+.promo-card {
+  --#{$prefix}promo-card-line-height: 1.5;
+  --#{$prefix}promo-card-min-height: 350px;
+  --#{$prefix}promo-card-padding: 40px;
+  --#{$prefix}promo-card-radius: var(--#{$prefix}border-radius-xl);
+  --#{$prefix}promo-card-gap: 20px;
+  --#{$prefix}promo-card-base-color: var(--#{$prefix}color-yellow-rgb);
+  --#{$prefix}promo-card-border-width: var(--#{$prefix}border-width);
+  --#{$prefix}promo-card-border-style: var(--#{$prefix}border-style);
+  --#{$prefix}promo-card-base-border-color-opacity: 0.5;
+  --#{$prefix}promo-card-base-border-color: rgb(
+    var(--#{$prefix}promo-card-base-color),
+    var(--#{$prefix}promo-card-base-border-color-opacity)
+  );
+  --#{$prefix}promo-card-border-color: linear-gradient(
+    320deg,
+    var(--#{$prefix}promo-card-base-border-color),
+    var(--#{$prefix}color-black)
+  );
+  --#{$prefix}promo-card-bg-color-opacity: 0.2;
+  --#{$prefix}promo-card-bg-color: rgb(
+    var(--#{$prefix}promo-card-base-color),
+    var(--#{$prefix}promo-card-bg-color-opacity)
+  );
+  --#{$prefix}promo-card-bg: linear-gradient(
+    320deg,
+    var(--#{$prefix}promo-card-bg-color),
+    var(--#{$prefix}color-black)
+  );
+  --#{$prefix}promo-card-image-size: 160px;
+
+  width: 100%;
+  min-height: var(--#{$prefix}promo-card-min-height);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--#{$prefix}promo-card-gap);
+  padding: var(--#{$prefix}promo-card-padding);
+  line-height: var(--#{$prefix}promo-card-line-height);
+  border-radius: var(--#{$prefix}promo-card-radius);
+  border: var(--#{$prefix}border-width) solid transparent;
+  background: var(--#{$prefix}promo-card-bg) border-box;
+  background-repeat: no-repeat;
+  background-position: 95% 95%;
+  background-size: var(--#{$prefix}promo-card-image-size);
+  background-image: none;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    padding: var(--#{$prefix}promo-card-padding);
+    border: var(--#{$prefix}border-width) solid transparent;
+    border-radius: var(--#{$prefix}promo-card-radius);
+  }
+
+  &::before {
+    background: var(--#{$prefix}promo-card-border-color) border-box;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  &::after {
+    background: var(--#{$prefix}promo-card-bg) border-box;
+  }
+
+  .promo-card-title {
+    margin: 0;
+    font-size: var(--#{$prefix}font-size-xl);
+    font-weight: var(--#{$prefix}font-weight-700);
+  }
+
+  .promo-card-description {
+    margin: 0;
+    font-size: var(--#{$prefix}font-size-md);
+    font-weight: var(--#{$prefix}font-weight-400);
+  }
+
+  .promo-card-cta {
+    margin-top: auto;
+    text-decoration: none;
+    font-size: var(--#{$prefix}font-size-md);
+    font-weight: var(--#{$prefix}font-weight-400);
+
+    &:hover {
+      color: rgb(var(--#{$prefix}promo-card-base-color));
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    --#{$prefix}promo-card-image-size: 120px;
+    --#{$prefix}promo-card-padding: 24px;
+
+    .promo-card-title {
+      font-size: var(--#{$prefix}font-size-lg);
+    }
+  }
+}
+
+@each $color, $value in $base-colors {
+  .promo-card-#{"" + $color} {
+    --#{$prefix}promo-card-base-color: var(--#{$prefix}color-#{"" + $color}-rgb);
+  }
+}
