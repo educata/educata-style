@@ -1,4 +1,4 @@
-const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={tags:["!dev"],parameters:{backgrounds:{default:"dark"}},render:()=>`
+const x=""+new URL("yellow-promo-j10me3Vk.svg",import.meta.url).href,y=""+new URL("green-promo-BBsvlyf8.svg",import.meta.url).href,P=""+new URL("blue-promo-DXXBF8a_.svg",import.meta.url).href,I=""+new URL("purple-promo-CV4lldi5.svg",import.meta.url).href,C={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={tags:["!dev"],parameters:{backgrounds:{default:"dark"}},render:()=>`
 <div
   class="promo-card"
   style="max-width: 600px;"
@@ -27,7 +27,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 `},s={tags:["!dev"],parameters:{backgrounds:{default:"dark"}},render:()=>`
 <div
   class="promo-card"
-  style="max-width: 600px; background-image: url('/stories/assets/yellow-promo.svg')"
+  style="max-width: 600px; background-image: url('${x}');"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -40,7 +40,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 `},o={parameters:{backgrounds:{default:"dark"}},args:{withImage:!0,maxWidth:600,variation:"yellow"},argTypes:{variation:{control:"select",options:["yellow","green","blue","purple"]}},render:r=>`
 <div
   class="promo-card promo-card-${r.variation}"
-  style="max-width: ${r.maxWidth}px; ${r.withImage?`background-image: url('/stories/assets/${r.variation}-promo.svg')`:""}"
+  style="max-width: ${r.maxWidth}px; ${r.withImage?$(r.variation):""}"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -69,7 +69,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
     </div>
   </div>
 </div>
-`};var d,t,c;a.parameters={...a.parameters,docs:{...(d=a.parameters)==null?void 0:d.docs,source:{originalSource:`{
+`};function $(r){switch(r){case"yellow":return`background-image: url('${x}');`;case"green":return`background-image: url('${y}');`;case"blue":return`background-image: url('${P}');`;case"purple":return`background-image: url('${I}');`}}var t,c,d;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
   tags: ["!dev"],
   parameters: {
     backgrounds: {
@@ -92,7 +92,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 </div>
 \`;
   }
-}`,...(c=(t=a.parameters)==null?void 0:t.docs)==null?void 0:c.source}}};var i,p,m;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`{
+}`,...(d=(c=a.parameters)==null?void 0:c.docs)==null?void 0:d.source}}};var m,i,p;e.parameters={...e.parameters,docs:{...(m=e.parameters)==null?void 0:m.docs,source:{originalSource:`{
   tags: ["!dev"],
   parameters: {
     backgrounds: {
@@ -115,7 +115,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 </div>
 \`;
   }
-}`,...(m=(p=e.parameters)==null?void 0:p.docs)==null?void 0:m.source}}};var l,u,g;s.parameters={...s.parameters,docs:{...(l=s.parameters)==null?void 0:l.docs,source:{originalSource:`{
+}`,...(p=(i=e.parameters)==null?void 0:i.docs)==null?void 0:p.source}}};var l,u,g;s.parameters={...s.parameters,docs:{...(l=s.parameters)==null?void 0:l.docs,source:{originalSource:`{
   tags: ["!dev"],
   parameters: {
     backgrounds: {
@@ -126,7 +126,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
     return \`
 <div
   class="promo-card"
-  style="max-width: 600px; background-image: url('/stories/assets/yellow-promo.svg')"
+  style="max-width: 600px; background-image: url('\${YellowPromo}');"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -138,7 +138,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 </div>
 \`;
   }
-}`,...(g=(u=s.parameters)==null?void 0:u.docs)==null?void 0:g.source}}};var h,v,x;o.parameters={...o.parameters,docs:{...(h=o.parameters)==null?void 0:h.docs,source:{originalSource:`{
+}`,...(g=(u=s.parameters)==null?void 0:u.docs)==null?void 0:g.source}}};var h,v,b;o.parameters={...o.parameters,docs:{...(h=o.parameters)==null?void 0:h.docs,source:{originalSource:`{
   parameters: {
     backgrounds: {
       default: "dark"
@@ -159,7 +159,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
     return \`
 <div
   class="promo-card promo-card-\${args.variation}"
-  style="max-width: \${args.maxWidth}px; \${args.withImage ? \`background-image: url('/stories/assets/\${args.variation}-promo.svg')\` : ""}"
+  style="max-width: \${args.maxWidth}px; \${args.withImage ? getImage(args.variation) : ""}"
 >
   <h3 class="promo-card-title">ფრონტენდი</h3>
   <p class="promo-card-description">
@@ -171,7 +171,7 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 </div>
 \`;
   }
-}`,...(x=(v=o.parameters)==null?void 0:v.docs)==null?void 0:x.source}}};var b,k,f;n.parameters={...n.parameters,docs:{...(b=n.parameters)==null?void 0:b.docs,source:{originalSource:`{
+}`,...(b=(v=o.parameters)==null?void 0:v.docs)==null?void 0:b.source}}};var k,w,f;n.parameters={...n.parameters,docs:{...(k=n.parameters)==null?void 0:k.docs,source:{originalSource:`{
   parameters: {
     backgrounds: {
       default: "dark"
@@ -199,4 +199,4 @@ const w={title:"Components/Card",parameters:{backgrounds:{default:"dark"}}},a={t
 </div>
 \`;
   }
-}`,...(f=(k=n.parameters)==null?void 0:k.docs)==null?void 0:f.source}}};const y=["PromoCardWithoutImage","PromoCardWithoutImage2","PromoCardWithImage","Promo","SimpleCard"];export{o as Promo,s as PromoCardWithImage,a as PromoCardWithoutImage,e as PromoCardWithoutImage2,n as SimpleCard,y as __namedExportsOrder,w as default};
+}`,...(f=(w=n.parameters)==null?void 0:w.docs)==null?void 0:f.source}}};const S=["PromoCardWithoutImage","PromoCardWithoutImage2","PromoCardWithImage","Promo","SimpleCard"];export{o as Promo,s as PromoCardWithImage,a as PromoCardWithoutImage,e as PromoCardWithoutImage2,n as SimpleCard,S as __namedExportsOrder,C as default};

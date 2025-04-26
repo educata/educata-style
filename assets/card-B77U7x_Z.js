@@ -1,4 +1,4 @@
-import{j as r}from"./index-BdIgl1Fy.js";import{useMDXComponents as d}from"./index-Bb44zobi.js";import{C as i,M as n}from"./index-fukZuh4x.js";import{PromoCardWithoutImage as c,PromoCardWithoutImage2 as s,PromoCardWithImage as l,SimpleCard as t}from"./card.stories-D3mDmOnf.js";import"./iframe-DEf-nsc0.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(a){const e={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...d(),...a.components};return r.jsxs(r.Fragment,{children:[r.jsx(e.h1,{id:"card",children:"Card"}),`
+import{j as r}from"./index-BdIgl1Fy.js";import{useMDXComponents as d}from"./index-Bb44zobi.js";import{C as i,M as n}from"./index-DPANTUHU.js";import{PromoCardWithoutImage as c,PromoCardWithoutImage2 as s,PromoCardWithImage as l,SimpleCard as t}from"./card.stories-CAT9_EIu.js";import"./iframe-Dv6xdS0u.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(a){const e={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...d(),...a.components};return r.jsxs(r.Fragment,{children:[r.jsx(e.h1,{id:"card",children:"Card"}),`
 `,r.jsx(e.p,{children:"There is two card component."}),`
 `,r.jsxs(e.ul,{children:[`
 `,r.jsx(e.li,{children:r.jsx(e.a,{href:"#promo-card",children:"Promo Card"})}),`
@@ -21,9 +21,9 @@ import{j as r}from"./index-BdIgl1Fy.js";import{useMDXComponents as d}from"./inde
 `]}),`
 `,r.jsx(e.h3,{id:"with-image",children:"With image"}),`
 `,r.jsx(e.p,{children:"Promo card could have an image. The image is on the right bottom side of the card."}),`
+`,r.jsx(i,{of:l,className:"bg-main"}),`
 `,r.jsx(e.h3,{id:"classes",children:"Classes"}),`
 `,r.jsx(n,{children:"\n| Class                       | Description                         |\n|-----------------------------|-------------------------------------|\n| `.promo-card`             | Base class for promo card wrapper   |\n| `.promo-card-title`       | Promo card title                    |\n| `.promo-card-description` | Promo card description              |\n| `.promo-card-cta`         | Promo card cta                      |\n"}),`
-`,r.jsx(i,{of:l,className:"bg-main"}),`
 `,r.jsx(e.h2,{id:"simple-card",children:"Simple card"}),`
 `,r.jsx(e.p,{children:"Simple card is a simple card with a title, description, and a image."}),`
 `,r.jsx(i,{of:t,className:"bg-main"}),`
