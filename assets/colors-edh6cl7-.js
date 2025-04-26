@@ -1,4 +1,4 @@
-import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as c}from"./index-Bb44zobi.js";import{C as l}from"./index-ClPGGPa5.js";import{ColorTable as s}from"./color.stories-BhH8KVZE.js";import"./iframe-rB9v4Q7M.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(n){const r={code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...c(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(r.h1,{id:"colors",children:"Colors"}),`
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as c}from"./index-Bb44zobi.js";import{C as l}from"./index-fukZuh4x.js";import{ColorTable as s}from"./color.stories-BhH8KVZE.js";import"./iframe-DEf-nsc0.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(n){const r={code:"code",h1:"h1",h2:"h2",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...c(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(r.h1,{id:"colors",children:"Colors"}),`
 `,e.jsx(r.p,{children:"The color variables are used to define the color palette of the project."}),`
 `,e.jsx(r.pre,{children:e.jsx(r.code,{children:`--ec-color-{COLOR_NAME}
 --ec-color-{COLOR_NAME}-rgb
