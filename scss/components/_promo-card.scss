@@ -1,4 +1,3 @@
-@use "sass:map";
 @use "../variables/global" as *;
 @use "../utilities/breakpoints" as *;
 
@@ -78,16 +77,15 @@
   }
 
   .promo-card-title {
-    text-transform: uppercase;
+    margin: 0;
     font-size: var(--#{$prefix}font-size-xl);
     font-weight: var(--#{$prefix}font-weight-700);
-    margin: 0;
   }
 
   .promo-card-description {
+    margin: 0;
     font-size: var(--#{$prefix}font-size-md);
     font-weight: var(--#{$prefix}font-weight-400);
-    margin: 0;
   }
 
   .promo-card-cta {

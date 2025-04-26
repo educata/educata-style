@@ -131,3 +131,33 @@ export const Promo: Story = {
 `;
   },
 };
+
+export const SimpleCard: Story = {
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+  },
+  render: () => {
+    return `
+<div class="card" style="max-width: 300px">
+  <img
+    class="card-image"
+    src="https://thumbs.dreamstime.com/b/lines-code-software-several-colors-developer-programming-black-screen-abstract-modern-virtual-computer-script-web-259579244.jpg"
+    alt="random image"
+  />
+  <div class="card-body">
+    <h3 class="card-title">ჯავასკრიპტის საწყისები</h3>
+    <p class="card-text">
+      ლორემ იპსუმ გვეცვა ნეტარებებში წყალს მტკივნეუ ერთ შეხედოს. ისუთქავდა
+      გარეგნობითაც
+    </p>
+    <div class="d-flex gap-3">
+      <div class="chip">JS</div>
+      <div class="chip chip-secondary">TS</div>
+    </div>
+  </div>
+</div>
+`;
+  },
+};
