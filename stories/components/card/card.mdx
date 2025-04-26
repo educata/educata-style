@@ -1,0 +1,36 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CardStories from './card.stories.ts';
+
+# Card
+
+There is two card component.
+
+- [Promo Card](#promo-card)
+- [Simple Card](#simple-card)
+
+## Promo card
+
+Promo card contains a title, description, and a cta. It has gradient color for background and border.
+
+<Canvas of={CardStories.PromoCardWithoutImage} className='bg-main' />
+
+Promo card base color could be change via `promo-card-{{COLOR}}`.
+
+<Canvas of={CardStories.PromoCardWithoutImage2} className='bg-main' />
+
+Avaliable colors are:
+
+- white
+- black
+- blue
+- red
+- green
+- purple
+- yellow
+
+### With image
+
+Promo card could have an image. The image is on the right bottom side of the card.
+
+<Canvas of={CardStories.PromoCardWithImage} className='bg-main' />
