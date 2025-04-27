@@ -1,0 +1,16 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ColorStories from './colors.stories.ts';
+
+# Color
+
+Colorize text with color utilities.
+
+There is two general color utilities:
+
+```html
+<span class="text-{{variation}}">Same color as variation</span>
+<span class="text-{{variation}}-bg">Color to fit background variation</span>
+```
+
+<Canvas of={ColorStories.Variations} />

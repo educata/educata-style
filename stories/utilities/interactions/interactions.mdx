@@ -1,0 +1,25 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as Interactions from './interactions.stories.ts';
+
+# Interactions
+
+Utility classes that change how users interact with contents of a website.
+
+## Text
+
+Change the way in which the content is selected when the user interacts with it.
+
+<Canvas of={Interactions.UserSelect} />
+
+## Pointer events
+
+Educata provides `.pe-none` and `.pe-auto` classes to prevent or add element interactions.
+
+<Canvas of={Interactions.PointerEvents} />
+
+## Cursor
+
+Educata provides a set of classes to change the cursor when hovering over an element.
+
+<Canvas of={Interactions.Cursor} />

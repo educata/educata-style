@@ -37,6 +37,10 @@
     --#{$prefix}font-size-#{$property}: #{$value}em;
   }
 
+  @each $property, $value in $line-heights {
+    --#{$prefix}line-height-#{$property}: #{$value};
+  }
+
   @each $property, $value in $border-vars {
     --#{$prefix}border-#{$property}: #{$value};
   }

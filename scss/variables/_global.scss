@@ -6,13 +6,20 @@ $transitions-duration: 0.3s !default;
 $transitions: ease-in-out, ease-in, ease-out, linear !default;
 
 $font-sizes: (
-  sm: 0.75,
-  md: 1,
-  lg: 1.25,
-  xl: 1.5,
-  xxl: 2,
   xxxl: 3,
-);
+  xxl: 2,
+  xl: 1.5,
+  lg: 1.25,
+  md: 1,
+  sm: 0.75,
+) !default;
+
+$line-heights: (
+  1: 1,
+  sm: 1.25,
+  base: 1.5,
+  lg: 2,
+) !default;
 
 $container-padding-x: 1.5rem !default;
 

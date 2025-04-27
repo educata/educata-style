@@ -1,0 +1,50 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as SizingStories from './sizing.stories.ts';
+
+# Sizing
+
+Easily make an element as wide or as tall with our width and height utilities.
+
+## Relative to the parent
+
+The width and height utilities are relative to the parent element.
+The default values are `25%`, `50%`, `75%`, `100%`, and `auto`.
+
+<Canvas of={SizingStories.Width} />
+
+For height, the same applies. The default values are `25%`, `50%`, `75%`, `100%`, and `auto`.
+
+<Canvas of={SizingStories.Height} />
+
+### Max width and max height
+
+The max width and max height utilities are relative to the parent element.
+The default values are `25%`, `50%`, `75%`, `100%`, and `auto`.
+
+Formula uses the same values as width and height, but with `max-` prefix.
+
+```
+max-{{w | h}}-{{value}}
+```
+
+Where `w` is width and `h` is height.
+
+## Relative to the viewport
+
+Everything is same as above, but the values are relative to the viewport.
+The default values are `25vw`, `50vw`, `75vw`, `100vw`, and `auto`.
+The formula uses the same values as width and height, but with `vw` or `vh` suffix.
+
+```
+{{w | h}}-{{value}}-vw
+```
+
+Where `w` is width and `h` is height.
+
+```html
+<div class="min-vw-100">Min-width 100vw</div>
+<div class="min-vh-100">Min-height 100vh</div>
+<div class="vw-100">Width 100vw</div>
+<div class="vh-100">Height 100vh</div>
+```

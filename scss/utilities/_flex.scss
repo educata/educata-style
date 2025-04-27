@@ -1,10 +1,10 @@
 @use "../functions/apply-utility" as *;
 
 $wrap-values: nowrap, wrap, wrap-reverse;
-@include apply-utility-classes("flex-wrap", "flex-wrap", $wrap-values);
+@include apply-utility-classes("flex", "flex-wrap", $wrap-values);
 
 $direction-values: row, row-reverse, column, column-reverse;
-@include apply-utility-classes("flex-direction", "flex-direction", $direction-values);
+@include apply-utility-classes("flex", "flex-direction", $direction-values);
 
 $justify-content-values: flex-start, flex-end, center, space-between, space-around,
   space-evenly;
@@ -31,3 +31,7 @@ $grow-values: 0, 1;
 
 $shrink-values: 0, 1;
 @include apply-utility-classes("flex-shrink", "flex-shrink", $shrink-values);
+
+.flex-fill {
+  flex: 1 1 auto;
+}

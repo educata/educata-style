@@ -1,0 +1,87 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as TextStories from './text.stories.ts';
+
+# Text
+
+Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+
+## Text alignment
+
+Easily realign text to components with text alignment classes. For `start`, `end`, `center` and `justify` alignment.
+
+<Canvas of={TextStories.Align} />
+
+## Text wrapping and overflow
+
+Wrap text with a `.text-wrap-normal` class.
+
+<Canvas of={TextStories.Wrap} />
+
+Prevent text from wrapping with a `.text-wrap-nowrap` class.
+
+<Canvas of={TextStories.NoWrap} />
+
+For `text-wrap` there is also another values:
+
+- `normal`
+- `pre`
+- `pre-line`
+- `pre-wrap`
+
+## Word break
+
+Prevent long strings of text from breaking your components layout by using `.text-break-all`.
+
+<Canvas of={TextStories.Break} />
+
+And `.text-keep-all` to prevent word breaking.
+
+<Canvas of={TextStories.KeepAll} />
+
+## Text transform
+
+Transform text with text transform classes. For `uppercase`, `lowercase`, and `capitalize` text transformation.
+
+<Canvas of={TextStories.Transform} />
+
+> Note: The `capitalize` class will only capitalize the first letter of each word. It will not change the case of the rest of the letters in the word.
+
+## Font size
+
+Quickly change the `font-size` of text.
+Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases.
+
+<Canvas of={TextStories.FontSize} />
+
+## Font weight
+
+Similar to the font size utilities, you can quickly change the `font-weight` of text with `.fw-*` classes.
+
+<Canvas of={TextStories.FontWeight} />
+
+## Font styles
+
+Quickly change the `font-style` of text with `.fs-*` classes.
+
+<Canvas of={TextStories.FontStyle} />
+
+## Line height
+
+Quickly change the `line-height` of text with `.lh-*` classes.
+
+<Canvas of={TextStories.LineHeight} />
+
+## Reset color
+
+Reset the color of text with `.text-reset` class.
+This is useful for resetting the color of text inside a component that has a different color applied.
+
+<Canvas of={TextStories.ResetColor} />
+
+## Text decoration
+
+Quickly change the `text-decoration` of text with `.text-decoration-*` classes.
+For `none`, `underline`, `overline` and `line-through` text decorations.
+
+<Canvas of={TextStories.TextDecoration} />

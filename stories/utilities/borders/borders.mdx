@@ -1,0 +1,40 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as BorderStories from './borders.stories.ts';
+
+# Border
+
+Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
+
+## Additive
+
+Add borders to custom elements:
+
+<Canvas of={BorderStories.Additive} />
+
+## Subtractive
+
+Remove borders from custom elements:
+
+<Canvas of={BorderStories.Subtractive} />
+
+## Color
+
+Change the border color using utilities built on our theme colors.
+
+<Canvas of={BorderStories.Color} />
+
+## Width
+
+<Canvas of={BorderStories.Width} />
+
+## Radius
+
+<Canvas of={BorderStories.Radius} />
+
+### Size
+
+Use the scaling classes for larger or smaller rounded corners. Sizes range from 0 to 5 including `circle` and `pill`.
+
+<Canvas of={BorderStories.RadiusSize} />
