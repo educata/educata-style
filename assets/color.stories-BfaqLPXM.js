@@ -34,12 +34,12 @@ const v={title:"Variables/Colors"},u=[{name:"white",value:"#ffffff"},{name:"blac
         <th>Variable value</th>
         <th>Copy</th>
       </tr>
-    `,t.appendChild(a);const c=document.createElement("tbody");return p(u).forEach(n=>{const r=document.createElement("tr"),o=document.createElement("button");o.classList.add("btn","btn-primary"),o.setAttribute("data-color-variable-name",n.name),o.addEventListener("click",b),o.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/></svg>',r.innerHTML=`
+    `,t.appendChild(a);const c=document.createElement("tbody");return b(u).forEach(n=>{const r=document.createElement("tr"),o=document.createElement("button");o.classList.add("btn"),o.style.borderRadius="0",o.setAttribute("data-color-variable-name",n.name),o.addEventListener("click",p),o.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/></svg>',r.innerHTML=`
         <td>${n.name}</td>
         <td style="background-color: ${n.value};"></td>
         <td><code>--ec-color-${n.name}</code></td>
         <td><code>${n.value}</code></td>
-      `;const d=document.createElement("td");d.appendChild(o),r.appendChild(d),c.appendChild(r)}),t.appendChild(c),e.appendChild(t),e}};function p(e){const t=[];return e.forEach(a=>{t.push({name:a.name,value:s(`--ec-color-${a.name}`)}),new Array(10).fill(0).map((n,r)=>(r+1)*10).reverse().forEach(n=>{const r=`--ec-color-${a.name}-${n}`,o=s(r);o&&t.push({name:`${a.name}-${n}`,value:o})})}),t}function s(e){return getComputedStyle(document.documentElement).getPropertyValue(e).trim()}function b(){const e=this.dataset.colorVariableName;if(!e)return;const t=`--ec-color-${e}`;navigator.clipboard.writeText(t),alert(`Copied color value: ${t}`)}var i,m,h;l.parameters={...l.parameters,docs:{...(i=l.parameters)==null?void 0:i.docs,source:{originalSource:`{
+      `;const d=document.createElement("td");d.appendChild(o),r.appendChild(d),c.appendChild(r)}),t.appendChild(c),e.appendChild(t),e}};function b(e){const t=[];return e.forEach(a=>{t.push({name:a.name,value:s(`--ec-color-${a.name}`)}),new Array(10).fill(0).map((n,r)=>(r+1)*10).reverse().forEach(n=>{const r=`--ec-color-${a.name}-${n}`,o=s(r);o&&t.push({name:`${a.name}-${n}`,value:o})})}),t}function s(e){return getComputedStyle(document.documentElement).getPropertyValue(e).trim()}function p(){const e=this.dataset.colorVariableName;if(!e)return;const t=`--ec-color-${e}`;navigator.clipboard.writeText(t),alert(`Copied color value: ${t}`)}var i,m,h;l.parameters={...l.parameters,docs:{...(i=l.parameters)==null?void 0:i.docs,source:{originalSource:`{
   name: "Color Table",
   parameters: {
     layout: "center",
@@ -98,7 +98,8 @@ const v={title:"Variables/Colors"},u=[{name:"white",value:"#ffffff"},{name:"blac
     transformBaseColorsToShadedColors(BASE_COLORS).forEach(color => {
       const tr = document.createElement("tr");
       const button = document.createElement("button");
-      button.classList.add("btn", "btn-primary");
+      button.classList.add("btn");
+      button.style.borderRadius = "0";
       button.setAttribute("data-color-variable-name", color.name);
       button.addEventListener("click", copyColor);
       button.innerHTML = \`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/></svg>\`;

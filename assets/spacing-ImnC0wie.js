@@ -1,4 +1,4 @@
-import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as r}from"./index-Bb44zobi.js";import{C as i}from"./index-DPANTUHU.js";import{CenteredDiv as c}from"./centered-div.stories-CQqjmt0C.js";import{Gap as o}from"./gap.stories-Hl_XlOpU.js";import{RowGap as l}from"./row-gap.stories-DjIo3ns1.js";import{ColumnGap as a}from"./column-gap.stories-D2scWGjF.js";import"./iframe-Dv6xdS0u.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function d(s){const n={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",pre:"pre",ul:"ul",...r(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"spacing",children:"Spacing"}),`
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as r}from"./index-Bb44zobi.js";import{C as i}from"./index-Bkz0NjA1.js";import{CenteredDiv as c,Gap as o,RowGap as l,ColGap as a}from"./spacing.stories-wmFDT0Wg.js";import"./iframe-jbHmTV0R.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function d(s){const n={a:"a",blockquote:"blockquote",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",p:"p",pre:"pre",ul:"ul",...r(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"spacing",children:"Spacing"}),`
 `,e.jsx(n.p,{children:`Educata-Style provides a set of spacing utilities that can be used to add margin and padding to elements.
 There are many shorthand utilities for quickly adding margin, padding or gap to an element.`}),`
 `,e.jsx(n.h2,{id:"margin-and-spacing",children:"Margin and Spacing"}),`
@@ -65,4 +65,4 @@ This utility is available for both `,e.jsx(n.code,{children:"row"})," and ",e.js
 `,e.jsx(i,{of:l}),`
 `,e.jsx(n.h3,{id:"column-gap",children:"column-gap"}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"column-gap"})," sets the gap between columns in a container."]}),`
-`,e.jsx(i,{of:a})]})}function y(s={}){const{wrapper:n}={...r(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(d,{...s})}):d(s)}export{y as default};
+`,e.jsx(i,{of:a})]})}function u(s={}){const{wrapper:n}={...r(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(d,{...s})}):d(s)}export{u as default};
