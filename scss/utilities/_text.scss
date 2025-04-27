@@ -1,15 +1,14 @@
+@use "sass:map";
+@use "sass:list";
+
 @use "../variables/global" as *;
 @use "../functions/apply-utility" as *;
 
-$text-align-values: left, right, center, justify;
+$text-align-values: start, end, center, justify;
 @include apply-utility-classes("text", "text-align", $text-align-values);
 
-$text-transform-values: none, uppercase, lowercase, capitalize;
-@include apply-utility-classes(
-  "text-transform",
-  "text-transform",
-  $text-transform-values
-);
+$text-transform-values: uppercase, lowercase, capitalize;
+@include apply-utility-classes("text", "text-transform", $text-transform-values);
 
 $text-decoration-values: none, underline, overline, line-through;
 @include apply-utility-classes(
@@ -48,9 +47,17 @@ $font-style-values: normal, italic, oblique;
 $font-weight-values: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 @include apply-utility-classes("fw", "font-weight", $font-weight-values, true);
 
-@each $property, $value in $font-sizes {
-  .fs-#{$property} {
-    font-size: var(--#{$prefix}font-size-#{$property});
+@for $i from 1 through list.length(map.keys($font-sizes)) {
+  $key: list.nth(map.keys($font-sizes), $i);
+
+  .fs-#{$i} {
+    font-size: var(--#{$prefix}font-size-#{$key});
+  }
+}
+
+@each $property, $value in $line-heights {
+  .lh-#{$property} {
+    line-height: var(--#{$prefix}line-height-#{$property});
   }
 }
 
@@ -58,4 +65,18 @@ $font-weight-values: 100, 200, 300, 400, 500, 600, 700, 800, 900;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.text-reset {
+  color: inherit !important;
+}
+
+@each $property, $value in $color-variations {
+  .text-#{"" + $property} {
+    color: var(--#{$prefix}#{$property}-bg-color);
+  }
+
+  .text-#{"" + $property}-bg {
+    color: var(--#{$prefix}#{$property}-text-color);
+  }
 }

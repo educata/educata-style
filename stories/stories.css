@@ -7,11 +7,31 @@
   --ec-alert-margin: 1rem;
 }
 
-.box {
+body {
+  color: var(--ec-color-black);
+}
+
+.box,
+.box-wrapper {
   min-width: fit-content;
   border: 1px solid var(--ec-story-border, --ec-color-green-100);
   background-color: var(--ec-story-bg, --ec-color-green-100);
   font-family: system-ui;
+}
+
+.box-active {
+  background-color: color-mix(in srgb, var(--ec-color-green-100) 60%, white);
+  border: 1px solid color-mix(in srgb, var(--ec-color-green-100) 100%, white);
+}
+
+.box-primary-active {
+  background-color: color-mix(in srgb, var(--ec-color-yellow-100) 60%, white);
+  border: 1px solid color-mix(in srgb, var(--ec-color-yellow-100) 100%, white);
+}
+
+.box-secondary-active {
+  background-color: color-mix(in srgb, var(--ec-color-blue-100) 60%, white);
+  border: 1px solid color-mix(in srgb, var(--ec-color-blue-100) 100%, white);
 }
 
 blockquote {
@@ -40,4 +60,12 @@ blockquote > * {
 
 .bg-main {
   background-color: var(--ec-main-bg-color) !important;
+}
+
+/* Used for border story */
+
+div[data-box-example] {
+  div {
+    background-color: #f8f9fa;
+  }
 }

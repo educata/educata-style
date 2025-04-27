@@ -1,9 +1,6 @@
 import { Canvas, Meta } from '@storybook/blocks';
 
-import * as CenteredDivStories from './centered-div.stories.ts';
-import * as GapStories from './gap.stories.ts';
-import * as RowGapStories from './row-gap.stories.ts';
-import * as ColumnGapStories from './column-gap.stories.ts';
+import * as SpacingStories from './spacing.stories.ts';
 
 # Spacing
 
@@ -75,23 +72,23 @@ Where `{size}` is one of:
 
 You can use the `.m-auto` class to center an element horizontally.
 
-<Canvas of={CenteredDivStories.CenteredDiv} />
+<Canvas of={SpacingStories.CenteredDiv} />
 
 ## Gap
 
 When using `display: flex` or `display: grid`, you can use the `gap` utilities to add spacing between elements.
 This utility is available for both `row` and `column` directions. Gap utilities are responsive.
 
-<Canvas of={GapStories.Gap} />
+<Canvas of={SpacingStories.Gap} />
 
 ### row-gap
 
 `row-gap` sets the gap between rows in a container.
 
-<Canvas of={RowGapStories.RowGap} />
+<Canvas of={SpacingStories.RowGap} />
 
 ### column-gap
 
 `column-gap` sets the gap between columns in a container.
 
-<Canvas of={ColumnGapStories.ColumnGap} />
+<Canvas of={SpacingStories.ColGap} />

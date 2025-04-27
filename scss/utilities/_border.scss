@@ -22,8 +22,8 @@ $border-properties: "border", "border-top", "border-right", "border-bottom", "bo
   }
 }
 
-@each $property, $value in $base-colors {
+@each $property, $value in $color-variations {
   .border-color-#{"" + $property} {
-    border-color: var(--#{$prefix}color-#{$property}-100);
+    border-color: var(--#{$prefix}#{$property}-bg-color);
   }
 }

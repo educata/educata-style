@@ -2,6 +2,7 @@
 
 @each $property, $value in $color-variations {
   .bg-#{"" + $property} {
-    background-color: var(--#{$prefix}bg-color-#{$property});
+    color: var(--#{$prefix}#{$property}-text-color);
+    background-color: var(--#{$prefix}#{$property}-bg-color);
   }
 }

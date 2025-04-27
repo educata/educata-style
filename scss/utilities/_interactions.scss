@@ -1,0 +1,12 @@
+@use "../functions/apply-utility" as *;
+
+$cursor-values: pointer, default, none, move, text, wait, help, progress, not-allowed,
+  all-scroll, col-resize, row-resize, n-resize, e-resize, s-resize, w-resize, ne-resize,
+  nw-resize, se-resize, sw-resize;
+@include apply-utility-classes("cursor", "cursor", $cursor-values);
+
+$pointer-events-values: auto, none;
+@include apply-utility-classes("pe", "pointer-events", $pointer-events-values);
+
+$user-select-values: none, auto, text, all;
+@include apply-utility-classes("user-select", "user-select", $user-select-values);
