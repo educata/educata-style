@@ -1,0 +1,22 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ChipStories from './breadcrumb.stories.ts';
+
+# Breadcrumb
+
+Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+
+## Example
+
+Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.
+
+<Canvas of={ChipStories.Example} className='bg-main' />
+
+## Dividers
+
+Use the `dividers` prop to add dividers between the breadcrumb items.
+The default divider is a forward slash (`/`), but you can customize it by passing a different character to variable.
+
+<Canvas of={ChipStories.Dividers} className='bg-main' />
+
+> Keep in mind `--ec-breadcrumb-divider` is a CSS variable, so you can use any character you want.

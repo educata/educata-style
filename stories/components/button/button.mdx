@@ -1,0 +1,45 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './button.stories.ts';
+
+# Button
+
+Use Educata's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+## Base class
+
+Bootstrap has a base `.btn` class that sets up basic styles such as padding and content alignment.
+By default, `.btn` controls have a transparent border and background color, and lack any explicit focus and hover styles.
+
+<Canvas of={ButtonStories.Example} />
+
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
+
+## Variants
+
+Educata includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+<Canvas of={ButtonStories.Variations} />
+
+## Disable text wrapping
+
+By default, button text will wrap to fit the button width. To disable this behavior, add the `.text-nowrap` class to the button.
+
+## Outline buttons
+
+Outline buttons are a great way to create a button that is less visually prominent than the default button. They are often used for secondary actions or to indicate that an action is not required.
+Outline buttons are created by adding the `.btn-outline-*` class to the base class. The outline button will have a transparent background and a border color that matches the button variant.
+
+<Canvas of={ButtonStories.Outline} />
+
+## Sizes
+
+Add `.btn-lg` or `.btn-sm` for additional sizes.
+
+<Canvas of={ButtonStories.Sizes} />
+
+## Disabled state
+
+Disabled buttons are created by adding the `disabled` attribute to the button element.
+
+<Canvas of={ButtonStories.Disabled} />

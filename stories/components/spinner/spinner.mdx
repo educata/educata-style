@@ -1,0 +1,31 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as Spinner from './spinner.stories.ts';
+
+# Spinner
+
+The Spinner component is a loading indicator that provides visual feedback to users while content is being loaded or processed.
+It can be used in various scenarios, such as during data fetching, form submission, or any other asynchronous operation.
+
+## Variations
+
+There are several variations of the Spinner component that can be used to customize its appearance and behavior.
+
+### Color variations
+
+There are total of 7 color variation.
+
+<Canvas of={Spinner.Example} className='bg-main' />
+
+### Reverse
+
+If you add `.spinner-reverse` it will rotate backwards.
+
+<Canvas of={Spinner.Reverse} className='bg-main' />
+
+### Size
+
+The Spinner component can be resized using the `size` prop. The available sizes are `sm`, and `lg`.
+
+<Canvas of={Spinner.Size} className='bg-main' />
+

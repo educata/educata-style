@@ -3,7 +3,7 @@
 .spinner {
   --#{$prefix}spinner-size: 2rem;
   --#{$prefix}spinner-border-width: 0.25rem;
-  --#{$prefix}spinner-color: var(--#{$prefix}color-white);
+  --#{$prefix}spinner-color: var(--#{$prefix}primary-bg-color);
   --#{$prefix}spinner-animation-speed: 0.75s;
 
   display: inline-block;
