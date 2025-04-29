@@ -1,0 +1,2 @@
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as i}from"./index-Bb44zobi.js";function o(t){const n={h1:"h1",p:"p",...i(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"utilities",children:"Utilities"}),`
+`,e.jsx(n.p,{children:"Here are some utilities that can be used to help with the development of your application."})]})}function c(t={}){const{wrapper:n}={...i(),...t.components};return n?e.jsx(n,{...t,children:e.jsx(o,{...t})}):o(t)}export{c as default};

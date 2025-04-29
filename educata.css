@@ -3793,7 +3793,6 @@ h6 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -3840,7 +3839,7 @@ h6 {
 .spinner {
   --ec-spinner-size: 2rem;
   --ec-spinner-border-width: 0.25rem;
-  --ec-spinner-color: var(--ec-color-white);
+  --ec-spinner-color: var(--ec-primary-bg-color);
   --ec-spinner-animation-speed: 0.75s;
   display: inline-block;
   width: var(--ec-spinner-size);

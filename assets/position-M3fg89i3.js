@@ -1,4 +1,4 @@
-import{j as i}from"./index-BdIgl1Fy.js";import{useMDXComponents as s}from"./index-Bb44zobi.js";import"./index-Bkz0NjA1.js";import"./iframe-jbHmTV0R.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function t(o){const n={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...s(),...o.components};return i.jsxs(i.Fragment,{children:[i.jsx(n.h1,{id:"position",children:"Position"}),`
+import{j as i}from"./index-BdIgl1Fy.js";import{useMDXComponents as s}from"./index-Bb44zobi.js";import"./index-kloDSQVd.js";import"./iframe-gQCLYYfa.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function t(o){const n={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...s(),...o.components};return i.jsxs(i.Fragment,{children:[i.jsx(n.h1,{id:"position",children:"Position"}),`
 `,i.jsx(n.p,{children:"Use these shorthand utilities for quickly configuring the position of an element."}),`
 `,i.jsx(n.h2,{id:"position-values",children:"Position values"}),`
 `,i.jsx(n.pre,{children:i.jsx(n.code,{className:"language-html",children:`<div class="position-static">...</div>
