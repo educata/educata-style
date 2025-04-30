@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../variables/global" as *;
+@use "../../variables/global" as *;
 
 .btn {
   --#{$prefix}btn-weight: 400;

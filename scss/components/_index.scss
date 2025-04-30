@@ -1,9 +1,9 @@
 @use "./containers";
-@use "./button";
 @use "./modal";
 @use "./chips";
 @use "./spinner";
 @use "./breadcrumb";
 @use "./card";
 @use "./promo-card";
-@use "./form/index";
+@use "./button/index" as button;
+@use "./form/index" as form;

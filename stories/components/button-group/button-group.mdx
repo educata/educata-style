@@ -1,0 +1,35 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonGroupStories from './button-group.stories.ts';
+
+# Button groups
+
+Group a series of buttons together on a single line or stack them in a vertical column.
+
+## Example
+
+Wrap a series of buttons with `.btn` in `.btn-group`.
+
+<Canvas of={ButtonGroupStories.Example} className='bg-main' />
+
+### Mixed
+
+<Canvas of={ButtonGroupStories.Mixed} className='bg-main' />
+
+### Outlined styles
+
+<Canvas of={ButtonGroupStories.Outlined} className='bg-main' />
+
+<Canvas of={ButtonGroupStories.OutlinedMixed} className='bg-main' />
+
+### Vertical
+
+Add the `.btn-group-vertical` class to stack buttons vertically.
+
+<Canvas of={ButtonGroupStories.Vertical} className='bg-main' />
+
+### Sizes
+
+Add the `.btn-group-sm` or `.btn-group-lg` class to create small or large button groups.
+
+<Canvas of={ButtonGroupStories.Sizes} className='bg-main' />
