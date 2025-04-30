@@ -120,12 +120,6 @@
       font-weight: var(--#{$prefix}font-weight-700);
       line-height: 1.5;
     }
-
-    .modal-close {
-      // TODO: Update to icon styles
-      font-size: var(--#{$prefix}font-size-xxl);
-      cursor: pointer;
-    }
   }
 
   .modal-body {

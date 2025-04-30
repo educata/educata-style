@@ -12,7 +12,7 @@ export const Example: Story = {
   tags: ["!dev"],
   render: () => {
     return `
-<div class="d-flex flex-column gap-3">
+<div class="d-flex flex-column align-items-center gap-3">
   <div class="spinner"></div>
   <div class="spinner spinner-primary"></div>
   <div class="spinner spinner-secondary"></div>
@@ -32,7 +32,7 @@ export const Size: Story = {
   tags: ["!dev"],
   render: () => {
     return `
-<div class="d-flex flex-column gap-3">
+<div class="d-flex flex-column align-items-center gap-3">
   <div class="spinner spinner-sm"></div>
   <div class="spinner"></div>
   <div class="spinner spinner-lg"></div>
