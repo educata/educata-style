@@ -1,0 +1,58 @@
+@use "../../variables/global" as *;
+
+.btn-close {
+  --#{$prefix}-btn-close-height: 1rem;
+  --#{$prefix}-btn-close-width: 1rem;
+  --#{$prefix}-btn-close-padding: 0.25rem;
+  --#{$prefix}-btn-close-bg: transparent;
+  --#{$prefix}-btn-close-opacity: 0.8;
+  --#{$prefix}-btn-close-hover-opacity: 1;
+  --#{$prefix}-btn-close-disabled-opacity: 0.5;
+  --#{$prefix}-btn-close-transition: ease-in-out;
+  --#{$prefix}-btn-close-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: var(--#{$prefix}-btn-close-width);
+  height: var(--#{$prefix}-btn-close-height);
+  padding: var(--#{$prefix}-btn-close-padding);
+  opacity: var(--#{$prefix}-btn-close-opacity);
+  background-image: var(--#{$prefix}-btn-close-image);
+  background-size: var(--#{$prefix}-btn-close-width) var(--#{$prefix}-btn-close-height);
+  background-color: var(--#{$prefix}-btn-close-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity ease-in-out 0.15s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: var(--#{$prefix}-btn-close-hover-opacity);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: var(--#{$prefix}-btn-close-disabled-opacity);
+  }
+
+  &.btn-close-sm {
+    --#{$prefix}-btn-close-height: 0.75rem;
+    --#{$prefix}-btn-close-width: 0.75rem;
+    --#{$prefix}-btn-close-padding: 0.125rem;
+  }
+
+  &.btn-close-lg {
+    --#{$prefix}-btn-close-height: 1.5rem;
+    --#{$prefix}-btn-close-width: 1.5rem;
+    --#{$prefix}-btn-close-padding: 0.5rem;
+  }
+
+  &.btn-close-black {
+    --#{$prefix}-btn-close-opacity: 0.5;
+    --#{$prefix}-btn-close-hover-opacity: 0.75;
+    --#{$prefix}-btn-close-disabled-opacity: 0.2;
+    --#{$prefix}-btn-close-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+  }
+}

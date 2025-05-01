@@ -27,7 +27,7 @@ export const DefaultModal: Story = {
         <div class="modal-content">
           <div class="modal-header">
             <span class="modal-title">Header name</span>
-            <span class="modal-close">&times;</span>
+            <button type="button" class="btn-close" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <h2>Some header</h2>
@@ -46,7 +46,7 @@ export const DefaultModal: Story = {
           )}
         `;
       }
-      const closeButton = modal.querySelector(".modal-close");
+      const closeButton = modal.querySelector(".btn-close");
       closeButton?.addEventListener("click", () => {
         modal.classList.remove("show");
         setTimeout(() => {
@@ -81,7 +81,7 @@ export const MobileFullScreenModal: Story = {
         <div class="modal-content">
           <div class="modal-header">
             <span class="modal-title">Header name</span>
-            <span class="modal-close">&times;</span>
+            <button type="button" class="btn-close" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <h2>Some header</h2>
@@ -100,7 +100,7 @@ export const MobileFullScreenModal: Story = {
           )}
         `;
       }
-      const closeButton = modal.querySelector(".modal-close");
+      const closeButton = modal.querySelector(".btn-close");
       closeButton?.addEventListener("click", () => {
         modal.classList.remove("show");
         setTimeout(() => {

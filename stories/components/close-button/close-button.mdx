@@ -1,0 +1,33 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CloseButton from './close-button.stories.ts';
+
+# Close button
+
+A generic close button for dismissing content like modals and alerts.
+
+## Example
+
+Provide an option to dismiss or close a component with `.btn-close`.
+
+<Canvas of={CloseButton.Example} className='bg-main' />
+
+> Be sure to include text for screen readers, as we've done with `aria-label`.
+
+## Disabled state
+
+Disabled close buttons change their opacity.
+
+<Canvas of={CloseButton.Disabled} className='bg-main' />
+
+## Dark variant
+
+The dark variant of the close button is used in dark mode.
+
+<Canvas of={CloseButton.Black}/>
+
+## Sizes
+
+The close button can be used in different sizes. We have a small and large variant.
+
+<Canvas of={CloseButton.Sizes} className='bg-main' />

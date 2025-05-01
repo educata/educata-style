@@ -1,0 +1,40 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ChipStories from './list-group.stories.ts';
+
+# List group
+
+List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+
+## Basic example
+
+The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+
+<Canvas of={ChipStories.Example} className='bg-main' />
+
+## Flush
+
+Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+
+<Canvas of={ChipStories.Flush} className='bg-main' />
+
+## Border none
+
+Add `.list-group-border-none` to remove the border from the list group.
+
+<Canvas of={ChipStories.BorderNone} className='bg-main' />
+
+## Horizontal
+
+Add `.list-group-horizontal` to change the layout of list group items.
+
+<Canvas of={ChipStories.Horizontal} className='bg-main' />
+
+## Some example
+
+You can use almost everything inside of a list group item. Inside group items, we use `flex` to align items.
+
+For example checkbox and radios:
+
+<Canvas of={ChipStories.Checkbox} className='bg-main' />
+<Canvas of={ChipStories.Radio} className='bg-main' />

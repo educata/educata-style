@@ -405,6 +405,7 @@ export const Flex: Story = {
     justifyContent: "center",
     alignItems: "center",
     alignContent: "center",
+    direction: "row",
   },
   argTypes: {
     elementCount: {
@@ -444,16 +445,20 @@ export const Flex: Story = {
       control: "select",
       options: ["flex-start", "flex-end", "center", "baseline", "stretch"],
     },
+    direction: {
+      control: "select",
+      options: ["row", "row-reverse", "column", "column-reverse"],
+    },
   },
   render: (args) => {
     const div = document.createElement("div");
-    div.classList.add("d-flex", "m-auto", "box-wrapper", "p-3", "w-100");
+    div.classList.add("d-flex", "m-auto", "box-wrapper", "p-3", "w-100", "vh-100");
     div.classList.add(`justify-content-${args.justifyContent}`);
     div.classList.add(`align-items-${args.alignItems}`);
     div.classList.add(`align-content-${args.alignContent}`);
     div.classList.add(`flex-${args.wrap}`);
-    div.style.height = "200px";
     div.classList.add(`gap-${args.gapLevel}`);
+    div.classList.add(`flex-${args.direction}`);
     const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < args.elementCount; i++) {
