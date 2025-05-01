@@ -15,6 +15,7 @@
   line-height: var(--#{$prefix}card-line-height);
   border-radius: var(--#{$prefix}card-radius);
   border: var(--#{$prefix}card-border);
+  color: var(--#{$prefix}main-text-color);
 
   .card-image {
     width: 100%;

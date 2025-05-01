@@ -39,6 +39,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  color: var(--#{$prefix}main-text-color);
   gap: var(--#{$prefix}promo-card-gap);
   padding: var(--#{$prefix}promo-card-padding);
   line-height: var(--#{$prefix}promo-card-line-height);

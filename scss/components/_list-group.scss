@@ -1,0 +1,70 @@
+@use "../variables/global" as *;
+
+.list-group {
+  --#{$prefix}list-group-padding-x: 1rem;
+  --#{$prefix}list-group-padding-y: 0.5rem;
+  --#{$prefix}list-group-color: var(--#{$prefix}main-text-color);
+  --#{$prefix}list-group-bg: transparent;
+  --#{$prefix}list-group-item-gap: 0.5rem;
+  --#{$prefix}list-group-border-radius: var(--#{$prefix}border-radius);
+  --#{$prefix}list-group-border-width: var(--#{$prefix}border-width);
+  --#{$prefix}list-group-border-color: var(--#{$prefix}border-color);
+  --#{$prefix}list-group-border-style: solid;
+  --#{$prefix}list-group-border: var(--#{$prefix}list-group-border-width)
+    var(--#{$prefix}list-group-border-style) var(--#{$prefix}list-group-border-color);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: var(--#{$prefix}list-group-border);
+  border-radius: var(--#{$prefix}border-radius);
+  color: var(--#{$prefix}list-group-color);
+
+  &.list-group-flush {
+    border: none;
+    border-radius: 0;
+  }
+
+  &.list-group-horizontal {
+    border: 0;
+    flex-direction: row;
+
+    .list-group-item {
+      border: var(--#{$prefix}list-group-border);
+      border-radius: 0;
+
+      &:first-child {
+        border-right: 0;
+        border-top-left-radius: var(--#{$prefix}border-radius);
+        border-bottom-left-radius: var(--#{$prefix}border-radius);
+      }
+
+      &:last-child {
+        border-left: 0;
+        border-top-right-radius: var(--#{$prefix}border-radius);
+        border-bottom-right-radius: var(--#{$prefix}border-radius);
+      }
+    }
+  }
+
+  .list-group-item {
+    padding: var(--#{$prefix}list-group-padding-y) var(--#{$prefix}list-group-padding-x);
+    display: flex;
+    align-items: center;
+    gap: var(--#{$prefix}list-group-item-gap);
+
+    &:not(:last-child) {
+      border-bottom: var(--#{$prefix}list-group-border);
+    }
+  }
+
+  &.list-group-border-none {
+    border: none;
+
+    .list-group-item {
+      border: none;
+    }
+  }
+}
