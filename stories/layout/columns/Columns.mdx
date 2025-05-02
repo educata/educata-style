@@ -1,0 +1,51 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ColumnsStories from './columns.stories.ts';
+
+# Columns
+
+Learn how to modify columns with a handful of options for alignment, ordering, and offsetting thanks to our flexbox grid system.
+Plus, see how to use column classes to manage widths of non-grid elements.
+
+> First read the Grid page.
+
+## How they work
+
+- **Columns build on the grid's flexbox architecture.** Flexbox means we have options for changing individual columns and modifying groups of columns at the row level. You choose how columns grow, shrink, or otherwise change.
+- **When building grid layouts, all content goes in columns.** The hierarchy of Educatas's grid goes from container to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
+- **Educatas'includes predefined classes for creating fast, responsive layouts.** With six breakpoints and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+
+## Alignment
+
+Use flexbox alignment utilities to vertically and horizontally align columns.
+
+### Vertical alignment
+
+Change the vertical alignment with any of the responsive `align-items-*` classes.
+
+<Canvas of={ColumnsStories.VerticalAligment} />
+<Canvas of={ColumnsStories.VerticalAligment2} />
+<Canvas of={ColumnsStories.VerticalAligment3} />
+
+Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
+
+<Canvas of={ColumnsStories.AlignSelf} />
+
+### Horizontal alignment
+
+Change the horizontal alignment with any of the responsive `justify-content-*` classes.
+
+<Canvas of={ColumnsStories.Horizontal} />
+
+### Column wrapping
+
+If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+
+<Canvas of={ColumnsStories.ColumnWrapping} />
+
+### Column breaks
+
+Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line.
+Normally this is accomplished with multiple `.rows`, but not every implementation method can account for this.
+
+<Canvas of={ColumnsStories.ColumnBreaks} />

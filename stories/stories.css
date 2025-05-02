@@ -69,3 +69,9 @@ div[data-box-example] {
     background-color: #f8f9fa;
   }
 }
+
+div[data-box-width-remove] {
+  div.box {
+    min-width: unset;
+  }
+}
