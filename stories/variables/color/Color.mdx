@@ -1,0 +1,73 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ColorStories from './color.stories.ts';
+import * as ColorUtilitiesStories from '../../utilities/colors/colors.stories.ts';
+
+# Colors
+
+The color variables are used to define the color palette of the project.
+
+```
+--ec-color-{COLOR_NAME}
+--ec-color-{COLOR_NAME}-rgb
+--ec-color-{COLOR_NAME}-{10|20|30|40|50|60|70|80|90|100}
+--ec-{VARIATION}-text-color
+--ec-{VARIATION}-bg-color
+```
+
+- `{COLOR_NAME}` is the name of the color.
+- `{COLOR_NAME}-rgb` is the rgb value of the color.
+- `{10|20|30|40|50|60|70|80|90|100}` is variation of the color.
+- `{VARIATION}` is the name of the color variation. (`primary`, `secondary`, `success`, `danger`, `white`, `black`, `main`).
+
+## Base Colors
+
+There is **7** base color:
+
+- white (`#ffffff` | `rgb(255, 255, 255)`)
+- black (`#171719` | `rgb(23, 23, 25)`)
+- red (`#cc1f4f` | `rgb(204, 31, 79)`)
+- blue (`#6666ff` | `rgb(102, 102, 255)`)
+- green (`#51d253` | `rgb(81, 210, 83)`)
+- yellow (`#e6fd53` | `rgb(230, 253, 83)`)
+- purple (`#c05be0` | `rgb(192, 91, 224)`)
+
+## Variation colors
+
+- primary
+  - text: `--ec-primary-text-color` (`#000` | `rgb(0, 0, 0)`)
+  - background: `--ec-primary-bg-color` (`#e6fd53` | `rgb(230, 253, 83)`)
+- secondary
+  - text: `--ec-secondary-text-color` (`#fff` | `rgb(255, 255, 255)`)
+  - background: `--ec-secondary-bg-color` (`#6666ff` | `rgb(102, 102, 255)`)
+- success
+  - text: `--ec-success-text-color` (`#fff` | `rgb(255, 255, 255)`)
+  - background: `--ec-success-bg-color` (`#51d253` | `rgb(81, 210, 83)`)
+- danger
+  - text: `--ec-danger-text-color` (`#fff` | `rgb(255, 255, 255)`)
+  - background: `--ec-danger-bg-color` (`#cc1f4f` | `rgb(204, 31, 79)`)
+- white
+  - text: `--ec-white-text-color` (`#000` | `rgb(0, 0, 0)`)
+  - background: `--ec-white-bg-color` (`#fff` | `rgb(255, 255, 255)`)
+- black
+  - text: `--ec-black-text-color` (`#fff` | `rgb(255, 255, 255)`)
+  - background: `--ec-black-bg-color` (`#171719` | `rgb(23, 23, 25)`)
+- main
+  - text: `--ec-main-text-color` (`#000` | `rgb(0, 0, 0)`)
+  - background: `--ec-main-bg-color` (`#0c0c16` | `rgb(12, 12, 22)`)
+
+<Canvas of={ColorUtilitiesStories.Variations} />
+
+
+Each color has a set of variations, which are used to define the color palette of the project.
+While the base colors are used to define the main colors of the project, the variations are used to define the shades and tints of the base colors.
+
+Keep in mind that there are classes that can easily be used to apply the colors to the elements.
+For example: `.text-primary`, `.bg-secondary` and etc. Read more about the classes in the [Color utilities](?path=/docs/utilities-colors--docs) doc.
+
+> To have better class names, we have used the `text` and `bg` prefixes for the text and background colors respectively.
+  That means `--ec-{VARIATION}-text-color` color that will fit for background and `--ec-{VARIATION}-bg-color` variation color.
+
+## Color palette
+
+<Canvas of={ColorStories.ColorTable} />

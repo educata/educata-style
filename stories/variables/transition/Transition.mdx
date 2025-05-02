@@ -1,0 +1,28 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as TransitionStories from './transition.stories.ts';
+
+# Transition
+
+The transition variables are used to define the transition properties of the project.
+
+```
+--ec-transation-duration
+--ec-transition-{PROPERTY}
+```
+
+`{PROPERTY}` could be one of the following:
+
+- `linear`
+- `ease`
+- `ease-in`
+- `ease-out`
+- `ease-in-out`
+
+By defualt `--ec-transation-duration` equals `0.3s` but can be modified.
+
+## Example
+
+<Canvas of={TransitionStories.Example} />
+
+Mostly we use `ease-in-out` or `linear`.

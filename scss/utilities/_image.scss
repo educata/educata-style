@@ -15,8 +15,8 @@
 
 @each $property, $value in $icon-sizes {
   .icon-#{$property} {
-    width: $value;
-    height: $value;
+    width: var(--#{$prefix}icon-#{$property});
+    height: var(--#{$prefix}icon-#{$property});
     object-fit: contain;
   }
 }

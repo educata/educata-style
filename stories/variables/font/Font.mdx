@@ -1,0 +1,86 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as FontStories from './font.stories.ts';
+import * as TextStories from '../../utilities/text/text.stories.ts';
+
+# Font
+
+To maintain a consistent look we have there font variables that can be used in application.
+
+- Weight
+- Size
+- Line Height
+
+## Weight
+
+```
+--ec-font-{WEIGHT}
+```
+
+Weight is used to define the thickness of the text. The following weights are available:
+
+- 100
+- 200
+- 300
+- 400
+- 500
+- 600
+- 700
+- 800
+- 900
+
+There are also classes built for each weight. The classes are:
+
+- `fw-1`
+- `fw-2`
+- ...
+- `fw-9`
+
+<Canvas of={TextStories.FontWeight} />
+
+## Size
+
+```
+--ec-size-{SIZE}
+```
+
+Size is used to define the size of the text. The following sizes are available:
+
+- `sm` - `0.75rem`
+- `md` - `1rem`
+- `lg` - `1.25rem`
+- `xl` - `1.5rem`
+- `xxl` - `2rem`
+- `xxxl` - `2.5rem`
+
+There are also classes built for each size. The classes are:
+
+- `fs-1` (XXXL)
+- `fs-2` (XXL)
+- ...
+- `fs-6` (SM)
+
+<Canvas of={TextStories.FontSize} />
+
+## Line Height
+
+```
+--ec-line-height-{height}
+```
+
+Line height is used to define the space between lines of text.
+The following line heights are available:
+
+- `sm` - `1.25`
+- `1` - `1`
+- `base` - `1.5`
+- `lg` - `2`
+
+There are also classes built for each line height. The classes are:
+
+- `lh-sm` (SM)
+- `lh-1` (1)
+- `lh-base` (BASE)
+- `lh-lg` (LG)
+
+<Canvas of={FontStories.Example} />

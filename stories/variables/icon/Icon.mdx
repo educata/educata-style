@@ -1,0 +1,35 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+# Icon
+
+```
+--ec-icon-{{SIZE}}
+```
+
+For icon sizes, we use the following variables:
+
+- `sm` = `12px`
+- `md` = `16px`
+- `lg` = `20px`
+- `xl` = `24px`
+- `xxl` = `32px`
+- `xxxl` = `40px`
+
+There are also classes available for each of the icon sizes:
+
+- `.icon-sm` - `--ec-icon-sm`
+- `.icon-md` - `--ec-icon-md`
+- `.icon-lg` - `--ec-icon-lg`
+- `.icon-xl` - `--ec-icon-xl`
+- `.icon-xxl` - `--ec-icon-xxl`
+- `.icon-xxxl` - `--ec-icon-xxxl`
+
+Which has the following CSS:
+
+```css
+.icon-sm {
+  width: var(--ec-icon-sm);
+  height: var(--ec-icon-sm);
+  object-fit: contain;
+}
+```

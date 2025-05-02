@@ -3,7 +3,7 @@
 
 $prefix: "ec-";
 $transitions-duration: 0.3s !default;
-$transitions: ease-in-out, ease-in, ease-out, linear !default;
+$transitions: linear, ease, ease-in, ease-out, ease-in-out !default;
 
 $font-sizes: (
   xxxl: 3,

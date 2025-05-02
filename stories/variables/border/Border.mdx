@@ -1,0 +1,49 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as BorderStories from '../../utilities/borders/borders.stories.ts';
+
+# Border
+
+For border styles, we use the following variables:
+
+- Width
+- Style
+- Color
+- Radius
+- `Radius-{{ SIZE }}`
+
+## Static
+
+There are four static border styles available:
+
+- Width - `--ec-border-width` = `1px`
+- Style - `--ec-border-style` = `solid`
+- Color - `--ec-border-color` = `#ededee`
+- Radius - `--ec-border-radius` = `0.375rem`
+
+## Radius
+
+While we have radius as static value, we also have a set of radius variables
+that can be used to create different border radius styles. The following variables are available:
+
+```
+--ec-border-radius-{{SIZE}}
+```
+
+Where `{{SIZE}}` can be one of the following:
+
+- `sm` = `0.25rem`
+- `lg` = `0.5rem`
+- `xl` = `1rem`
+- `xxl` = `2rem`
+- `pill` = `50rem`
+- `circle` = `50%`
+
+There are also classes available for each of the radius sizes:
+
+- `.rounded` - `--ec-border-radius`
+- `.rounded-sm` - `--ec-border-radius-sm`
+- ...
+- `.rounded-circle` - `--ec-border-radius-circle`
+
+<Canvas of={BorderStories.Radius} />
