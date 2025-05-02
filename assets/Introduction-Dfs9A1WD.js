@@ -1,0 +1,5 @@
+import{j as e}from"./index-BdIgl1Fy.js";import{useMDXComponents as i}from"./index-Bb44zobi.js";function n(s){const t={a:"a",h1:"h1",p:"p",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(t.h1,{id:"layout",children:"Layout"}),`
+`,e.jsx(t.p,{children:`Educata is a design system that provides a consistent and cohesive user experience across all platforms and devices.
+It is built on the principles of responsive design, accessibility, and usability, ensuring that users can easily navigate and interact with the system regardless of their device or screen size.`}),`
+`,e.jsxs(t.p,{children:["Educata design is similar to ",e.jsx(t.a,{href:"https://getbootstrap.com/",rel:"nofollow",children:"Bootstrap"}),`, but it is not a direct copy. It is a unique design system that has been tailored to meet the specific needs of Educata users.
+Since it's similar to Bootstrap, layout docs are similar to Bootstrap docs.`]})]})}function r(s={}){const{wrapper:t}={...i(),...s.components};return t?e.jsx(t,{...s,children:e.jsx(n,{...s})}):n(s)}export{r as default};

@@ -1,3 +1,0 @@
-import{j as t}from"./index-BdIgl1Fy.js";import{useMDXComponents as r}from"./index-Bb44zobi.js";import{C as s}from"./index-BIWoHJfk.js";import{Example as i}from"./float.stories-CRGE7t9S.js";import"./iframe-DIxpjqu4.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(e){const n={h1:"h1",p:"p",...r(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(n.h1,{id:"float",children:"Float"}),`
-`,t.jsx(n.p,{children:"These utility classes are used to float elements to the left or right of their container, allowing text and inline elements to wrap around them."}),`
-`,t.jsx(s,{of:i})]})}function x(e={}){const{wrapper:n}={...r(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o(e)}export{x as default};
