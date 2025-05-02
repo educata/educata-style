@@ -104,14 +104,16 @@
   --ec-main-text-color: white;
   --ec-main-bg-color: #0c0c16;
   --ec-transation-duration: 0.3s;
-  --ec-transition-ease-in-out: var(--ec-transation-duration)
-    ease-in-out;
+  --ec-transition-linear: var(--ec-transation-duration)
+    linear;
+  --ec-transition-ease: var(--ec-transation-duration)
+    ease;
   --ec-transition-ease-in: var(--ec-transation-duration)
     ease-in;
   --ec-transition-ease-out: var(--ec-transation-duration)
     ease-out;
-  --ec-transition-linear: var(--ec-transation-duration)
-    linear;
+  --ec-transition-ease-in-out: var(--ec-transation-duration)
+    ease-in-out;
   --ec-font-weight-100: 100;
   --ec-font-weight-200: 200;
   --ec-font-weight-300: 300;
@@ -1542,38 +1544,38 @@ h6 {
 }
 
 .icon-sm {
-  width: 12px;
-  height: 12px;
+  width: var(--ec-icon-sm);
+  height: var(--ec-icon-sm);
   object-fit: contain;
 }
 
 .icon-md {
-  width: 16px;
-  height: 16px;
+  width: var(--ec-icon-md);
+  height: var(--ec-icon-md);
   object-fit: contain;
 }
 
 .icon-lg {
-  width: 20px;
-  height: 20px;
+  width: var(--ec-icon-lg);
+  height: var(--ec-icon-lg);
   object-fit: contain;
 }
 
 .icon-xl {
-  width: 24px;
-  height: 24px;
+  width: var(--ec-icon-xl);
+  height: var(--ec-icon-xl);
   object-fit: contain;
 }
 
 .icon-xxl {
-  width: 32px;
-  height: 32px;
+  width: var(--ec-icon-xxl);
+  height: var(--ec-icon-xxl);
   object-fit: contain;
 }
 
 .icon-xxxl {
-  width: 40px;
-  height: 40px;
+  width: var(--ec-icon-xxxl);
+  height: var(--ec-icon-xxxl);
   object-fit: contain;
 }
 

@@ -1,0 +1,4 @@
+import{j as o}from"./index-BdIgl1Fy.js";import{useMDXComponents as r}from"./index-Bb44zobi.js";import{C as s}from"./index-OPW9XFND.js";import{Examples as c}from"./background.stories-2uLm1ufA.js";import"./iframe-CekNVhDQ.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";import"./variations-ITiYtS3r.js";function e(n){const t={h1:"h1",p:"p",...r(),...n.components};return o.jsxs(o.Fragment,{children:[o.jsx(t.h1,{id:"background",children:"Background"}),`
+`,o.jsx(t.p,{children:`Background utilities are used to set the background color of an element.
+They can be used to set the background color of an element to a specific color.`}),`
+`,o.jsx(s,{of:c})]})}function x(n={}){const{wrapper:t}={...r(),...n.components};return t?o.jsx(t,{...n,children:o.jsx(e,{...n})}):e(n)}export{x as default};
