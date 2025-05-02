@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/html";
 
 const meta: Meta = {
-  title: "Variables/Colors",
+  title: "Variables/Color",
 };
 
 export default meta;
@@ -44,6 +44,7 @@ const BASE_COLORS: Color[] = [
 ];
 
 export const ColorTable: Story = {
+  tags: ["!dev"],
   name: "Color Table",
   parameters: {
     layout: "center",
@@ -116,7 +117,7 @@ export const ColorTable: Story = {
       button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/></svg>`;
 
       tr.innerHTML = `
-        <td>${color.name}</td>
+        <td class="user-select-all">${color.name}</td>
         <td style="background-color: ${color.value};"></td>
         <td><code>--ec-color-${color.name}</code></td>
         <td><code>${color.value}</code></td>

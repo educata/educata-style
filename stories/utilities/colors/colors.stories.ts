@@ -20,7 +20,7 @@ export const Variations: Story = {
 <div class="d-flex flex-column gap-3">
   ${VARIATIONS.map(
     (variation) =>
-      `<span class="text-${variation} p-2">.text-${variation}</span> <span class="text-${variation}-bg bg-${variation} p-2">.text-${variation}-bg</span>`
+      `<span class="text-${variation} user-select-all p-2">.text-${variation}</span> <span class="text-${variation}-bg bg-${variation} user-select-all p-2">.text-${variation}-bg</span>`
   ).join("")}
 </div>
 `;
